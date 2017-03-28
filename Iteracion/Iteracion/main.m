@@ -28,6 +28,25 @@ int main(int argc, const char * argv[]) {
         [list enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NSLog(@"El elemento %lu vale %@", idx, obj);
         }];
+        
+        
+        //NSDictionary
+        NSDictionary *dict = @{@"uno":@1, @"dos":@2, @"tres":@3};
+        
+        //Classic way
+        NSArray *keys = dict.allKeys;
+        for (int i = 0; i < keys.count; i++) {
+            NSLog(@"La clave %@ corresponde al objeto %@", keys[i], dict[keys[i]]);
+        }
+        
+        //Fast
+        for (id key in keys) {
+            NSLog(@"La clave %@ corresponde al objeto %@", key, dict[key]);
+        }
+        
+        [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSLog(@"La clave %@ corresponde al objeto %@", key, obj);
+        }];
     }
     return 0;
 }

@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGTImageViewController">
             <connections>
+                <outlet property="photoView" destination="vDY-xF-yfJ" id="g8g-t8-DHV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,6 +25,9 @@
                     <frame key="frameInset" minX="125" minY="518" width="71" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Descargar"/>
+                    <connections>
+                        <action selector="donwloadImage:" destination="-1" eventType="touchUpInside" id="z4S-RN-dRT"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,6 +10,9 @@
 
 @interface AGTImageViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
+
+
 @end
 
 @implementation AGTImageViewController
@@ -33,5 +36,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Actions
+- (IBAction)donwloadImage:(id)sender {
+}
+
 
 @end

@@ -39,6 +39,14 @@
 
 #pragma mark - Actions
 - (IBAction)donwloadImage:(id)sender {
+    
+    NSURL *url = [NSURL URLWithString:@"http://kingofwallpapers.com/charmander/charmander-013.jpg"];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    _photoView.image = image;
 }
 
 

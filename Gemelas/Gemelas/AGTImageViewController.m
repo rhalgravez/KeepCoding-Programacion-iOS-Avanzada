@@ -12,7 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
-
 @end
 
 @implementation AGTImageViewController
@@ -39,28 +38,28 @@
 
 #pragma mark - Actions
 - (IBAction)donwloadImage:(id)sender {
-    
-    //Create a queue
-    dispatch_queue_t gemelas = dispatch_queue_create("charmander", 0);
-    
-    //Send to background thread
-    dispatch_async(gemelas, ^{
-        NSURL *url = [NSURL URLWithString:@"http://kingofwallpapers.com/charmander/charmander-013.jpg"];
-        
-         NSData *imageData = [NSData dataWithContentsOfURL:url];
-        
-        //Execute in main thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            UIImage *image = [UIImage imageWithData:imageData];
-            
-            self.photoView.image = image;
-        });
-    });
-    
-    
-    
-    
+    [self imageFromInternetWithCompletitionHandler:^(UIImage *image) {
+        self.photoView.image = image;
+    }];
 }
 
+#pragma mark - Utils
+-(void)imageFromInternetWithCompletitionHandler:(void (^)(UIImage *image))completitionHandler {
+    //Download image in background thread
+    //Now best practice, use dispatch_get_global_queue to reuse a queue already available in the system
+    dispatch_queue_t download = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(download, ^{
+        NSURL *url = [NSURL URLWithString:@"http://kingofwallpapers.com/charmander/charmander-013.jpg"];
+        
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //Execute completitonHandler
+            UIImage *image = [UIImage imageWithData:data];
+            completitionHandler(image);
+        });
+    });
+}
 
 @end

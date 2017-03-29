@@ -40,13 +40,26 @@
 #pragma mark - Actions
 - (IBAction)donwloadImage:(id)sender {
     
-    NSURL *url = [NSURL URLWithString:@"http://kingofwallpapers.com/charmander/charmander-013.jpg"];
+    //Create a queue
+    dispatch_queue_t gemelas = dispatch_queue_create("charmander", 0);
     
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    //Send to background thread
+    dispatch_async(gemelas, ^{
+        NSURL *url = [NSURL URLWithString:@"http://kingofwallpapers.com/charmander/charmander-013.jpg"];
+        
+         NSData *imageData = [NSData dataWithContentsOfURL:url];
+        
+        //Execute in main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [UIImage imageWithData:imageData];
+            
+            self.photoView.image = image;
+        });
+    });
     
-    UIImage *image = [UIImage imageWithData:imageData];
     
-    _photoView.image = image;
+    
+    
 }
 
 

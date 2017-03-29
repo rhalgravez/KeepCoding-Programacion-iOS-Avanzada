@@ -11,6 +11,7 @@
 		DFF4DDE21E8C6D1F00D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DDE11E8C6D1F00D9C91E /* AppDelegate.m */; };
 		DFF4DDEA1E8C6D1F00D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DDE91E8C6D1F00D9C91E /* Assets.xcassets */; };
 		DFF4DDED1E8C6D1F00D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DDEB1E8C6D1F00D9C91E /* LaunchScreen.storyboard */; };
+		DFF4DDF61E8C6E1000D9C91E /* AGTConnorMacLeod.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DDF51E8C6E1000D9C91E /* AGTConnorMacLeod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		DFF4DDE91E8C6D1F00D9C91E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF4DDEC1E8C6D1F00D9C91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF4DDEE1E8C6D1F00D9C91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF4DDF41E8C6E1000D9C91E /* AGTConnorMacLeod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTConnorMacLeod.h; sourceTree = "<group>"; };
+		DFF4DDF51E8C6E1000D9C91E /* AGTConnorMacLeod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTConnorMacLeod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 				DFF4DDEB1E8C6D1F00D9C91E /* LaunchScreen.storyboard */,
 				DFF4DDEE1E8C6D1F00D9C91E /* Info.plist */,
 				DFF4DDDD1E8C6D1F00D9C91E /* Supporting Files */,
+				DFF4DDF41E8C6E1000D9C91E /* AGTConnorMacLeod.h */,
+				DFF4DDF51E8C6E1000D9C91E /* AGTConnorMacLeod.m */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4DDE21E8C6D1F00D9C91E /* AppDelegate.m in Sources */,
+				DFF4DDF61E8C6E1000D9C91E /* AGTConnorMacLeod.m in Sources */,
 				DFF4DDDF1E8C6D1F00D9C91E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

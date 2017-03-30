@@ -17,12 +17,25 @@
 
 @implementation AGTImageDownloader
 
+#pragma mark - Init
 -(instancetype)initWithImageViewController:(AGTImageViewController *) vc {
     if (self = [super init]) {
         _iVC = vc;
     }
     
     return self;
+}
+
+#pragma mark - Executing the Operation
+-(void)main {
+    
+    NSURL *url = [NSURL URLWithString:@"http://i.imgur.com/XXI53.jpg"];
+    
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    
+    UIImage *image = [UIImage imageWithData:data];
+    
+    //Next we need to send the image to the UIImageView in the main thread because this main methos is executed in the background thread
 }
 
 @end

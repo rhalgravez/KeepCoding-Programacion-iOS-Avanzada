@@ -8,6 +8,7 @@
 
 #import "AGTImageViewController.h"
 #import "AGTImageDownloader.h"
+#import "AGTImageFilterOperation.h"
 
 @interface AGTImageViewController ()
 
@@ -53,11 +54,14 @@
     
     //Create operations
     AGTImageDownloader *downloader = [[AGTImageDownloader alloc] initWithImageViewController:self];
+    AGTImageFilterOperation *filterOperation = [[AGTImageFilterOperation alloc] initWithImageViewController:self];
     
     //Create dependecy between the operations
+    [filterOperation addDependency:downloader];
     
     //Send the operations to the queue
     [self.queue addOperation:downloader];
+    [self.queue addOperation:filterOperation];
 }
 
 

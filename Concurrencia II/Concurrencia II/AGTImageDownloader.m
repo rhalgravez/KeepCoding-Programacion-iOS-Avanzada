@@ -36,6 +36,14 @@
     UIImage *image = [UIImage imageWithData:data];
     
     //Next we need to send the image to the UIImageView in the main thread because this main methos is executed in the background thread
+    [self performSelectorOnMainThread:@selector(updateViewControllerWithImage:) withObject:image waitUntilDone:NO];
+}
+
+#pragma mark - Utils
+-(void)updateViewControllerWithImage:(UIImage *)image {
+    
+    self.iVC.ImageView.image = image;
+    [self.iVC.activityView stopAnimating];
 }
 
 @end

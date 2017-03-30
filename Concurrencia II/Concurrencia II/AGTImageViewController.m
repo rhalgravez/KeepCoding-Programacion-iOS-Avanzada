@@ -10,9 +10,6 @@
 
 @interface AGTImageViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *ImageView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
-
 @property (strong, nonatomic) NSOperationQueue *queue;
 
 @end

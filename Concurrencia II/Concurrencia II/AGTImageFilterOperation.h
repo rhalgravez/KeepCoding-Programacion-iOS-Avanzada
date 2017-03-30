@@ -11,6 +11,6 @@
 
 @interface AGTImageFilterOperation : NSOperation
 
--(instancetype)initWithImageViewController:(AGTImageViewController *) vc;
+-(instancetype)initWithImageViewController:(AGTImageViewController *) imageViewController;
 
 @end

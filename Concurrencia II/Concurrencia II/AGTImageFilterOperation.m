@@ -11,15 +11,15 @@
 
 @interface AGTImageFilterOperation ()
 
-@property(strong, nonatomic) AGTImageViewController *vc;
+@property(strong, nonatomic) AGTImageViewController *imageViewController;
 
 @end
 
 @implementation AGTImageFilterOperation
 
--(instancetype)initWithImageViewController:(AGTImageViewController *) vc {
+-(instancetype)initWithImageViewController:(AGTImageViewController *) imageViewController {
     if (self = [super init]) {
-        _vc = vc;
+        _imageViewController = imageViewController;
     }
     
     return self;

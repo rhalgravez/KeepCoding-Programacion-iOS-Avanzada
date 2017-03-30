@@ -12,9 +12,21 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *ImageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
+
+@property (strong, nonatomic) NSOperationQueue *queue;
+
 @end
 
 @implementation AGTImageViewController
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _queue = [[NSOperationQueue alloc] init];
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

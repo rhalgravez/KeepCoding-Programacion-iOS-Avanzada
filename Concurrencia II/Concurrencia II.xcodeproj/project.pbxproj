@@ -11,6 +11,8 @@
 		DFF4DE081E8D8E5C00D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE071E8D8E5C00D9C91E /* AppDelegate.m */; };
 		DFF4DE101E8D8E5C00D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE0F1E8D8E5C00D9C91E /* Assets.xcassets */; };
 		DFF4DE131E8D8E5C00D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE111E8D8E5C00D9C91E /* LaunchScreen.storyboard */; };
+		DFF4DE1D1E8D906500D9C91E /* AGTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE1B1E8D906500D9C91E /* AGTImageViewController.m */; };
+		DFF4DE1E1E8D906500D9C91E /* AGTImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		DFF4DE0F1E8D8E5C00D9C91E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF4DE121E8D8E5C00D9C91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF4DE141E8D8E5C00D9C91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF4DE1A1E8D906500D9C91E /* AGTImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTImageViewController.h; sourceTree = "<group>"; };
+		DFF4DE1B1E8D906500D9C91E /* AGTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTImageViewController.m; sourceTree = "<group>"; };
+		DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTImageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 				DFF4DE111E8D8E5C00D9C91E /* LaunchScreen.storyboard */,
 				DFF4DE141E8D8E5C00D9C91E /* Info.plist */,
 				DFF4DE031E8D8E5C00D9C91E /* Supporting Files */,
+				DFF4DE1F1E8D906900D9C91E /* Controllers */,
 			);
 			path = "Concurrencia II";
 			sourceTree = "<group>";
@@ -69,6 +75,16 @@
 				DFF4DE041E8D8E5C00D9C91E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF4DE1F1E8D906900D9C91E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DE1A1E8D906500D9C91E /* AGTImageViewController.h */,
+				DFF4DE1B1E8D906500D9C91E /* AGTImageViewController.m */,
+				DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +147,7 @@
 			files = (
 				DFF4DE131E8D8E5C00D9C91E /* LaunchScreen.storyboard in Resources */,
 				DFF4DE101E8D8E5C00D9C91E /* Assets.xcassets in Resources */,
+				DFF4DE1E1E8D906500D9C91E /* AGTImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF4DE1D1E8D906500D9C91E /* AGTImageViewController.m in Sources */,
 				DFF4DE081E8D8E5C00D9C91E /* AppDelegate.m in Sources */,
 				DFF4DE051E8D8E5C00D9C91E /* main.m in Sources */,
 			);

@@ -14,6 +14,7 @@
 		DFF4DE1D1E8D906500D9C91E /* AGTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE1B1E8D906500D9C91E /* AGTImageViewController.m */; };
 		DFF4DE1E1E8D906500D9C91E /* AGTImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */; };
 		DFF4DE231E8D95AF00D9C91E /* AGTImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE221E8D95AF00D9C91E /* AGTImageDownloader.m */; };
+		DFF4DE261E8DADC100D9C91E /* AGTImageFilterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE251E8DADC100D9C91E /* AGTImageFilterOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTImageViewController.xib; sourceTree = "<group>"; };
 		DFF4DE211E8D95AF00D9C91E /* AGTImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTImageDownloader.h; sourceTree = "<group>"; };
 		DFF4DE221E8D95AF00D9C91E /* AGTImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTImageDownloader.m; sourceTree = "<group>"; };
+		DFF4DE241E8DADC100D9C91E /* AGTImageFilterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTImageFilterOperation.h; sourceTree = "<group>"; };
+		DFF4DE251E8DADC100D9C91E /* AGTImageFilterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTImageFilterOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 			children = (
 				DFF4DE211E8D95AF00D9C91E /* AGTImageDownloader.h */,
 				DFF4DE221E8D95AF00D9C91E /* AGTImageDownloader.m */,
+				DFF4DE241E8DADC100D9C91E /* AGTImageFilterOperation.h */,
+				DFF4DE251E8DADC100D9C91E /* AGTImageFilterOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				DFF4DE1D1E8D906500D9C91E /* AGTImageViewController.m in Sources */,
 				DFF4DE231E8D95AF00D9C91E /* AGTImageDownloader.m in Sources */,
 				DFF4DE081E8D8E5C00D9C91E /* AppDelegate.m in Sources */,
+				DFF4DE261E8DADC100D9C91E /* AGTImageFilterOperation.m in Sources */,
 				DFF4DE051E8D8E5C00D9C91E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

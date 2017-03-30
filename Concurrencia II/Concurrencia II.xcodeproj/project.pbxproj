@@ -13,6 +13,7 @@
 		DFF4DE131E8D8E5C00D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE111E8D8E5C00D9C91E /* LaunchScreen.storyboard */; };
 		DFF4DE1D1E8D906500D9C91E /* AGTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE1B1E8D906500D9C91E /* AGTImageViewController.m */; };
 		DFF4DE1E1E8D906500D9C91E /* AGTImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */; };
+		DFF4DE231E8D95AF00D9C91E /* AGTImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE221E8D95AF00D9C91E /* AGTImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		DFF4DE1A1E8D906500D9C91E /* AGTImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTImageViewController.h; sourceTree = "<group>"; };
 		DFF4DE1B1E8D906500D9C91E /* AGTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTImageViewController.m; sourceTree = "<group>"; };
 		DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTImageViewController.xib; sourceTree = "<group>"; };
+		DFF4DE211E8D95AF00D9C91E /* AGTImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTImageDownloader.h; sourceTree = "<group>"; };
+		DFF4DE221E8D95AF00D9C91E /* AGTImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTImageDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +66,9 @@
 				DFF4DE0F1E8D8E5C00D9C91E /* Assets.xcassets */,
 				DFF4DE111E8D8E5C00D9C91E /* LaunchScreen.storyboard */,
 				DFF4DE141E8D8E5C00D9C91E /* Info.plist */,
-				DFF4DE031E8D8E5C00D9C91E /* Supporting Files */,
 				DFF4DE1F1E8D906900D9C91E /* Controllers */,
+				DFF4DE031E8D8E5C00D9C91E /* Supporting Files */,
+				DFF4DE201E8D94CF00D9C91E /* Operations */,
 			);
 			path = "Concurrencia II";
 			sourceTree = "<group>";
@@ -85,6 +89,15 @@
 				DFF4DE1C1E8D906500D9C91E /* AGTImageViewController.xib */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DFF4DE201E8D94CF00D9C91E /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DE211E8D95AF00D9C91E /* AGTImageDownloader.h */,
+				DFF4DE221E8D95AF00D9C91E /* AGTImageDownloader.m */,
+			);
+			name = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4DE1D1E8D906500D9C91E /* AGTImageViewController.m in Sources */,
+				DFF4DE231E8D95AF00D9C91E /* AGTImageDownloader.m in Sources */,
 				DFF4DE081E8D8E5C00D9C91E /* AppDelegate.m in Sources */,
 				DFF4DE051E8D8E5C00D9C91E /* main.m in Sources */,
 			);

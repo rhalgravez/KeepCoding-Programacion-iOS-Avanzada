@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTImageViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self.window = [UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    AGTImageViewController *imageVC = [[AGTImageViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = imageVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

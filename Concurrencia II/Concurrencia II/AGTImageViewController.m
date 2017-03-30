@@ -50,6 +50,14 @@
 
 #pragma mark - Action
 - (IBAction)downloadImage:(id)sender {
+    //Setup the interface
+    [self.activityView startAnimating];
+    
+    //Create operations
+    
+    //Create dependecy between the operations
+    
+    //Send the operations to the queue
 }
 
 

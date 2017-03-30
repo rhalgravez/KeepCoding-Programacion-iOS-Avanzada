@@ -7,6 +7,7 @@
 //
 
 #import "AGTImageViewController.h"
+#import "AGTImageDownloader.h"
 
 @interface AGTImageViewController ()
 
@@ -51,10 +52,12 @@
     [self.activityView startAnimating];
     
     //Create operations
+    AGTImageDownloader *downloader = [[AGTImageDownloader alloc] initWithImageViewController:self];
     
     //Create dependecy between the operations
     
     //Send the operations to the queue
+    [self.queue addOperation:downloader];
 }
 
 

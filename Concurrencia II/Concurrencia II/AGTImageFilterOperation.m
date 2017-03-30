@@ -7,7 +7,22 @@
 //
 
 #import "AGTImageFilterOperation.h"
+#import "AGTImageViewController.h"
+
+@interface AGTImageFilterOperation ()
+
+@property(strong, nonatomic) AGTImageViewController *vc;
+
+@end
 
 @implementation AGTImageFilterOperation
+
+-(instancetype)initWithImageViewController:(AGTImageViewController *) vc {
+    if (self = [super init]) {
+        _vc = vc;
+    }
+    
+    return self;
+}
 
 @end

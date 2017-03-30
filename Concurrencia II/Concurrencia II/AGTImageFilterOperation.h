@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class AGTImageViewController;
 
 @interface AGTImageFilterOperation : NSOperation
+
+-(instancetype)initWithImageViewController:(AGTImageViewController *) vc;
 
 @end

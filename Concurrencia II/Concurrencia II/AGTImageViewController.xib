@@ -8,8 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGTImageViewController">
             <connections>
-                <outlet property="ImageView" destination="cQo-jb-rf2" id="pap-9F-Hyu"/>
                 <outlet property="activityView" destination="Yhp-tQ-IBO" id="aQr-ho-QG2"/>
+                <outlet property="imageView" destination="cQo-jb-rf2" id="gs1-B6-ibb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -10,7 +10,7 @@
 
 @interface AGTImageViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *ImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 @end

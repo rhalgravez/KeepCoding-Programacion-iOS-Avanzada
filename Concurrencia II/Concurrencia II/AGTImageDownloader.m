@@ -42,7 +42,7 @@
 #pragma mark - Utils
 -(void)updateViewControllerWithImage:(UIImage *)image {
     
-    self.iVC.ImageView.image = image;
+    self.iVC.imageView.image = image;
     [self.iVC.activityView stopAnimating];
 }
 

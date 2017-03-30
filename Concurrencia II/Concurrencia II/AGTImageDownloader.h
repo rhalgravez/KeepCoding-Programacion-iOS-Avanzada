@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class AGTImageViewController;
 
 @interface AGTImageDownloader : NSOperation
+
+-(instancetype)initWithImageViewController:(AGTImageViewController *) vc;
 
 @end

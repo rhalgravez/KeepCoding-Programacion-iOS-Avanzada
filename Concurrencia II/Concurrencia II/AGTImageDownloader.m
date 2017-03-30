@@ -7,7 +7,22 @@
 //
 
 #import "AGTImageDownloader.h"
+#import "AGTImageViewController.h"
+
+@interface AGTImageDownloader()
+
+@property(strong, nonatomic) AGTImageViewController *iVC;
+
+@end
 
 @implementation AGTImageDownloader
+
+-(instancetype)initWithImageViewController:(AGTImageViewController *) vc {
+    if (self = [super init]) {
+        _iVC = vc;
+    }
+    
+    return self;
+}
 
 @end

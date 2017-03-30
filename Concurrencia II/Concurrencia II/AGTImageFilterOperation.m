@@ -47,7 +47,12 @@
     //2.4) Create the outputImage (the image with the filter)
     CIImage *output = falseColor.outputImage;
     //2.5) Create other filter (just for fun :D)
+    CIFilter *vignette = [CIFilter filterWithName:@"CIVignette"];
+    [vignette setDefaults];
+    [vignette setValue:@10 forKey:kCIInputIntensityKey];
     //2.6) Create the outputImage (the image with the filter, again because we aply two filters)
+    [vignette setValue:output forKey:kCIInputImageKey];//put my outputImage as inputImage for my second filter
+    output = vignette.outputImage;//using the same CIImage for the vignette outputImage
     //2.7) Create the CGImage with the filters
     CGImageRef res = [context createCGImage:output fromRect:[output extent]];
     

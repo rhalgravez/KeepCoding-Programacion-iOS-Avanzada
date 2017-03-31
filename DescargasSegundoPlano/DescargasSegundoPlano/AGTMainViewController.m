@@ -10,6 +10,10 @@
 
 @interface AGTMainViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ativityView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressIndicatorView;
+
 @end
 
 @implementation AGTMainViewController

@@ -33,6 +33,8 @@
     //Other way to fix the navigation bar overlapping the view
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
+    [self setupButtons];
+    
     //Set the URL with its image
     self.bulbasaurURL = [NSURL URLWithString:@"http://vignette1.wikia.nocookie.net/pokemon/images/e/ea/001Bulbasaur_AG_anime.png"];
     self.charmanderURL = [NSURL URLWithString:@"http://cartoonbros.com/wp-content/uploads/2016/11/Charmander-3.png"];
@@ -57,5 +59,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Utils
+
+-(void)setupButtons {
+    
+    UIBarButtonItem *crashApp = [[UIBarButtonItem alloc] initWithTitle:@"Crash me!" style:UIBarButtonItemStylePlain target:self action:@selector(crashApp:)];
+    
+    UIBarButtonItem *foregroundDownload = [[UIBarButtonItem alloc] initWithTitle:@"Download" style:UIBarButtonItemStylePlain target:self action:@selector(download:)];
+    
+    UIBarButtonItem *backgrtoundDownload = [[UIBarButtonItem alloc] initWithTitle:@"Background Download" style:UIBarButtonItemStylePlain target:self action:@selector(downloadInBackground:)];
+    
+    [self.navigationItem setLeftBarButtonItem:crashApp];
+    [self.navigationItem setRightBarButtonItems:@[foregroundDownload, backgrtoundDownload]];
+}
 
 @end

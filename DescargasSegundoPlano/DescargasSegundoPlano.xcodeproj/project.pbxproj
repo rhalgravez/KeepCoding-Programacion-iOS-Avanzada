@@ -11,6 +11,8 @@
 		DFF4DE381E8F000A00D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE371E8F000A00D9C91E /* AppDelegate.m */; };
 		DFF4DE401E8F000A00D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE3F1E8F000A00D9C91E /* Assets.xcassets */; };
 		DFF4DE431E8F000A00D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE411E8F000A00D9C91E /* LaunchScreen.storyboard */; };
+		DFF4DE531E8F03C700D9C91E /* AGTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE511E8F03C700D9C91E /* AGTMainViewController.m */; };
+		DFF4DE541E8F03C700D9C91E /* AGTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE521E8F03C700D9C91E /* AGTMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		DFF4DE3F1E8F000A00D9C91E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF4DE421E8F000A00D9C91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF4DE441E8F000A00D9C91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF4DE501E8F03C700D9C91E /* AGTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMainViewController.h; sourceTree = "<group>"; };
+		DFF4DE511E8F03C700D9C91E /* AGTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMainViewController.m; sourceTree = "<group>"; };
+		DFF4DE521E8F03C700D9C91E /* AGTMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 				DFF4DE3F1E8F000A00D9C91E /* Assets.xcassets */,
 				DFF4DE411E8F000A00D9C91E /* LaunchScreen.storyboard */,
 				DFF4DE441E8F000A00D9C91E /* Info.plist */,
+				DFF4DE4A1E8F018300D9C91E /* Controllers */,
 				DFF4DE331E8F000A00D9C91E /* Supporting Files */,
 			);
 			path = DescargasSegundoPlano;
@@ -69,6 +75,16 @@
 				DFF4DE341E8F000A00D9C91E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF4DE4A1E8F018300D9C91E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DE501E8F03C700D9C91E /* AGTMainViewController.h */,
+				DFF4DE511E8F03C700D9C91E /* AGTMainViewController.m */,
+				DFF4DE521E8F03C700D9C91E /* AGTMainViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +147,7 @@
 			files = (
 				DFF4DE431E8F000A00D9C91E /* LaunchScreen.storyboard in Resources */,
 				DFF4DE401E8F000A00D9C91E /* Assets.xcassets in Resources */,
+				DFF4DE541E8F03C700D9C91E /* AGTMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +160,7 @@
 			files = (
 				DFF4DE381E8F000A00D9C91E /* AppDelegate.m in Sources */,
 				DFF4DE351E8F000A00D9C91E /* main.m in Sources */,
+				DFF4DE531E8F03C700D9C91E /* AGTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGTMainViewController : UIViewController
+@interface AGTMainViewController : UIViewController <NSURLSessionDownloadDelegate>
 
 @end

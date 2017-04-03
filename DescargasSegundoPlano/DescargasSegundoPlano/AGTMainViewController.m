@@ -95,6 +95,11 @@
     [self.navigationItem setRightBarButtonItems:@[foregroundDownload, backgroundDownload]];
 }
 
+//Get the progress in a float number
+-(float)progressWithBytesSoFar:(int64_t)soFar totalExpectedBytes:(int64_t)totalBytes {
+    return (soFar *1.0f)/(totalBytes*1.0);
+}
+
 #pragma mark - Actions
 -(void) crashApp:(id)sender {
     //Crash by sending an unrecognized message
@@ -108,4 +113,49 @@
 -(void)downloadInBackground:(id)sender {
     
 }
+
+#pragma mark - NSURLSessionDownloadDelegate
+
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite{
+    //We are in a background thread, so everything releated to UI needs to be done in the main thread!!
+    NSLog(@"Session %@ is in progress!", session);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressIndicatorView.progress = [self progressWithBytesSoFar: totalBytesWritten totalExpectedBytes: totalBytesExpectedToWrite];
+    });
+}
+
+-(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes{
+    //We are in a background thread, so everything releated to UI needs to be done in the main thread!!
+    NSLog(@"Session %@ resumed!", session);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressIndicatorView.progress = [self progressWithBytesSoFar: fileOffset totalExpectedBytes: expectedTotalBytes];
+    });
+}
+
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
+    //We are in a background thread, so everything releated to UI needs to be done in the main thread!!
+    NSLog(@"Session %@ finished downloading!", session);
+    
+    NSData *imgData = [NSData dataWithContentsOfURL:location];
+    UIImage *img = [UIImage imageWithData:imgData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.imageView.image = img;
+        [self.ativityView stopAnimating];
+    });
+}
+
+-(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    if (error) {
+        //Smething faild
+        NSLog(@"Error en session %@\n%@", session, error);
+    } else {
+        //Don't worry, be happy
+        NSLog(@"Session %@ finished", session);
+    }
+}
+
+
 @end

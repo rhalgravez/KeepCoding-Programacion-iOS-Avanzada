@@ -22,6 +22,9 @@
 @property (strong, nonatomic) NSURLSession *downloadSession;
 @property (strong, nonatomic) NSURLSession *backgroundDonwloadSession;
 
+//Queue where all the delegates methods are executed
+@property (strong, nonatomic) NSOperationQueue *delegateQueue;
+
 @end
 
 @implementation AGTMainViewController
@@ -38,6 +41,8 @@
     //Set the URL with its image
     self.bulbasaurURL = [NSURL URLWithString:@"http://vignette1.wikia.nocookie.net/pokemon/images/e/ea/001Bulbasaur_AG_anime.png"];
     self.charmanderURL = [NSURL URLWithString:@"http://cartoonbros.com/wp-content/uploads/2016/11/Charmander-3.png"];
+    
+    self.delegateQueue = [[NSOperationQueue alloc] init];
 }
 
 - (void)viewDidLoad {

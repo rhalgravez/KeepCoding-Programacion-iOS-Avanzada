@@ -42,6 +42,10 @@
     self.bulbasaurURL = [NSURL URLWithString:@"http://vignette1.wikia.nocookie.net/pokemon/images/e/ea/001Bulbasaur_AG_anime.png"];
     self.charmanderURL = [NSURL URLWithString:@"http://cartoonbros.com/wp-content/uploads/2016/11/Charmander-3.png"];
     
+    //Session
+    [self setupDonwloadSession];
+    [self setupBackgroundSession];
+    
     self.delegateQueue = [[NSOperationQueue alloc] init];
 }
 
@@ -72,7 +76,11 @@
 }
 
 -(void)setupDonwloadSession {
+    //Create default configuration
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
+    //Create session
+    self.downloadSession = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:self.delegateQueue];
 }
 
 -(void)setupButtons {
@@ -93,11 +101,11 @@
     [self performSelector:@selector(lucasGrijander) withObject:nil];
 }
 
--(void)donwnload:(id)sender {
+-(void)download:(id)sender {
     
 }
 
--(void)donwloadInBackground:(id)sender {
+-(void)downloadInBackground:(id)sender {
     
 }
 @end

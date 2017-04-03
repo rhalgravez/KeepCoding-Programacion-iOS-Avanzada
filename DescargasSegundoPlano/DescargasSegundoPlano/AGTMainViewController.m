@@ -62,16 +62,37 @@
 
 #pragma mark - Utils
 
+-(void)setupBackgroundSession {
+    
+}
+
+-(void)setupDonwloadSession {
+    
+}
+
 -(void)setupButtons {
     
     UIBarButtonItem *crashApp = [[UIBarButtonItem alloc] initWithTitle:@"Crash me!" style:UIBarButtonItemStylePlain target:self action:@selector(crashApp:)];
     
     UIBarButtonItem *foregroundDownload = [[UIBarButtonItem alloc] initWithTitle:@"Download" style:UIBarButtonItemStylePlain target:self action:@selector(download:)];
     
-    UIBarButtonItem *backgrtoundDownload = [[UIBarButtonItem alloc] initWithTitle:@"Background Download" style:UIBarButtonItemStylePlain target:self action:@selector(downloadInBackground:)];
+    UIBarButtonItem *backgroundDownload = [[UIBarButtonItem alloc] initWithTitle:@"Background Download" style:UIBarButtonItemStylePlain target:self action:@selector(downloadInBackground:)];
     
     [self.navigationItem setLeftBarButtonItem:crashApp];
-    [self.navigationItem setRightBarButtonItems:@[foregroundDownload, backgrtoundDownload]];
+    [self.navigationItem setRightBarButtonItems:@[foregroundDownload, backgroundDownload]];
 }
 
+#pragma mark - Actions
+-(void) crashApp:(id)sender {
+    //Crash by sending an unrecognized message
+    [self performSelector:@selector(lucasGrijander) withObject:nil];
+}
+
+-(void)donwnload:(id)sender {
+    
+}
+
+-(void)donwloadInBackground:(id)sender {
+    
+}
 @end

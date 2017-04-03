@@ -39,7 +39,7 @@
     [self setupButtons];
     
     //Set the URL with its image
-    self.bulbasaurURL = [NSURL URLWithString:@"http://vignette1.wikia.nocookie.net/pokemon/images/e/ea/001Bulbasaur_AG_anime.png"];
+    self.bulbasaurURL = [NSURL URLWithString:@"http://orig06.deviantart.net/4858/f/2016/088/e/3/_1_bulbasaur__gotta_trace_em_all___by_shortyvoir-d9ww5p3.png"];
     self.charmanderURL = [NSURL URLWithString:@"http://cartoonbros.com/wp-content/uploads/2016/11/Charmander-3.png"];
     
     //Session
@@ -100,6 +100,12 @@
     return (soFar *1.0f)/(totalBytes*1.0);
 }
 
+-(void)cleanupUI {
+    self.imageView.image = nil;
+    self.progressIndicatorView.progress = 0.0f;
+    [self.ativityView startAnimating];
+}
+
 #pragma mark - Actions
 -(void) crashApp:(id)sender {
     //Crash by sending an unrecognized message
@@ -107,7 +113,10 @@
 }
 
 -(void)download:(id)sender {
+    [self cleanupUI];
     
+    NSURLSessionDownloadTask *task = [self.downloadSession downloadTaskWithURL:self.bulbasaurURL];
+    [task resume];
 }
 
 -(void)downloadInBackground:(id)sender {
@@ -140,7 +149,7 @@
     
     NSData *imgData = [NSData dataWithContentsOfURL:location];
     UIImage *img = [UIImage imageWithData:imgData];
-    
+
     dispatch_async(dispatch_get_main_queue(), ^{
         self.imageView.image = img;
         [self.ativityView stopAnimating];

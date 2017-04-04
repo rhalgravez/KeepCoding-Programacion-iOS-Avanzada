@@ -25,6 +25,11 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan:)];
     
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    
+    //Add the gestures to the view
+    [self.view addGestureRecognizer:tap];
+    [self.view addGestureRecognizer:pan];
+    [self.view addGestureRecognizer:swipe];
 }
 
 - (void)viewDidLoad {

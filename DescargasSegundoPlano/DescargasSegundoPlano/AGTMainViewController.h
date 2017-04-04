@@ -10,4 +10,6 @@
 
 @interface AGTMainViewController : UIViewController <NSURLSessionDownloadDelegate>
 
+@property (copy, nonatomic) void (^sessionCompletionHandler)(void);
+
 @end

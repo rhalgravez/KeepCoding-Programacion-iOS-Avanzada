@@ -11,6 +11,8 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) AGTMainViewController *mainVC;
+
 @end
 
 @implementation AppDelegate
@@ -20,13 +22,22 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    AGTMainViewController *mainVC = [[AGTMainViewController alloc] init];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    self.mainVC = [[AGTMainViewController alloc] init];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:self.mainVC];
     
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+-(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
+    //Nos han despertado de nuestro sueño en background para gestionar
+    //alguna descarga en 2do plano: o ha trminado, o necesita algún tipo de credencial.
+    //Guardamos el completionhander y lo llamaremos cuando terminemos de recibir
+    //mensajes de delegado
+    self.mainVC.sessionCompletionHandler = completionHandler;
+    
 }
 
 

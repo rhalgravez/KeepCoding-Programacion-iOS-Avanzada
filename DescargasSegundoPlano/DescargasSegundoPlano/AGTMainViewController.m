@@ -25,8 +25,6 @@
 //Queue where all the delegates methods are executed
 @property (strong, nonatomic) NSOperationQueue *delegateQueue;
 
-@property (copy, nonatomic) void (^sessionCompletionHandler)(void);
-
 @end
 
 @implementation AGTMainViewController

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTBelenViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    AGTBelenViewController *belenVC = [[AGTBelenViewController alloc] init];
+    
+    self.window.rootViewController = belenVC;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

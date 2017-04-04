@@ -168,6 +168,11 @@
     } else {
         //Don't worry, be happy
         NSLog(@"Session %@ finished", session);
+        //Si tenemos un sessionCompletionHandler, lo ejecuto para
+        //que acuralicen mis snapshots en background y me vaya a dormir
+        if(self.sessionCompletionHandler) {
+            self.sessionCompletionHandler();
+        }
     }
 }
 

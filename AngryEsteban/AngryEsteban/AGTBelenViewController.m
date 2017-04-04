@@ -47,4 +47,17 @@
 }
 */
 
+#pragma mark - Actions
+-(void)didTap:(UITapGestureRecognizer *)tap {
+    
+}
+
+-(void)didPan:(UIPanGestureRecognizer *)pan {
+    
+}
+
+-(void)didSwipe:(UISwipeGestureRecognizer *)swipe {
+    
+}
+
 @end

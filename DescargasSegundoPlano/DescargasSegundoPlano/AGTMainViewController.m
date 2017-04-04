@@ -72,6 +72,11 @@
 #pragma mark - Utils
 
 -(void)setupBackgroundSession {
+    //Create background configuration
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"biz.agbo.descargas.gemelas"];
+    
+    //Create session
+    self.backgroundDonwloadSession = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:_delegateQueue];
     
 }
 

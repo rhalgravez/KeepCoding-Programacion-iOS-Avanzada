@@ -125,6 +125,10 @@
 }
 
 -(void)downloadInBackground:(id)sender {
+    [self cleanupUI];
+    
+    NSURLSessionDownloadTask *task = [self.backgroundDonwloadSession downloadTaskWithURL:self.charmanderURL];
+    [task resume];
     
 }
 

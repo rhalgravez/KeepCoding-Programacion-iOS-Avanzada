@@ -13,6 +13,11 @@
 		DFF4DE711E94452100D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE6F1E94452100D9C91E /* LaunchScreen.storyboard */; };
 		DFF4DE7F1E94463500D9C91E /* AGTBelenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE7D1E94463500D9C91E /* AGTBelenViewController.m */; };
 		DFF4DE801E94463500D9C91E /* AGTBelenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE7E1E94463500D9C91E /* AGTBelenViewController.xib */; };
+		DFF4DE871E95921D00D9C91E /* machineGunLoop.wav in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE821E95921D00D9C91E /* machineGunLoop.wav */; };
+		DFF4DE881E95921D00D9C91E /* niQueFueraYoBinLaden.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE831E95921D00D9C91E /* niQueFueraYoBinLaden.m4a */; };
+		DFF4DE891E95921D00D9C91E /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE841E95921D00D9C91E /* punch.wav */; };
+		DFF4DE8A1E95921D00D9C91E /* tape.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE851E95921D00D9C91E /* tape.caf */; };
+		DFF4DE8B1E95921D00D9C91E /* untape.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE861E95921D00D9C91E /* untape.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		DFF4DE7C1E94463500D9C91E /* AGTBelenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTBelenViewController.h; sourceTree = "<group>"; };
 		DFF4DE7D1E94463500D9C91E /* AGTBelenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBelenViewController.m; sourceTree = "<group>"; };
 		DFF4DE7E1E94463500D9C91E /* AGTBelenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTBelenViewController.xib; sourceTree = "<group>"; };
+		DFF4DE821E95921D00D9C91E /* machineGunLoop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = machineGunLoop.wav; sourceTree = "<group>"; };
+		DFF4DE831E95921D00D9C91E /* niQueFueraYoBinLaden.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = niQueFueraYoBinLaden.m4a; sourceTree = "<group>"; };
+		DFF4DE841E95921D00D9C91E /* punch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = punch.wav; sourceTree = "<group>"; };
+		DFF4DE851E95921D00D9C91E /* tape.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tape.caf; sourceTree = "<group>"; };
+		DFF4DE861E95921D00D9C91E /* untape.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = untape.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		DFF4DE601E94452100D9C91E /* AngryEsteban */ = {
 			isa = PBXGroup;
 			children = (
+				DFF4DE811E9591F500D9C91E /* Resources */,
 				DFF4DE641E94452100D9C91E /* AppDelegate.h */,
 				DFF4DE651E94452100D9C91E /* AppDelegate.m */,
 				DFF4DE781E9445E300D9C91E /* Controllers */,
@@ -85,6 +96,18 @@
 				DFF4DE7E1E94463500D9C91E /* AGTBelenViewController.xib */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DFF4DE811E9591F500D9C91E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DE821E95921D00D9C91E /* machineGunLoop.wav */,
+				DFF4DE831E95921D00D9C91E /* niQueFueraYoBinLaden.m4a */,
+				DFF4DE841E95921D00D9C91E /* punch.wav */,
+				DFF4DE851E95921D00D9C91E /* tape.caf */,
+				DFF4DE861E95921D00D9C91E /* untape.caf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +168,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF4DE881E95921D00D9C91E /* niQueFueraYoBinLaden.m4a in Resources */,
+				DFF4DE891E95921D00D9C91E /* punch.wav in Resources */,
 				DFF4DE711E94452100D9C91E /* LaunchScreen.storyboard in Resources */,
 				DFF4DE6E1E94452100D9C91E /* Assets.xcassets in Resources */,
 				DFF4DE801E94463500D9C91E /* AGTBelenViewController.xib in Resources */,
+				DFF4DE8A1E95921D00D9C91E /* tape.caf in Resources */,
+				DFF4DE871E95921D00D9C91E /* machineGunLoop.wav in Resources */,
+				DFF4DE8B1E95921D00D9C91E /* untape.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

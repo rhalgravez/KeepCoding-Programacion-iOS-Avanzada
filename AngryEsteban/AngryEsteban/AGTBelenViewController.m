@@ -7,6 +7,7 @@
 //
 
 #import "AGTBelenViewController.h"
+#import "AGTSystemSounds.h"
 
 @interface AGTBelenViewController ()
 
@@ -71,6 +72,8 @@
         [self.belenView addSubview:crack];
         
         //Maybe add a sound effect
+        [self playPunch];
+        
     }
 }
 
@@ -87,6 +90,13 @@
             self.lastShot = shot;
         }
         
+    } else if(pan.state == UIGestureRecognizerStateBegan) {
+        //Start machin gun
+        [[AGTSystemSounds sharedSystemSounds] startMachinGun];
+        
+    } else if (pan.state == UIGestureRecognizerStateEnded) {
+        //stop the machin gun
+        [[AGTSystemSounds sharedSystemSounds] stopMachinGun];
     }
 }
 
@@ -95,6 +105,9 @@
         
         if (!self.tapeView) {
             //We need to put the tape
+            
+            [[AGTSystemSounds sharedSystemSounds] tape];
+            
             self.tapeView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tape4"]];
             self.tapeView.animationImages = self.showSprite;
             self.tapeView.animationRepeatCount = 1;
@@ -106,6 +119,9 @@
             [self.tapeView startAnimating];
         } else {
             //take off the tape
+            
+            [[AGTSystemSounds sharedSystemSounds] untape];
+            
             self.tapeView.animationImages = self.hideSprite;
             self.tapeView.image = nil;
             [self.tapeView startAnimating];
@@ -129,11 +145,19 @@
             [view removeFromSuperview];
         }
         self.tapeView = nil;
+        
+        [[AGTSystemSounds sharedSystemSounds] binLaden]
+        
     }
 }
 
 -(BOOL)canBecomeFirstResponder {
     return YES;
+}
+
+#pragma mark - Sound
+-(void) playPunch {
+    [[AGTSystemSounds sharedSystemSounds] punch];
 }
 
 @end

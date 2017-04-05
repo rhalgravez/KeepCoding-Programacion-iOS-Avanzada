@@ -146,7 +146,7 @@
         }
         self.tapeView = nil;
         
-        [[AGTSystemSounds sharedSystemSounds] binLaden]
+        [[AGTSystemSounds sharedSystemSounds] binLaden];
         
     }
 }

@@ -20,4 +20,27 @@
     return shared;
 }
 
+-(void)punch {
+    
+}
+
+-(void)startMachinGun {
+    
+}
+
+-(void)stopMachinGun {
+    
+}
+
+-(void) tape {
+    
+}
+
+-(void)untape {
+    
+}
+
+-(void)binLaden {
+    
+}
 @end

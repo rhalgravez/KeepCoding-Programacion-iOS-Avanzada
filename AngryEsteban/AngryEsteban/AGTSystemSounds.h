@@ -12,4 +12,11 @@
 
 +(instancetype)sharedSystemSounds;
 
+-(void)punch;
+-(void)startMachinGun;
+-(void)stopMachinGun;
+-(void) tape;
+-(void)untape;
+-(void)binLaden;
+
 @end

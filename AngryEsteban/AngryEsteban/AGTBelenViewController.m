@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *belenView;
 
+@property (strong, nonatomic) UIImageView *lastShot;
 @end
 
 @implementation AGTBelenViewController
@@ -64,7 +65,19 @@
 }
 
 -(void)didPan:(UIPanGestureRecognizer *)pan {
-    
+    if (pan.state == UIGestureRecognizerStateChanged) {
+        CGPoint currentPosition = [pan locationInView:self.belenView];
+        CGRect lastShotRect = self.lastShot.frame;
+        
+        if (!CGRectContainsPoint(lastShotRect, currentPosition)) {
+            UIImageView *shot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bloodWound"]];
+            shot.center = currentPosition;
+            [self.belenView addSubview:shot];
+            
+            self.lastShot = shot;
+        }
+        
+    }
 }
 
 -(void)didSwipe:(UISwipeGestureRecognizer *)swipe {

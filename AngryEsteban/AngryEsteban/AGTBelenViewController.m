@@ -13,12 +13,22 @@
 @property (weak, nonatomic) IBOutlet UIImageView *belenView;
 
 @property (strong, nonatomic) UIImageView *lastShot;
+
+@property (strong, nonatomic) NSArray *showSprite;//Array to show the tape
+@property (strong, nonatomic) NSArray *hideSprite;//Array to hide the tape
+@property (strong, nonatomic) UIImageView *tapeView;
+
 @end
 
 @implementation AGTBelenViewController
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    //Sprites
+    self.showSprite = @[[UIImage imageNamed:@"tape1"], [UIImage imageNamed:@"tape2"], [UIImage imageNamed:@"tape3"], [UIImage imageNamed:@"tape4"]];
+    self.hideSprite = @[[UIImage imageNamed:@"tape4"], [UIImage imageNamed:@"tape3"], [UIImage imageNamed:@"tape2"], [UIImage imageNamed:@"tape1"]];
+    
     
     //Creat the gestures
     UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
@@ -81,6 +91,34 @@
 }
 
 -(void)didSwipe:(UISwipeGestureRecognizer *)swipe {
+    if (swipe.state == UIGestureRecognizerStateRecognized) {
+        
+        if (!self.tapeView) {
+            //We need to put the tape
+            self.tapeView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tape4"]];
+            self.tapeView.animationImages = self.showSprite;
+            self.tapeView.animationRepeatCount = 1;
+            self.tapeView.animationDuration = 0.2;
+            
+            self.tapeView.center = [swipe locationInView:self.belenView];
+            [self.belenView addSubview:self.tapeView];
+            
+            [self.tapeView startAnimating];
+        } else {
+            //take off the tape
+            self.tapeView.animationImages = self.hideSprite;
+            self.tapeView.image = nil;
+            [self.tapeView startAnimating];
+            
+            double delayInSeconds = 0.4;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                //Remove the tape
+                [self.tapeView removeFromSuperview];
+                self.tapeView = nil;
+            });
+        }
+        
+    }
     
 }
 

@@ -10,4 +10,14 @@
 
 @implementation AGTSystemSounds
 
++(instancetype)sharedSystemSounds {
+    static AGTSystemSounds *shared;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[AGTSystemSounds alloc] init];
+    });
+    
+    return shared;
+}
+
 @end

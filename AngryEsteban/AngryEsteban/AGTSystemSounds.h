@@ -10,4 +10,6 @@
 
 @interface AGTSystemSounds : NSObject
 
++(instancetype)sharedSystemSounds;
+
 @end

@@ -122,4 +122,18 @@
     
 }
 
+#pragma mark - Shake
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        for (UIView *view in self.belenView.subviews) {
+            [view removeFromSuperview];
+        }
+        self.tapeView = nil;
+    }
+}
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
 @end

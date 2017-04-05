@@ -54,7 +54,13 @@
 
 #pragma mark - Actions
 -(void)didTap:(UITapGestureRecognizer *)tap {
-    
+    if (tap.state == UIGestureRecognizerStateRecognized) {
+        UIImageView *crack = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"crackedGlass"]];
+        crack.center = [tap locationInView:self.belenView];
+        [self.belenView addSubview:crack];
+        
+        //Maybe add a sound effect
+    }
 }
 
 -(void)didPan:(UIPanGestureRecognizer *)pan {

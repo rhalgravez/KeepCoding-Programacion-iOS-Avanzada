@@ -18,6 +18,7 @@
 		DFF4DE891E95921D00D9C91E /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE841E95921D00D9C91E /* punch.wav */; };
 		DFF4DE8A1E95921D00D9C91E /* tape.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE851E95921D00D9C91E /* tape.caf */; };
 		DFF4DE8B1E95921D00D9C91E /* untape.caf in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DE861E95921D00D9C91E /* untape.caf */; };
+		DFF4DE8F1E95927A00D9C91E /* AGTSystemSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DE8E1E95927A00D9C91E /* AGTSystemSounds.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		DFF4DE841E95921D00D9C91E /* punch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = punch.wav; sourceTree = "<group>"; };
 		DFF4DE851E95921D00D9C91E /* tape.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tape.caf; sourceTree = "<group>"; };
 		DFF4DE861E95921D00D9C91E /* untape.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = untape.caf; sourceTree = "<group>"; };
+		DFF4DE8D1E95927A00D9C91E /* AGTSystemSounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSystemSounds.h; sourceTree = "<group>"; };
+		DFF4DE8E1E95927A00D9C91E /* AGTSystemSounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSystemSounds.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 		DFF4DE601E94452100D9C91E /* AngryEsteban */ = {
 			isa = PBXGroup;
 			children = (
+				DFF4DE8C1E95925B00D9C91E /* Models */,
 				DFF4DE811E9591F500D9C91E /* Resources */,
 				DFF4DE641E94452100D9C91E /* AppDelegate.h */,
 				DFF4DE651E94452100D9C91E /* AppDelegate.m */,
@@ -108,6 +112,15 @@
 				DFF4DE861E95921D00D9C91E /* untape.caf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		DFF4DE8C1E95925B00D9C91E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DE8D1E95927A00D9C91E /* AGTSystemSounds.h */,
+				DFF4DE8E1E95927A00D9C91E /* AGTSystemSounds.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4DE661E94452100D9C91E /* AppDelegate.m in Sources */,
+				DFF4DE8F1E95927A00D9C91E /* AGTSystemSounds.m in Sources */,
 				DFF4DE631E94452100D9C91E /* main.m in Sources */,
 				DFF4DE7F1E94463500D9C91E /* AGTBelenViewController.m in Sources */,
 			);

@@ -48,7 +48,16 @@
 -(void)userDidTap:(UITapGestureRecognizer *)tap {
     CGPoint newCenter = [tap locationInView:self.spaceView];
     
-    self.xwingView.center = newCenter;
+    UIViewAnimationOptions options = 0;
+    
+    [UIView animateWithDuration:1
+                          delay:0
+                        options:options animations:^{
+                            self.xwingView.center = newCenter;
+                        }
+                     completion:^(BOOL finished) {
+                         //For now we do nothing here
+                     }];
 }
 
 @end

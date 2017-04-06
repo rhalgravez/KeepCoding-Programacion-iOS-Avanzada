@@ -48,7 +48,7 @@
 -(void)userDidTap:(UITapGestureRecognizer *)tap {
     CGPoint newCenter = [tap locationInView:self.spaceView];
     
-    UIViewAnimationOptions options = 0;
+    UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState;
     
     [UIView animateWithDuration:1
                           delay:0
@@ -57,6 +57,22 @@
                         }
                      completion:^(BOOL finished) {
                          //For now we do nothing here
+                     }];
+    
+   [ UIView animateWithDuration:0.5
+                          delay:0
+                        options:options
+                     animations:^{
+                         self.xwingView.transform = CGAffineTransformMakeRotation(M_2_PI);
+                     } completion:^(BOOL finished) {
+                         
+                         [UIView animateWithDuration:0.5
+                                               delay:0
+                                             options:options
+                                          animations:^{
+                                              self.xwingView.transform = CGAffineTransformIdentity;
+                                          } completion:nil];
+                         
                      }];
 }
 

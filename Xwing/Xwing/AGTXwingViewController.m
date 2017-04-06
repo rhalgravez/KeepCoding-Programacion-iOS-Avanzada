@@ -46,7 +46,9 @@
 
 #pragma mark - Action
 -(void)userDidTap:(UITapGestureRecognizer *)tap {
-    NSLog(@"User tap");
+    CGPoint newCenter = [tap locationInView:self.spaceView];
+    
+    self.xwingView.center = newCenter;
 }
 
 @end

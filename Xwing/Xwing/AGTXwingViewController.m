@@ -17,6 +17,13 @@
 
 @implementation AGTXwingViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidTap:)];
+    [self.view addGestureRecognizer:tap];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -36,5 +43,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Action
+-(void)userDidTap:(UITapGestureRecognizer *)tap {
+    NSLog(@"User tap");
+}
 
 @end

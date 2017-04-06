@@ -22,6 +22,9 @@
     
     UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidTap:)];
     [self.view addGestureRecognizer:tap];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSwipe:)];
+    [self.view addGestureRecognizer:swipe];
 }
 
 - (void)viewDidLoad {
@@ -45,6 +48,21 @@
 */
 
 #pragma mark - Action
+-(void)userDidSwipe:(UISwipeGestureRecognizer *) swipe {
+    if (swipe.state == UIGestureRecognizerStateRecognized) {
+        static CGFloat angle = 0;
+        [UIView animateWithDuration:3
+                              delay:0
+             usingSpringWithDamping:0.2
+              initialSpringVelocity:0.8
+                            options:0
+                         animations:^{
+                             angle = angle + M_PI_2;
+                             self.xwingView.transform = CGAffineTransformMakeRotation(angle);
+                         } completion:nil];
+    }
+}
+
 -(void)userDidTap:(UITapGestureRecognizer *)tap {
     CGPoint newCenter = [tap locationInView:self.spaceView];
     

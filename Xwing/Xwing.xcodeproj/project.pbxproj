@@ -11,6 +11,8 @@
 		DFF4DEA11E96BE9B00D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEA01E96BE9B00D9C91E /* AppDelegate.m */; };
 		DFF4DEA91E96BE9B00D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DEA81E96BE9B00D9C91E /* Assets.xcassets */; };
 		DFF4DEAC1E96BE9B00D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DEAA1E96BE9B00D9C91E /* LaunchScreen.storyboard */; };
+		DFF4DEB71E96C03900D9C91E /* AGTXwingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEB51E96C03900D9C91E /* AGTXwingViewController.m */; };
+		DFF4DEB81E96C03900D9C91E /* AGTXwingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DEB61E96C03900D9C91E /* AGTXwingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		DFF4DEA81E96BE9B00D9C91E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF4DEAB1E96BE9B00D9C91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF4DEAD1E96BE9B00D9C91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF4DEB41E96C03900D9C91E /* AGTXwingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTXwingViewController.h; sourceTree = "<group>"; };
+		DFF4DEB51E96C03900D9C91E /* AGTXwingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTXwingViewController.m; sourceTree = "<group>"; };
+		DFF4DEB61E96C03900D9C91E /* AGTXwingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTXwingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 		DFF4DE9B1E96BE9B00D9C91E /* Xwing */ = {
 			isa = PBXGroup;
 			children = (
+				DFF4DEB31E96BFF100D9C91E /* Controllers */,
 				DFF4DE9F1E96BE9B00D9C91E /* AppDelegate.h */,
 				DFF4DEA01E96BE9B00D9C91E /* AppDelegate.m */,
 				DFF4DEA81E96BE9B00D9C91E /* Assets.xcassets */,
@@ -69,6 +75,16 @@
 				DFF4DE9D1E96BE9B00D9C91E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF4DEB31E96BFF100D9C91E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DEB41E96C03900D9C91E /* AGTXwingViewController.h */,
+				DFF4DEB51E96C03900D9C91E /* AGTXwingViewController.m */,
+				DFF4DEB61E96C03900D9C91E /* AGTXwingViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +147,7 @@
 			files = (
 				DFF4DEAC1E96BE9B00D9C91E /* LaunchScreen.storyboard in Resources */,
 				DFF4DEA91E96BE9B00D9C91E /* Assets.xcassets in Resources */,
+				DFF4DEB81E96C03900D9C91E /* AGTXwingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4DEA11E96BE9B00D9C91E /* AppDelegate.m in Sources */,
+				DFF4DEB71E96C03900D9C91E /* AGTXwingViewController.m in Sources */,
 				DFF4DE9E1E96BE9B00D9C91E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

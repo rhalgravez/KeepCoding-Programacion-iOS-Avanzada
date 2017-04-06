@@ -10,6 +10,9 @@
 
 @interface AGTXwingViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *spaceView;
+@property (weak, nonatomic) IBOutlet UIImageView *xwingView;
+
 @end
 
 @implementation AGTXwingViewController

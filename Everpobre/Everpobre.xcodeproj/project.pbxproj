@@ -11,6 +11,7 @@
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
 		DFF4DED61E9BF1C200D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED41E9BF1C200D9C91E /* LaunchScreen.storyboard */; };
+		DFF4DEE01E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEDF1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF4DED51E9BF1C200D9C91E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF4DED71E9BF1C200D9C91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFF4DEDE1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleCoreDataStack.h; sourceTree = "<group>"; };
+		DFF4DEDF1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		DFF4DEC51E9BF1C200D9C91E /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				DFF4DEDD1E9BF3BB00D9C91E /* Models */,
 				DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */,
 				DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */,
 				DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */,
@@ -69,6 +73,15 @@
 				DFF4DEC71E9BF1C200D9C91E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF4DEDD1E9BF3BB00D9C91E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4DEDE1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.h */,
+				DFF4DEDF1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +156,7 @@
 			files = (
 				DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */,
 				DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */,
+				DFF4DEE01E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

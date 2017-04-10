@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Note" syncable="YES">
-        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="modificationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="NamedEntity" syncable="YES">
+        <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="modificationDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Note" parentEntity="NamedEntity" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Notebook" syncable="YES">
-        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="modificationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
+    <entity name="Notebook" parentEntity="NamedEntity" syncable="YES"/>
     <elements>
-        <element name="Notebook" positionX="-45" positionY="-9" width="128" height="88"/>
-        <element name="Note" positionX="-9" positionY="45" width="128" height="105"/>
+        <element name="Notebook" positionX="-45" positionY="-9" width="128" height="43"/>
+        <element name="Note" positionX="-9" positionY="45" width="128" height="60"/>
+        <element name="NamedEntity" positionX="18" positionY="90" width="128" height="90"/>
     </elements>
 </model>

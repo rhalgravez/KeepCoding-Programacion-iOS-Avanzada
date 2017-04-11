@@ -13,6 +13,12 @@
 		DFF4DED61E9BF1C200D9C91E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED41E9BF1C200D9C91E /* LaunchScreen.storyboard */; };
 		DFF4DEE01E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEDF1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m */; };
 		DFF4DEE31E9C0B5B00D9C91E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEE11E9C0B5B00D9C91E /* Model.xcdatamodeld */; };
+		DFF4DF421E9D7E1E00D9C91E /* _AGTNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF371E9D7E1E00D9C91E /* _AGTNamedEntity.m */; };
+		DFF4DF431E9D7E1E00D9C91E /* _AGTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF391E9D7E1E00D9C91E /* _AGTNote.m */; };
+		DFF4DF441E9D7E1E00D9C91E /* _AGTNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF3B1E9D7E1E00D9C91E /* _AGTNotebook.m */; };
+		DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF3D1E9D7E1E00D9C91E /* AGTNamedEntity.m */; };
+		DFF4DF461E9D7E1E00D9C91E /* AGTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF3F1E9D7E1E00D9C91E /* AGTNote.m */; };
+		DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF411E9D7E1E00D9C91E /* AGTNotebook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,18 @@
 		DFF4DEDE1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleCoreDataStack.h; sourceTree = "<group>"; };
 		DFF4DEDF1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleCoreDataStack.m; sourceTree = "<group>"; };
 		DFF4DEE21E9C0B5B00D9C91E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DFF4DF361E9D7E1E00D9C91E /* _AGTNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTNamedEntity.h; sourceTree = "<group>"; };
+		DFF4DF371E9D7E1E00D9C91E /* _AGTNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTNamedEntity.m; sourceTree = "<group>"; };
+		DFF4DF381E9D7E1E00D9C91E /* _AGTNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTNote.h; sourceTree = "<group>"; };
+		DFF4DF391E9D7E1E00D9C91E /* _AGTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTNote.m; sourceTree = "<group>"; };
+		DFF4DF3A1E9D7E1E00D9C91E /* _AGTNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTNotebook.h; sourceTree = "<group>"; };
+		DFF4DF3B1E9D7E1E00D9C91E /* _AGTNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTNotebook.m; sourceTree = "<group>"; };
+		DFF4DF3C1E9D7E1E00D9C91E /* AGTNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNamedEntity.h; sourceTree = "<group>"; };
+		DFF4DF3D1E9D7E1E00D9C91E /* AGTNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNamedEntity.m; sourceTree = "<group>"; };
+		DFF4DF3E1E9D7E1E00D9C91E /* AGTNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNote.h; sourceTree = "<group>"; };
+		DFF4DF3F1E9D7E1E00D9C91E /* AGTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNote.m; sourceTree = "<group>"; };
+		DFF4DF401E9D7E1E00D9C91E /* AGTNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebook.h; sourceTree = "<group>"; };
+		DFF4DF411E9D7E1E00D9C91E /* AGTNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebook.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,18 @@
 				DFF4DEDE1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.h */,
 				DFF4DEDF1E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m */,
 				DFF4DEE11E9C0B5B00D9C91E /* Model.xcdatamodeld */,
+				DFF4DF361E9D7E1E00D9C91E /* _AGTNamedEntity.h */,
+				DFF4DF371E9D7E1E00D9C91E /* _AGTNamedEntity.m */,
+				DFF4DF381E9D7E1E00D9C91E /* _AGTNote.h */,
+				DFF4DF391E9D7E1E00D9C91E /* _AGTNote.m */,
+				DFF4DF3A1E9D7E1E00D9C91E /* _AGTNotebook.h */,
+				DFF4DF3B1E9D7E1E00D9C91E /* _AGTNotebook.m */,
+				DFF4DF3C1E9D7E1E00D9C91E /* AGTNamedEntity.h */,
+				DFF4DF3D1E9D7E1E00D9C91E /* AGTNamedEntity.m */,
+				DFF4DF3E1E9D7E1E00D9C91E /* AGTNote.h */,
+				DFF4DF3F1E9D7E1E00D9C91E /* AGTNote.m */,
+				DFF4DF401E9D7E1E00D9C91E /* AGTNotebook.h */,
+				DFF4DF411E9D7E1E00D9C91E /* AGTNotebook.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -158,8 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */,
+				DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */,
+				DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */,
+				DFF4DF421E9D7E1E00D9C91E /* _AGTNamedEntity.m in Sources */,
+				DFF4DF441E9D7E1E00D9C91E /* _AGTNotebook.m in Sources */,
+				DFF4DF431E9D7E1E00D9C91E /* _AGTNote.m in Sources */,
 				DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */,
 				DFF4DEE01E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m in Sources */,
+				DFF4DF461E9D7E1E00D9C91E /* AGTNote.m in Sources */,
 				DFF4DEE31E9C0B5B00D9C91E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +343,7 @@
 				DFF4DEDC1E9BF1C200D9C91E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

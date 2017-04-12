@@ -14,6 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class AGTNotebook;
+@class AGTPhoto;
 
 @interface AGTNoteID : AGTNamedEntityID {}
 @end
@@ -28,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) AGTNotebook *notebook;
 
+@property (nonatomic, strong, nullable) AGTPhoto *photo;
+
 @end
 
 @interface _AGTNote (CoreDataGeneratedPrimitiveAccessors)
@@ -38,6 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (AGTNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(AGTNotebook*)value;
 
+- (AGTPhoto*)primitivePhoto;
+- (void)setPrimitivePhoto:(AGTPhoto*)value;
+
 @end
 
 @interface AGTNoteAttributes: NSObject 
@@ -46,6 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AGTNoteRelationships: NSObject
 + (NSString *)notebook;
++ (NSString *)photo;
 @end
 
 NS_ASSUME_NONNULL_END

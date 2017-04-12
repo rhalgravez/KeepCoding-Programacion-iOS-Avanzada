@@ -36,6 +36,8 @@
 
 @dynamic notebook;
 
+@dynamic photo;
+
 @end
 
 @implementation AGTNoteAttributes 
@@ -47,6 +49,9 @@
 @implementation AGTNoteRelationships 
 + (NSString *)notebook {
 	return @"notebook";
+}
++ (NSString *)photo {
+	return @"photo";
 }
 @end
 

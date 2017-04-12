@@ -19,6 +19,8 @@
 		DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF3D1E9D7E1E00D9C91E /* AGTNamedEntity.m */; };
 		DFF4DF461E9D7E1E00D9C91E /* AGTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF3F1E9D7E1E00D9C91E /* AGTNote.m */; };
 		DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF411E9D7E1E00D9C91E /* AGTNotebook.m */; };
+		DFF4DF4C1E9EA98100D9C91E /* _AGTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF491E9EA98100D9C91E /* _AGTPhoto.m */; };
+		DFF4DF4D1E9EA98100D9C91E /* AGTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DF4B1E9EA98100D9C91E /* AGTPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		DFF4DF3F1E9D7E1E00D9C91E /* AGTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNote.m; sourceTree = "<group>"; };
 		DFF4DF401E9D7E1E00D9C91E /* AGTNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebook.h; sourceTree = "<group>"; };
 		DFF4DF411E9D7E1E00D9C91E /* AGTNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebook.m; sourceTree = "<group>"; };
+		DFF4DF481E9EA98100D9C91E /* _AGTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTPhoto.h; sourceTree = "<group>"; };
+		DFF4DF491E9EA98100D9C91E /* _AGTPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTPhoto.m; sourceTree = "<group>"; };
+		DFF4DF4A1E9EA98100D9C91E /* AGTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhoto.h; sourceTree = "<group>"; };
+		DFF4DF4B1E9EA98100D9C91E /* AGTPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +113,16 @@
 				DFF4DF391E9D7E1E00D9C91E /* _AGTNote.m */,
 				DFF4DF3A1E9D7E1E00D9C91E /* _AGTNotebook.h */,
 				DFF4DF3B1E9D7E1E00D9C91E /* _AGTNotebook.m */,
+				DFF4DF481E9EA98100D9C91E /* _AGTPhoto.h */,
+				DFF4DF491E9EA98100D9C91E /* _AGTPhoto.m */,
 				DFF4DF3C1E9D7E1E00D9C91E /* AGTNamedEntity.h */,
 				DFF4DF3D1E9D7E1E00D9C91E /* AGTNamedEntity.m */,
 				DFF4DF3E1E9D7E1E00D9C91E /* AGTNote.h */,
 				DFF4DF3F1E9D7E1E00D9C91E /* AGTNote.m */,
 				DFF4DF401E9D7E1E00D9C91E /* AGTNotebook.h */,
 				DFF4DF411E9D7E1E00D9C91E /* AGTNotebook.m */,
+				DFF4DF4A1E9EA98100D9C91E /* AGTPhoto.h */,
+				DFF4DF4B1E9EA98100D9C91E /* AGTPhoto.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF4DF4C1E9EA98100D9C91E /* _AGTPhoto.m in Sources */,
 				DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */,
 				DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */,
 				DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */,
@@ -197,6 +208,7 @@
 				DFF4DEE01E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m in Sources */,
 				DFF4DF461E9D7E1E00D9C91E /* AGTNote.m in Sources */,
 				DFF4DEE31E9C0B5B00D9C91E /* Model.xcdatamodeld in Sources */,
+				DFF4DF4D1E9EA98100D9C91E /* AGTPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

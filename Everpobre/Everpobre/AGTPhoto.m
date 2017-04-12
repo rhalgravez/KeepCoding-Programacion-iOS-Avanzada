@@ -35,7 +35,29 @@
     
     photo.imageData = UIImagePNGRepresentation(image);
     
+    //Notification for memory warning
+    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+    [notification addObserver:photo selector:@selector(notifyThatDidReceiveMemoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    
+    
     return photo;
 }
+
+#pragma mark - Notifications
+
+//UIApplicationDidReceiveMemoryWarningNotification
+-(void)notifyThatDidReceiveMemoryWarning:(NSNotification *)notification {
+    
+    _image = nil;
+    
+}
+
+#pragma mark - Lifecycle
+-(void)dealloc {
+    //dealloc the notification
+    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+    [notification removeObserver:self];
+}
+
 
 @end

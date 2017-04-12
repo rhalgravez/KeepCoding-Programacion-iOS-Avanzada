@@ -10,21 +10,16 @@
 
 // Custom logic goes here.
 
-@synthesize image = _image;
-
 #pragma mark - Properties
 
 -(void)setImage:(UIImage *)image {
-    _image = image;
     
     self.imageData = UIImagePNGRepresentation(image);
 }
 
 -(UIImage *)image {
-    if (!_image) {
-        _image = [UIImage imageWithData:self.imageData];
-    }
-    return _image;
+    
+    return [UIImage imageWithData:self.imageData];
 }
 
 #pragma mark - Class Methods
@@ -35,29 +30,7 @@
     
     photo.imageData = UIImagePNGRepresentation(image);
     
-    //Notification for memory warning
-    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
-    [notification addObserver:photo selector:@selector(notifyThatDidReceiveMemoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
-    
-    
     return photo;
 }
-
-#pragma mark - Notifications
-
-//UIApplicationDidReceiveMemoryWarningNotification
--(void)notifyThatDidReceiveMemoryWarning:(NSNotification *)notification {
-    
-    _image = nil;
-    
-}
-
-#pragma mark - Lifecycle
--(void)dealloc {
-    //dealloc the notification
-    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
-    [notification removeObserver:self];
-}
-
 
 @end

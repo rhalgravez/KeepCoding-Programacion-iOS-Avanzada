@@ -22,6 +22,8 @@
     // Override point for customization after application launch.
     self.model = [AGTSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
     
+    [self trastearConDatos];
+    
     return YES;
 }
 
@@ -69,8 +71,26 @@
                                     notebook:novias
                                      context:self.model.context];
     
+    //Search
+    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AGTNote entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes name]
+                                                          ascending:YES],
+                            [NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes modificationDate] ascending:NO]];
+    
+    NSError *error = nil;
+    NSArray *results = [self.model.context executeFetchRequest:req error:&error];
+    if(results == nil) {
+        NSLog(@"Error al buscar: %@", error);
+    } else {
+        NSLog(@"Results %@", results);
+    }
+
+    
     //Save
     [self save];
+    
+    //Delete
+    [self.model.context deleteObject:camila];
 }
 
 -(void)save {

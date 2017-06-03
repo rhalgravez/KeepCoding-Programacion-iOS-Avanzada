@@ -28,7 +28,7 @@
     
     AGTPhoto *photo = [NSEntityDescription insertNewObjectForEntityForName:[AGTPhoto entityName] inManagedObjectContext:context];
     
-    photo.imageData = UIImagePNGRepresentation(image);
+    photo.imageData = UIImageJPEGRepresentation(image, 0.9);
     
     return photo;
 }

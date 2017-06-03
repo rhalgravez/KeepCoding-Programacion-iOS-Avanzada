@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AGTSimpleCoreDataStack.h"
+#import "AGTNotebook.h"
+#import "AGTNote.h"
 
 @interface AppDelegate ()
 
@@ -50,5 +52,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Utils
+
+-(void)trastearConDatos {
+    
+    AGTNotebook *novias = [AGTNotebook notebookWithName:@"Ex-novias para el recuerdo"
+                                                context:self.model.context];
+    
+    AGTNote *camila = [AGTNote noteWithName:@"Camila Dávalos"
+                                   notebook:novias
+                                    context:self.model.context];
+    
+    AGTNote *pampita = [AGTNote noteWithName:@"Pampita"
+                                    notebook:novias
+                                     context:self.model.context];
+    
+}
 
 @end

@@ -56,4 +56,22 @@
     self.modificationDate = [NSDate date];
     
 }
+
+#pragma mark - LifeCycle
+
+-(void)awakeFromInsert {
+    [super awakeFromInsert];
+    [self setupKVO];
+}
+
+-(void)awakeFromFetch {
+    [super awakeFromFetch];
+    [self setupKVO];
+}
+
+-(void)willTurnIntoFault {
+    [super willTurnIntoFault];
+    [self tearDownKVO];
+}
+
 @end

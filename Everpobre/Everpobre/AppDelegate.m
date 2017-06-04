@@ -10,6 +10,7 @@
 #import "AGTSimpleCoreDataStack.h"
 #import "AGTNotebook.h"
 #import "AGTNote.h"
+#import "Settings.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,7 @@
     self.model = [AGTSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
     
     [self trastearConDatos];
+    [self autoSave];
     
     return YES;
 }
@@ -97,6 +99,15 @@
     [self.model saveWithErrorBlock:^(NSError *error) {
         NSLog(@"Error al guardar %s \n\n %@", __func__, error);
     }];
+}
+
+-(void)autoSave {
+    
+    if (AUTO_SAVE) {
+        NSLog(@"Saving...");
+        [self save];
+        [self performSelector:@selector(autoSave) withObject:nil afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
+    }
 }
 
 @end

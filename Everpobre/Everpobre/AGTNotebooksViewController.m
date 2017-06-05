@@ -7,6 +7,7 @@
 //
 
 #import "AGTNotebooksViewController.h"
+#import "AGTNotebook.h"
 
 @interface AGTNotebooksViewController ()
 
@@ -14,24 +15,28 @@
 
 @implementation AGTNotebooksViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+#pragma mark - Data Source
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Find out which notbook
+    AGTNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //Create cell
+    static NSString *cellIdentifier = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    
+    //Sync botebook with the cell
+    cell.textLabel.text = notebook.name;
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    format.dateStyle = NSDateFormatterMediumStyle;
+    cell.detailTextLabel.text = [format stringFromDate:notebook.modificationDate];
+    
+    //Return cell
+    return cell;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

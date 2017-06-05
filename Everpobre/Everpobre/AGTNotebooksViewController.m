@@ -15,6 +15,12 @@
 
 @implementation AGTNotebooksViewController
 
+#pragma mark - View Lifecycle
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.title = @"Everpobre";
+}
+
 #pragma mark - Data Source
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //Find out which notbook

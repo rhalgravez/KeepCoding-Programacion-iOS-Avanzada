@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6245F78A1EE608C900235641 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F7891EE608C900235641 /* AGTCoreDataTableViewController.m */; };
+		6245F78D1EE609AE00235641 /* AGTNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */; };
 		DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEC71E9BF1C200D9C91E /* main.m */; };
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
@@ -25,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		6245F7861EE38F7100235641 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		6245F7881EE608C900235641 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		6245F7891EE608C900235641 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		6245F78B1EE609AE00235641 /* AGTNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebooksViewController.h; sourceTree = "<group>"; };
+		6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebooksViewController.m; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6245F7871EE608B300235641 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6245F7881EE608C900235641 /* AGTCoreDataTableViewController.h */,
+				6245F7891EE608C900235641 /* AGTCoreDataTableViewController.m */,
+				6245F78B1EE609AE00235641 /* AGTNotebooksViewController.h */,
+				6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		DFF4DEBA1E9BF1C200D9C91E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +100,7 @@
 		DFF4DEC51E9BF1C200D9C91E /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				6245F7871EE608B300235641 /* Controllers */,
 				DFF4DEDD1E9BF3BB00D9C91E /* Models */,
 				DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */,
 				DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */,
@@ -199,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6245F78D1EE609AE00235641 /* AGTNotebooksViewController.m in Sources */,
 				DFF4DF4C1E9EA98100D9C91E /* _AGTPhoto.m in Sources */,
 				DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */,
 				DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */,
@@ -207,6 +226,7 @@
 				DFF4DF441E9D7E1E00D9C91E /* _AGTNotebook.m in Sources */,
 				DFF4DF431E9D7E1E00D9C91E /* _AGTNote.m in Sources */,
 				DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */,
+				6245F78A1EE608C900235641 /* AGTCoreDataTableViewController.m in Sources */,
 				DFF4DEE01E9BF3CD00D9C91E /* AGTSimpleCoreDataStack.m in Sources */,
 				DFF4DF461E9D7E1E00D9C91E /* AGTNote.m in Sources */,
 				DFF4DEE31E9C0B5B00D9C91E /* Model.xcdatamodeld in Sources */,

@@ -11,6 +11,7 @@
 #import "AGTNotebook.h"
 #import "AGTNote.h"
 #import "Settings.h"
+#import "AGTNotebooksViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,28 @@
     
     [self trastearConDatos];
     [self autoSave];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:[AGTNotebook entityName]];
+    
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes modificationDate]
+                                                              ascending:NO],
+                                [NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes name]
+                                                              ascending:YES]];
+    
+    NSFetchedResultsController *fetchResultsC = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                                    managedObjectContext:self.model.context
+                                                                                      sectionNameKeyPath:nil
+                                                                                               cacheName:nil];
+    
+    AGTNotebooksViewController *notebookVC = [[AGTNotebooksViewController alloc] initWithFetchedResultsController:fetchResultsC
+                                                                                                            style:UITableViewStylePlain];
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:notebookVC];
+    self.window.rootViewController = navVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

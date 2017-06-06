@@ -35,6 +35,9 @@
     if (_context == nil) {
         _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         _context.persistentStoreCoordinator = self.storeCoordinator;
+        
+        //Enable UndoManager
+        _context.undoManager = [[NSUndoManager alloc] init];
     }
     
     return _context;

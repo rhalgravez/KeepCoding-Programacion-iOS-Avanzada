@@ -28,6 +28,22 @@
     
     //Edit button
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    //Register for the proximity sensor notification
+    UIDevice *device = [UIDevice currentDevice];
+    if ([self hasProximitySensor]) {
+        [device setProximityMonitoringEnabled:YES];
+        
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center addObserver:self selector:@selector(proximityStateDidChange:) name:UIDeviceProximityStateDidChangeNotification object:nil];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self];
 }
 
 #pragma mark - Actions
@@ -72,6 +88,24 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
+#pragma mark - Proximity Sensor
 
+-(BOOL)hasProximitySensor {
+    UIDevice *device = [UIDevice currentDevice];
+    BOOL oldValue = [device isProximityMonitoringEnabled];
+    [device setProximityMonitoringEnabled:!oldValue];
+    BOOL newValue = [device isProximityMonitoringEnabled];
+    
+    [device setProximityMonitoringEnabled:oldValue];
+    
+    return (oldValue != newValue);
+}
+
+//UIDeviceProximityStateDidChangeNotification
+-(void)proximityStateDidChange:(NSNotification *)notification {
+    
+    [self.fetchedResultsController.managedObjectContext.undoManager undo];
+    
+}
 
 @end

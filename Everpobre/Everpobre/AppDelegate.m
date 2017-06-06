@@ -12,6 +12,7 @@
 #import "AGTNote.h"
 #import "Settings.h"
 #import "AGTNotebooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 @interface AppDelegate ()
 
@@ -44,8 +45,7 @@
     AGTNotebooksViewController *notebookVC = [[AGTNotebooksViewController alloc] initWithFetchedResultsController:fetchResultsC
                                                                                                             style:UITableViewStylePlain];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:notebookVC];
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = [notebookVC wrappedInNavigation];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

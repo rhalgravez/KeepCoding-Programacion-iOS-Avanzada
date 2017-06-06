@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6245F78A1EE608C900235641 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F7891EE608C900235641 /* AGTCoreDataTableViewController.m */; };
 		6245F78D1EE609AE00235641 /* AGTNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */; };
+		6245F7911EE73C9D00235641 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F7901EE73C9D00235641 /* UIViewController+Navigation.m */; };
 		DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEC71E9BF1C200D9C91E /* main.m */; };
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
@@ -31,6 +32,8 @@
 		6245F7891EE608C900235641 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
 		6245F78B1EE609AE00235641 /* AGTNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebooksViewController.h; sourceTree = "<group>"; };
 		6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebooksViewController.m; sourceTree = "<group>"; };
+		6245F78F1EE73C9D00235641 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		6245F7901EE73C9D00235641 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		6245F78E1EE73C2E00235641 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6245F78F1EE73C9D00235641 /* UIViewController+Navigation.h */,
+				6245F7901EE73C9D00235641 /* UIViewController+Navigation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		DFF4DEBA1E9BF1C200D9C91E = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 		DFF4DEC51E9BF1C200D9C91E /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				6245F78E1EE73C2E00235641 /* Categories */,
 				6245F7871EE608B300235641 /* Controllers */,
 				DFF4DEDD1E9BF3BB00D9C91E /* Models */,
 				DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */,
@@ -223,6 +236,7 @@
 				DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */,
 				DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */,
 				DFF4DF421E9D7E1E00D9C91E /* _AGTNamedEntity.m in Sources */,
+				6245F7911EE73C9D00235641 /* UIViewController+Navigation.m in Sources */,
 				DFF4DF441E9D7E1E00D9C91E /* _AGTNotebook.m in Sources */,
 				DFF4DF431E9D7E1E00D9C91E /* _AGTNote.m in Sources */,
 				DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */,

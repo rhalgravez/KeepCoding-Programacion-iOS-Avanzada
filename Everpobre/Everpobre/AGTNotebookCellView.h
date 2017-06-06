@@ -13,4 +13,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *nameView;
 @property (nonatomic, strong) IBOutlet UILabel *numberOfNotesView;
 
+
++(NSString *)cellIdentifier;
++(CGFloat)cellHeight;
+
 @end

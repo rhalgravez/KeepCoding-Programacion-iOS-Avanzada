@@ -10,6 +10,16 @@
 
 @implementation AGTNotebookCellView
 
+#pragma mark - Class methods
+
++(NSString *)cellIdentifier {
+    return NSStringFromClass(self);
+}
+
++(CGFloat)cellHeight {
+    return 60;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

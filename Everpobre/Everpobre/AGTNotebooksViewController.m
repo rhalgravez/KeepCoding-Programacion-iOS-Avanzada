@@ -23,8 +23,11 @@
     //Create button with target and action
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNotebook:)];
     
-    //Add nutton to the navigation bar
+    //Add button to the navigation bar
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    //Edit button
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 #pragma mark - Actions
@@ -54,6 +57,19 @@
     
     //Return cell
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //Find out which notebook i have to delete
+        AGTNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+        //Delete the notebook from the model
+        [self.fetchedResultsController.managedObjectContext deleteObject:notebook];
+    }
 }
 
 

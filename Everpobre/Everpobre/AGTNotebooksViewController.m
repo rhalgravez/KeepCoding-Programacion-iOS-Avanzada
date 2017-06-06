@@ -19,6 +19,19 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.title = @"Everpobre";
+    
+    //Create button with target and action
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNotebook:)];
+    
+    //Add nutton to the navigation bar
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
+#pragma mark - Actions
+-(void)addNotebook:(id)sender {
+    //What we need if we want to create a noebook and show it
+    //1)Create new AGTNotebook instance
+    [AGTNotebook notebookWithName:@"New Notebook" context:self.fetchedResultsController.managedObjectContext];
 }
 
 #pragma mark - Data Source

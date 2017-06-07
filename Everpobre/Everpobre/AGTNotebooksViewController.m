@@ -8,6 +8,7 @@
 
 #import "AGTNotebooksViewController.h"
 #import "AGTNotebook.h"
+#import "AGTNotebookCellView.h"
 
 @interface AGTNotebooksViewController ()
 
@@ -37,6 +38,10 @@
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         [center addObserver:self selector:@selector(proximityStateDidChange:) name:UIDeviceProximityStateDidChangeNotification object:nil];
     }
+    
+    //Register the nib file
+    UINib *cellNib = [UINib nibWithNibName:@"AGTNotebookCellView" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:[AGTNotebookCellView cellIdentifier]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -59,20 +64,20 @@
     AGTNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     //Create cell
-    static NSString *cellIdentifier = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-    }
+    AGTNotebookCellView *cell = [tableView dequeueReusableCellWithIdentifier:[AGTNotebookCellView cellIdentifier]];
+    
     
     //Sync botebook with the cell
-    cell.textLabel.text = notebook.name;
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    format.dateStyle = NSDateFormatterMediumStyle;
-    cell.detailTextLabel.text = [format stringFromDate:notebook.modificationDate];
+    cell.nameView.text = notebook.name;
+    cell.numberOfNotesView.text = [NSString stringWithFormat:@"%lu", notebook.notes.count];
     
     //Return cell
     return cell;
+}
+
+#pragma mark - TableView Delegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [AGTNotebookCellView cellHeight];
 }
 
 -(void)tableView:(UITableView *)tableView

@@ -7,7 +7,10 @@
 //
 
 #import "AGTCoreDataTableViewController.h"
+#import "AGTNotebook.h"
 
 @interface AGTNotesTableViewController : AGTCoreDataTableViewController
+
+-(instancetype)initWithNotebook:(AGTNotebook *)notebook;
 
 @end

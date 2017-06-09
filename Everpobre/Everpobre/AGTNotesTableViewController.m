@@ -7,31 +7,35 @@
 //
 
 #import "AGTNotesTableViewController.h"
+#import "AGTNote.h"
 
 @interface AGTNotesTableViewController ()
+
+@property(nonatomic, strong) AGTNotebook *model;//Property to save the model
 
 @end
 
 @implementation AGTNotesTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(instancetype)initWithNotebook:(AGTNotebook *)notebook {
+    
+    //1) Create fetch request
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[AGTNote entityName]];
+    //2) Create predicate
+    request.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", notebook];
+    //3) Create a sortDescriptor so we can put a FetchRequest inside of a FetchResult
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes name] ascending:YES]];
+    //4) Create FetchResult
+    NSFetchedResultsController *result =[[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:notebook.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    if (self = [super initWithFetchedResultsController:result style:UITableViewStylePlain]) {
+        self.fetchedResultsController = result;
+        self.model = notebook;
+        self.title = notebook.name;
+    }
+    
+    return self;
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

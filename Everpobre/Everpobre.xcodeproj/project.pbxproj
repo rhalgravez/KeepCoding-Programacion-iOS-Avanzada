@@ -12,6 +12,7 @@
 		6245F7911EE73C9D00235641 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F7901EE73C9D00235641 /* UIViewController+Navigation.m */; };
 		6245F7941EE75FB000235641 /* AGTNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6245F7931EE75FB000235641 /* AGTNotebookCellView.xib */; };
 		6245F7971EE763C400235641 /* AGTNotebookCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6245F7961EE763C400235641 /* AGTNotebookCellView.m */; };
+		624AFBF41EEB304A002B8C54 /* AGTNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624AFBF31EEB304A002B8C54 /* AGTNotesTableViewController.m */; };
 		DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEC71E9BF1C200D9C91E /* main.m */; };
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 		6245F7931EE75FB000235641 /* AGTNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNotebookCellView.xib; sourceTree = "<group>"; };
 		6245F7951EE763C400235641 /* AGTNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebookCellView.h; sourceTree = "<group>"; };
 		6245F7961EE763C400235641 /* AGTNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebookCellView.m; sourceTree = "<group>"; };
+		624AFBF21EEB304A002B8C54 /* AGTNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotesTableViewController.h; sourceTree = "<group>"; };
+		624AFBF31EEB304A002B8C54 /* AGTNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotesTableViewController.m; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				6245F7891EE608C900235641 /* AGTCoreDataTableViewController.m */,
 				6245F78B1EE609AE00235641 /* AGTNotebooksViewController.h */,
 				6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */,
+				624AFBF21EEB304A002B8C54 /* AGTNotesTableViewController.h */,
+				624AFBF31EEB304A002B8C54 /* AGTNotesTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				DFF4DF461E9D7E1E00D9C91E /* AGTNote.m in Sources */,
 				DFF4DEE31E9C0B5B00D9C91E /* Model.xcdatamodeld in Sources */,
 				DFF4DF4D1E9EA98100D9C91E /* AGTPhoto.m in Sources */,
+				624AFBF41EEB304A002B8C54 /* AGTNotesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -151,6 +151,17 @@
     }];
     
     NSLog(@"Results: \n %@", results);
+    
+    //Obtener las Dávalos
+    NSPredicate *davalos = [NSCompoundPredicate andPredicateWithSubpredicates:@[novias, [NSPredicate predicateWithFormat:@"name ENDSWITH[cd] 'davalos'"]]];
+    
+    request.predicate = davalos;
+    results = [self.model executeRequest:request withError:^(NSError *error) {
+        NSLog(@"Error buscando %@", request);
+    }];
+    
+    NSLog(@"Results Davalos: \n %@", results);
+    
 }
 
 @end

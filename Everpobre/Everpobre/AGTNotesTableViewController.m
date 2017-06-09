@@ -38,4 +38,19 @@
     
 }
 
+#pragma mark - TableView Data Source
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AGTNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    static NSString *cellIdentifier = @"NoteCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = note.name;
+    
+    return cell;
+}
+
 @end

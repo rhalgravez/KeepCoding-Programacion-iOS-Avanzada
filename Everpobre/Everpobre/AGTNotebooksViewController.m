@@ -9,6 +9,7 @@
 #import "AGTNotebooksViewController.h"
 #import "AGTNotebook.h"
 #import "AGTNotebookCellView.h"
+#import "AGTNotesTableViewController.h"
 
 @interface AGTNotebooksViewController ()
 
@@ -91,6 +92,13 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
         //Delete the notebook from the model
         [self.fetchedResultsController.managedObjectContext deleteObject:notebook];
     }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AGTNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    AGTNotesTableViewController *notesVC = [[AGTNotesTableViewController alloc] initWithNotebook:notebook];
+    
+    [self.navigationController pushViewController:notesVC animated:YES];
 }
 
 #pragma mark - Proximity Sensor

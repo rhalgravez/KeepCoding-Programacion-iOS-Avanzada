@@ -162,6 +162,15 @@
     
     NSLog(@"Results Davalos: \n %@", results);
     
+    //Obtener Pampita
+    NSPredicate *pampita = [NSCompoundPredicate andPredicateWithSubpredicates:@[novias,[NSPredicate predicateWithFormat:@"name CONTAINS[cd] 'pampita'"]]];
+    
+    request.predicate = pampita;
+    results = [self.model executeRequest:request withError:^(NSError *error) {
+        NSLog(@"Error buscando %@", request);
+    }];
+    
+    NSLog(@"Results Pampita: \n %@", results);
 }
 
 @end

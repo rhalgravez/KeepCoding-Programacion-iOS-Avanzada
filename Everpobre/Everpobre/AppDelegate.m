@@ -26,6 +26,7 @@
     self.model = [AGTSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
     
     [self trastearConDatos];
+    [self predicateTest];
     [self autoSave];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -89,12 +90,12 @@
                                                 context:self.model.context];
     
     __unused AGTNote *camila = [AGTNote noteWithName:@"Camila Dávalos"
-                                   notebook:novias
-                                    context:self.model.context];
+                                            notebook:novias
+                                             context:self.model.context];
     
     [AGTNote noteWithName:@"Pampita"
-                                    notebook:novias
-                                     context:self.model.context];
+                 notebook:novias
+                  context:self.model.context];
     
     //Search
     NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AGTNote entityName]];
@@ -102,20 +103,20 @@
                                                           ascending:YES],
                             [NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes modificationDate] ascending:NO]];
     
-    NSError *error = nil;
-    NSArray *results = [self.model.context executeFetchRequest:req error:&error];
-    if(results == nil) {
-        NSLog(@"Error al buscar: %@", error);
-    } else {
-        NSLog(@"Results %@", results);
-    }
-
+    //    NSError *error = nil;
+    //    NSArray *results = [self.model.context executeFetchRequest:req error:&error];
+    //    if(results == nil) {
+    //        NSLog(@"Error al buscar: %@", error);
+    //    } else {
+    //        NSLog(@"Results %@", results);
+    //    }
+    
     
     //Save
     [self save];
     
     //Delete
-    [self.model.context deleteObject:camila];
+    //    [self.model.context deleteObject:camila];
 }
 
 -(void)save {
@@ -131,6 +132,25 @@
         [self save];
         [self performSelector:@selector(autoSave) withObject:nil afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
     }
+}
+
+#pragma mark - Predicate Playground
+-(void)predicateTest {
+    
+    //Obtenemos las novias para el recuerdo
+    NSPredicate *novias = [NSPredicate predicateWithFormat:@"notebook.name ==[cd] 'Ex-novias para el recuerdo'"];
+    
+    //Fetch request
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:[AGTNote entityName]];
+    NSArray *results = nil;
+    
+    //Ex-Novias
+    request.predicate = novias;
+    results = [self.model executeRequest:request withError:^(NSError *error) {
+        NSLog(@"Error buscando %@", request);
+    }];
+    
+    NSLog(@"Results: \n %@", results);
 }
 
 @end

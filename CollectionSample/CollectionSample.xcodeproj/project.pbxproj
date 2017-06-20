@@ -11,6 +11,7 @@
 		62B60ED51EF9BBB400235ABE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B60ED41EF9BBB400235ABE /* AppDelegate.m */; };
 		62B60EDD1EF9BBB500235ABE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B60EDC1EF9BBB500235ABE /* Assets.xcassets */; };
 		62B60EE01EF9BBB500235ABE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B60EDE1EF9BBB500235ABE /* LaunchScreen.storyboard */; };
+		62B60EEA1EF9BE0600235ABE /* AGTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B60EE91EF9BE0600235ABE /* AGTColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		62B60EDC1EF9BBB500235ABE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62B60EDF1EF9BBB500235ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62B60EE11EF9BBB500235ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62B60EE81EF9BE0600235ABE /* AGTColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTColors.h; sourceTree = "<group>"; };
+		62B60EE91EF9BE0600235ABE /* AGTColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTColors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		62B60ECF1EF9BBB400235ABE /* CollectionSample */ = {
 			isa = PBXGroup;
 			children = (
+				62B60EE71EF9BDE100235ABE /* Model */,
 				62B60ED31EF9BBB400235ABE /* AppDelegate.h */,
 				62B60ED41EF9BBB400235ABE /* AppDelegate.m */,
 				62B60EDC1EF9BBB500235ABE /* Assets.xcassets */,
@@ -69,6 +73,15 @@
 				62B60ED11EF9BBB400235ABE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62B60EE71EF9BDE100235ABE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62B60EE81EF9BE0600235ABE /* AGTColors.h */,
+				62B60EE91EF9BE0600235ABE /* AGTColors.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +156,7 @@
 			files = (
 				62B60ED51EF9BBB400235ABE /* AppDelegate.m in Sources */,
 				62B60ED21EF9BBB400235ABE /* main.m in Sources */,
+				62B60EEA1EF9BE0600235ABE /* AGTColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

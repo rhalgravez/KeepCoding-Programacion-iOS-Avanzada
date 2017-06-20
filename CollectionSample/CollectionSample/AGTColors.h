@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
 @interface AGTColors : NSObject
+
+-(UIColor *) randomColor;
 
 @end

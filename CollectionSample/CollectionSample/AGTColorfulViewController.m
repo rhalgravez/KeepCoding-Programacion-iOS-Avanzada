@@ -34,6 +34,7 @@
     
     if (self = [super initWithCollectionViewLayout:layout]) {
         _model = model;
+        self.title = @"United colors of Agbo";
     }
     
     return self;

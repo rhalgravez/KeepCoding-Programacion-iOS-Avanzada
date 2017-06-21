@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTCOlorfulViewController.h"
+#import "AGTColors.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    AGTColors *model = [AGTColors new];
+    
+    //Create layout
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(100, 50);
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    //Create controller
+    AGTColorfulViewController *colorfulVC = [[AGTColorfulViewController alloc] initWithModel:model layout:layout];
+    
+    //Put the controller in a Navigation controller
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:colorfulVC];
+    
+    self.window.rootViewController = navVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AGTColors;
 
 @interface AGTColorfulViewController : UICollectionViewController
+
+-(instancetype)initWithModel:(AGTColors *)model layout:(UICollectionViewLayout *)layout;
 
 @end

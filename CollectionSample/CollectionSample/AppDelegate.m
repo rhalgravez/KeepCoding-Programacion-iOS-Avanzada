@@ -27,7 +27,10 @@
     //Create layout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(100, 50);
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    layout.minimumInteritemSpacing = 5;
+    layout.headerReferenceSize = CGSizeMake(60, 60);
     
     //Create controller
     AGTColorfulViewController *colorfulVC = [[AGTColorfulViewController alloc] initWithModel:model layout:layout];

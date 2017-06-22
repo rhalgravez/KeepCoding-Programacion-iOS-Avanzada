@@ -14,7 +14,13 @@
 @property (strong, nonatomic) AGTColors *model;
 
 +(NSString *)randomColorCellIdentifier;
++(NSString *)gradientColorCellIdentifier;
+
 +(NSInteger)maxRandomColorsToDisplay;
++(NSInteger)maxGradientColorsToDisplay;
+
++(NSUInteger)radomColorSection;
++(NSUInteger)gradientColorSection;
 
 @end
 
@@ -27,6 +33,21 @@
 
 +(NSInteger)maxRandomColorsToDisplay {
     return 104;
+}
+
++(NSInteger)maxGradientColorsToDisplay {
+    return 104;
+}
+
++(NSString *)gradientColorCellIdentifier {
+    return @"gradientColorCell";
+}
+
++(NSUInteger)radomColorSection {
+    return 1;
+}
++(NSUInteger)gradientColorSection {
+    return 0;
 }
 
 #pragma mark - Init
@@ -47,6 +68,7 @@
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     [self registerRandomColorCell];
+    [self registerGradientColorCell];
 }
 
 
@@ -59,6 +81,10 @@
 #pragma mark - Utils
 -(void)registerRandomColorCell {
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier]];
+}
+
+-(void)registerGradientColorCell {
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:[AGTColorfulViewController gradientColorCellIdentifier]];
 }
 
 #pragma mark - Data Source

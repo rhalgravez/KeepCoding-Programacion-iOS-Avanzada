@@ -9,6 +9,7 @@
 #import "AGTColorfulViewController.h"
 #import "AGTColors.h"
 #import "AGTRandomColorCell.h"
+#import "UIColor+Colorful.h"
 
 @interface AGTColorfulViewController ()
 
@@ -58,7 +59,7 @@
     if (self = [super initWithCollectionViewLayout:layout]) {
         _model = model;
         self.title = @"United colors of Agbo";
-        self.maxRandomColorsToDisplay = 3;
+        self.maxRandomColorsToDisplay = 104;
     }
     
     return self;
@@ -168,6 +169,16 @@
         }
     }
     return subView;
+}
+
+#pragma mark - Delegate
+-(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == [AGTColorfulViewController radomColorSection]) {
+        AGTRandomColorCell *cell = (AGTRandomColorCell*)[collectionView cellForItemAtIndexPath:indexPath];
+        cell.color = [cell.color complementaryColor];
+    }
+    
 }
 
 @end

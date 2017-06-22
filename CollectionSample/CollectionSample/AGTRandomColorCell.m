@@ -12,11 +12,20 @@
 @implementation AGTRandomColorCell
 
 -(void)awakeFromNib {
+    self.shouldAnimateChangeOfColor = NO;
     [self setupKVO];
 }
 
 -(void) dealloc {
     [self tearDownKVO];
+}
+
+#pragma mark - View lifecycle
+-(void)prepareForReuse {
+    [super prepareForReuse];
+    
+    self.shouldAnimateChangeOfColor = NO;
+    self.color = [UIColor x11WhiteColor];
 }
 
 #pragma mark - KVO
@@ -34,10 +43,17 @@
                       context:(void *)context {
     self.hexView.text = [self.color hexString];
     
-    [UIView animateWithDuration:0.6 animations:^{
+    float  duration = 0.0f;
+    if (self.shouldAnimateChangeOfColor) {
+        duration = 0.6f;
+    }
+    
+    [UIView animateWithDuration:duration animations:^{
         self.backgroundColor = self.color;
         self.hexView.textColor = [self.color contrastingTextColor];
     }];
+    
+    self.shouldAnimateChangeOfColor = YES;
 }
 
 @end

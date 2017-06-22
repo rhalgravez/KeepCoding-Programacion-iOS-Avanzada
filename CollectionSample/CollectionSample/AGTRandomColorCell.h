@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *hexView;
 
 @property (nonatomic, strong) UIColor *color;
+@property (nonatomic) BOOL shouldAnimateChangeOfColor;
 
 @end

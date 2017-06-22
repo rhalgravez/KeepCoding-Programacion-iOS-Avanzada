@@ -89,17 +89,30 @@
 
 #pragma mark - Data Source
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [AGTColorfulViewController maxRandomColorsToDisplay];
+    if (section == [AGTColorfulViewController radomColorSection]) {
+        return [AGTColorfulViewController maxRandomColorsToDisplay];
+
+    } else {
+        return [AGTColorfulViewController maxGradientColorsToDisplay];
+    }
+    
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier] forIndexPath:indexPath];
+    UICollectionViewCell *cell;
     
-    cell.backgroundColor = [self.model randomColor];
+    if (indexPath.section == [AGTColorfulViewController radomColorSection]) {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier] forIndexPath:indexPath];
+        cell.backgroundColor = [self.model randomColor];
+    } else {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController gradientColorCellIdentifier] forIndexPath:indexPath];
+        
+        cell.backgroundColor = [self.model colorInGradientAt:indexPath.item to:[AGTColorfulViewController maxGradientColorsToDisplay]];
+    }
     
     return cell;
 }

@@ -11,6 +11,7 @@
 
 @interface AGTColors : NSObject
 
+-(UIColor *)colorInGradientAt:(NSUInteger)current to:(NSUInteger)maximum;
 -(UIColor *) randomColor;
 
 @end

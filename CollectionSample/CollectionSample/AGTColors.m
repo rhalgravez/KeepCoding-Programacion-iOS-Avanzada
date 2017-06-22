@@ -10,6 +10,13 @@
 
 @implementation AGTColors
 
+-(UIColor *)colorInGradientAt:(NSUInteger)current to:(NSUInteger)maximum {
+    
+    float currentHue = (current * 1.0f) / (maximum * 1.0f);
+    
+    return [UIColor colorWithHue:currentHue saturation:1.0 brightness:0.8 alpha:1.0];
+}
+
 -(UIColor *) randomColor {
     
     return [UIColor colorWithHue:[self randomFloat]

@@ -15,6 +15,7 @@
 
 +(NSString *)randomColorCellIdentifier;
 +(NSString *)gradientColorCellIdentifier;
++(NSString *)sectionHeaderIdentifier;
 
 +(NSInteger)maxRandomColorsToDisplay;
 +(NSInteger)maxGradientColorsToDisplay;
@@ -50,6 +51,10 @@
     return 0;
 }
 
++(NSString *)sectionHeaderIdentifier {
+    return @"SectionHeader";
+}
+
 #pragma mark - Init
 -(instancetype)initWithModel:(AGTColors *)model layout:(UICollectionViewLayout *)layout {
     
@@ -69,6 +74,7 @@
     
     [self registerRandomColorCell];
     [self registerGradientColorCell];
+    [self registerSectionHedearView];
 }
 
 
@@ -85,6 +91,10 @@
 
 -(void)registerGradientColorCell {
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:[AGTColorfulViewController gradientColorCellIdentifier]];
+}
+
+-(void)registerSectionHedearView {
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[AGTColorfulViewController sectionHeaderIdentifier]];
 }
 
 #pragma mark - Data Source
@@ -115,6 +125,33 @@
     }
     
     return cell;
+}
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionReusableView *subView;
+    
+    if(kind == UICollectionElementKindSectionHeader) {
+        //REcycle header, configure it and return
+        subView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:[AGTColorfulViewController sectionHeaderIdentifier] forIndexPath:indexPath];
+        
+        subView.backgroundColor = [UIColor colorWithWhite:0.65 alpha:1.0];
+        
+        for (UIView *each in subView.subviews) {
+            [each removeFromSuperview];
+        }
+        
+        UILabel *title = [[UILabel alloc] initWithFrame:subView.bounds];
+        title.textColor = [UIColor whiteColor];
+        [subView addSubview:title];
+        
+        if (indexPath.section == [AGTColorfulViewController gradientColorSection]) {
+            title.text = @"Gradient";
+        } else {
+            title.text = @"Random";
+        }
+    }
+    return subView;
 }
 
 @end

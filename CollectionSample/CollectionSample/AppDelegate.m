@@ -30,7 +30,7 @@
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
     layout.minimumInteritemSpacing = 5;
-    layout.headerReferenceSize = CGSizeMake(60, 60);
+    layout.headerReferenceSize = CGSizeMake(30, 30);
     
     //Create controller
     AGTColorfulViewController *colorfulVC = [[AGTColorfulViewController alloc] initWithModel:model layout:layout];

@@ -12,12 +12,12 @@
 @interface AGTColorfulViewController ()
 
 @property (strong, nonatomic) AGTColors *model;
+@property (nonatomic) NSInteger maxRandomColorsToDisplay;
 
 +(NSString *)randomColorCellIdentifier;
 +(NSString *)gradientColorCellIdentifier;
 +(NSString *)sectionHeaderIdentifier;
 
-+(NSInteger)maxRandomColorsToDisplay;
 +(NSInteger)maxGradientColorsToDisplay;
 
 +(NSUInteger)radomColorSection;
@@ -32,10 +32,6 @@
     return @"randomColorCell";
 }
 
-+(NSInteger)maxRandomColorsToDisplay {
-    return 104;
-}
-
 +(NSInteger)maxGradientColorsToDisplay {
     return 104;
 }
@@ -45,10 +41,10 @@
 }
 
 +(NSUInteger)radomColorSection {
-    return 1;
+    return 0;
 }
 +(NSUInteger)gradientColorSection {
-    return 0;
+    return 1;
 }
 
 +(NSString *)sectionHeaderIdentifier {
@@ -61,6 +57,7 @@
     if (self = [super initWithCollectionViewLayout:layout]) {
         _model = model;
         self.title = @"United colors of Agbo";
+        self.maxRandomColorsToDisplay = 3;
     }
     
     return self;
@@ -75,6 +72,11 @@
     [self registerRandomColorCell];
     [self registerGradientColorCell];
     [self registerSectionHedearView];
+    
+    //Create button to add random colors
+    UIBarButtonItem *addColor = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewRandomColor:)];
+    
+    self.navigationItem.rightBarButtonItem = addColor;
 }
 
 
@@ -97,6 +99,14 @@
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[AGTColorfulViewController sectionHeaderIdentifier]];
 }
 
+#pragma mark - Actions
+-(void)addNewRandomColor:(id)sender {
+    self.maxRandomColorsToDisplay = self.maxRandomColorsToDisplay + 1;
+    
+    [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:[AGTColorfulViewController radomColorSection]]]];
+    
+}
+
 #pragma mark - Data Source
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
@@ -104,7 +114,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == [AGTColorfulViewController radomColorSection]) {
-        return [AGTColorfulViewController maxRandomColorsToDisplay];
+        return self.maxRandomColorsToDisplay;
 
     } else {
         return [AGTColorfulViewController maxGradientColorsToDisplay];

@@ -8,6 +8,7 @@
 
 #import "AGTColorfulViewController.h"
 #import "AGTColors.h"
+#import "AGTRandomColorCell.h"
 
 @interface AGTColorfulViewController ()
 
@@ -88,7 +89,11 @@
 
 #pragma mark - Utils
 -(void)registerRandomColorCell {
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier]];
+    //Read the nib
+    UINib *nib = [UINib nibWithNibName:@"AGTRandomColorCell" bundle:nil];
+    
+    //Register the nib
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier]];
 }
 
 -(void)registerGradientColorCell {
@@ -123,18 +128,19 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell;
     
     if (indexPath.section == [AGTColorfulViewController radomColorSection]) {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier] forIndexPath:indexPath];
-        cell.backgroundColor = [self.model randomColor];
+        AGTRandomColorCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController randomColorCellIdentifier] forIndexPath:indexPath];
+        cell.color = [self.model randomColor];
+        
+        return cell;
     } else {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController gradientColorCellIdentifier] forIndexPath:indexPath];
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[AGTColorfulViewController gradientColorCellIdentifier] forIndexPath:indexPath];
         
         cell.backgroundColor = [self.model colorInGradientAt:indexPath.item to:[AGTColorfulViewController maxGradientColorsToDisplay]];
-    }
     
-    return cell;
+        return cell;
+    }
 }
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {

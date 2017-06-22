@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6286C13A1EFC52AA006FA36F /* AGTRandomColorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C1391EFC52AA006FA36F /* AGTRandomColorCell.m */; };
+		6286C13E1EFC52E3006FA36F /* AGTRandomColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6286C13D1EFC52E3006FA36F /* AGTRandomColorCell.xib */; };
 		62B60ED21EF9BBB400235ABE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B60ED11EF9BBB400235ABE /* main.m */; };
 		62B60ED51EF9BBB400235ABE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B60ED41EF9BBB400235ABE /* AppDelegate.m */; };
 		62B60EDD1EF9BBB500235ABE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B60EDC1EF9BBB500235ABE /* Assets.xcassets */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6286C1381EFC52AA006FA36F /* AGTRandomColorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTRandomColorCell.h; sourceTree = "<group>"; };
+		6286C1391EFC52AA006FA36F /* AGTRandomColorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTRandomColorCell.m; sourceTree = "<group>"; };
+		6286C13D1EFC52E3006FA36F /* AGTRandomColorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTRandomColorCell.xib; sourceTree = "<group>"; };
 		62B60ECD1EF9BBB400235ABE /* CollectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B60ED11EF9BBB400235ABE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62B60ED31EF9BBB400235ABE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6286C1371EFC5278006FA36F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6286C1381EFC52AA006FA36F /* AGTRandomColorCell.h */,
+				6286C1391EFC52AA006FA36F /* AGTRandomColorCell.m */,
+				6286C13D1EFC52E3006FA36F /* AGTRandomColorCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		62B60EC41EF9BBB200235ABE = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +74,7 @@
 		62B60ECF1EF9BBB400235ABE /* CollectionSample */ = {
 			isa = PBXGroup;
 			children = (
+				6286C1371EFC5278006FA36F /* Views */,
 				62B60EEB1EF9C10000235ABE /* Controllers */,
 				62B60EE71EF9BDE100235ABE /* Model */,
 				62B60ED31EF9BBB400235ABE /* AppDelegate.h */,
@@ -156,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B60EE01EF9BBB500235ABE /* LaunchScreen.storyboard in Resources */,
+				6286C13E1EFC52E3006FA36F /* AGTRandomColorCell.xib in Resources */,
 				62B60EDD1EF9BBB500235ABE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B60ED51EF9BBB400235ABE /* AppDelegate.m in Sources */,
+				6286C13A1EFC52AA006FA36F /* AGTRandomColorCell.m in Sources */,
 				62B60ED21EF9BBB400235ABE /* main.m in Sources */,
 				62B60EEA1EF9BE0600235ABE /* AGTColors.m in Sources */,
 				62B60EEE1EF9C19900235ABE /* AGTColorfulViewController.m in Sources */,

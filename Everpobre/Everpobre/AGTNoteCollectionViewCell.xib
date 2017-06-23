@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lyV-7l-u8X">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lyV-7l-u8X" customClass="AGTNoteCellView">
             <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -39,6 +39,11 @@
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="modificationDAteView" destination="EYf-Tl-02n" id="eJg-mk-egk"/>
+                <outlet property="photoView" destination="jEH-oR-eru" id="fcF-ma-vyf"/>
+                <outlet property="titleView" destination="pOg-c7-0dz" id="kda-3i-dz1"/>
+            </connections>
             <point key="canvasLocation" x="9" y="109"/>
         </collectionViewCell>
     </objects>

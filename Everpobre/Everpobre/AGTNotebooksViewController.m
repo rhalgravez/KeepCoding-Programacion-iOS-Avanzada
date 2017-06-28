@@ -9,6 +9,8 @@
 #import "AGTNotebooksViewController.h"
 #import "AGTNotebook.h"
 #import "AGTNotebookCellView.h"
+#import "AGTNote.h"
+#import "AGTNotesViewController.h"
 
 @interface AGTNotebooksViewController ()
 
@@ -91,6 +93,35 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
         //Delete the notebook from the model
         [self.fetchedResultsController.managedObjectContext deleteObject:notebook];
     }
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Crear fetch request
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[AGTNote entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor
+                             sortDescriptorWithKey:[AGTNamedEntityAttributes name]
+                             ascending:YES],
+                            [NSSortDescriptor
+                             sortDescriptorWithKey:[AGTNamedEntityAttributes modificationDate]
+                             ascending:NO],
+                            [NSSortDescriptor
+                             sortDescriptorWithKey:[AGTNamedEntityAttributes creationDate]
+                             ascending:NO]];
+    
+    //Crear fetch results controller
+    NSFetchedResultsController *fC = [[NSFetchedResultsController alloc]
+                                      initWithFetchRequest:req
+                                      managedObjectContext:self.fetchedResultsController.managedObjectContext
+                                      sectionNameKeyPath:nil cacheName:nil];
+    
+    //Layout
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(120, 150);
+    
+    //Creamos el controlador de notas
+    AGTNotesViewController *notesVC = [AGTNotesViewController coreDataCollectionViewControllerWithFetchedResultsController:fC layout:layout];
+    
+    //Hacemos push para ver el nuevo controlador
+    [self.navigationController pushViewController:notesVC animated:YES];
 }
 
 #pragma mark - Proximity Sensor

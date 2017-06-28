@@ -16,6 +16,7 @@
 		6286C1471EFC9541006FA36F /* AGTNoteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C1461EFC9541006FA36F /* AGTNoteCellView.m */; };
 		6286C14A1F0414D8006FA36F /* AGTNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C1491F0414D8006FA36F /* AGTNotesTableViewController.m */; };
 		6286C14D1F041BEA006FA36F /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C14C1F041BEA006FA36F /* AGTCoreDataCollectionViewController.m */; };
+		6286C1501F041C64006FA36F /* AGTNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C14F1F041C64006FA36F /* AGTNotesViewController.m */; };
 		DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEC71E9BF1C200D9C91E /* main.m */; };
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
@@ -50,6 +51,8 @@
 		6286C1491F0414D8006FA36F /* AGTNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotesTableViewController.m; sourceTree = "<group>"; };
 		6286C14B1F041BEA006FA36F /* AGTCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataCollectionViewController.h; sourceTree = "<group>"; };
 		6286C14C1F041BEA006FA36F /* AGTCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataCollectionViewController.m; sourceTree = "<group>"; };
+		6286C14E1F041C64006FA36F /* AGTNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotesViewController.h; sourceTree = "<group>"; };
+		6286C14F1F041C64006FA36F /* AGTNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotesViewController.m; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				6245F78C1EE609AE00235641 /* AGTNotebooksViewController.m */,
 				6286C1481F0414D8006FA36F /* AGTNotesTableViewController.h */,
 				6286C1491F0414D8006FA36F /* AGTNotesTableViewController.m */,
+				6286C14E1F041C64006FA36F /* AGTNotesViewController.h */,
+				6286C14F1F041C64006FA36F /* AGTNotesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				6286C14A1F0414D8006FA36F /* AGTNotesTableViewController.m in Sources */,
 				6245F78D1EE609AE00235641 /* AGTNotebooksViewController.m in Sources */,
 				DFF4DF4C1E9EA98100D9C91E /* _AGTPhoto.m in Sources */,
+				6286C1501F041C64006FA36F /* AGTNotesViewController.m in Sources */,
 				DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */,
 				DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */,
 				DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */,

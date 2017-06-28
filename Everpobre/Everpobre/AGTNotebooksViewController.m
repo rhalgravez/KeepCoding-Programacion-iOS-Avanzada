@@ -107,6 +107,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                              sortDescriptorWithKey:[AGTNamedEntityAttributes creationDate]
                              ascending:NO]];
     
+    //To get the data only from the notebook we select
+    req.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", [self.fetchedResultsController objectAtIndexPath:indexPath]]; 
+    
     //Crear fetch results controller
     NSFetchedResultsController *fC = [[NSFetchedResultsController alloc]
                                       initWithFetchRequest:req

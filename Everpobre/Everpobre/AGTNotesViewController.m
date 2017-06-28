@@ -45,12 +45,7 @@ static NSString *cellID = @"NoteCellId";
     //Obtener una celda
     AGTNoteCellView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     //Configurar la celda
-    cell.titleView.text = note.name; 
-    cell.photoView.image = note.photo.image;
-    
-    NSDateFormatter *fmt = [NSDateFormatter new];
-    fmt.dateStyle = NSDateFormatterMediumStyle;
-    cell.modificationDAteView.text = [fmt stringFromDate:note.modificationDate];
+    [cell observeNote:note];
     
     return cell;
 }

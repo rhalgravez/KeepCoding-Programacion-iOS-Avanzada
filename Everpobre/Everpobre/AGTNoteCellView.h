@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AGTNote;
 
 @interface AGTNoteCellView : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *modificationDAteView;
 @property (weak, nonatomic) IBOutlet UILabel *titleView;
+
+-(void)observeNote:(AGTNote *) note;
 
 @end

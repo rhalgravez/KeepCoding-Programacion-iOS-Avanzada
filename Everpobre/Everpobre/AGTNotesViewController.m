@@ -24,6 +24,10 @@ static NSString *cellID = @"NoteCellId";
     [super viewWillAppear:animated];
     
     [self registerNib];
+    
+    self.collectionView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+    
+    self.title = @"Notas";
 }
 
 #pragma mark - Xib registration
@@ -41,7 +45,7 @@ static NSString *cellID = @"NoteCellId";
     //Obtener una celda
     AGTNoteCellView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     //Configurar la celda
-    cell.titleView.text = note.name;
+    cell.titleView.text = note.name; 
     cell.photoView.image = note.photo.image;
     
     NSDateFormatter *fmt = [NSDateFormatter new];

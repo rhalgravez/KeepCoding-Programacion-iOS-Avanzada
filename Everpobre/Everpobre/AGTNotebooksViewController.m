@@ -118,7 +118,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //Layout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(120, 150);
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.itemSize = CGSizeMake(140, 150);
+    layout.minimumLineSpacing = 10;
+    layout.minimumInteritemSpacing = 10;
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
     //Creamos el controlador de notas
     AGTNotesViewController *notesVC = [AGTNotesViewController coreDataCollectionViewControllerWithFetchedResultsController:fC layout:layout];

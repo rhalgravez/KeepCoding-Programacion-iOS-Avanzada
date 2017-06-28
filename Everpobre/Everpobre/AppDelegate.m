@@ -83,40 +83,66 @@
 }
 
 #pragma mark - Utils
-
--(void)trastearConDatos {
+-(void) addDummyData{
+    
+    [self.model zapAllData];
     
     AGTNotebook *novias = [AGTNotebook notebookWithName:@"Ex-novias para el recuerdo"
                                                 context:self.model.context];
     
-    __unused AGTNote *camila = [AGTNote noteWithName:@"Camila Dávalos"
-                                            notebook:novias
-                                             context:self.model.context];
+    [AGTNote noteWithName:@"Camila Dávalos"
+                 notebook:novias
+                  context:self.model.context];
+    
+    [AGTNote noteWithName:@"Mariana Dávalos"
+                 notebook:novias
+                  context:self.model.context];
     
     [AGTNote noteWithName:@"Pampita"
                  notebook:novias
                   context:self.model.context];
     
-    //Search
-    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AGTNote entityName]];
-    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes name]
-                                                          ascending:YES],
-                            [NSSortDescriptor sortDescriptorWithKey:[AGTNamedEntityAttributes modificationDate] ascending:NO]];
+    AGTNotebook *lugares = [AGTNotebook notebookWithName:@"Lugares donde me han pasado cosas raras"
+                                                 context:self.model.context];
     
-    //    NSError *error = nil;
-    //    NSArray *results = [self.model.context executeFetchRequest:req error:&error];
-    //    if(results == nil) {
-    //        NSLog(@"Error al buscar: %@", error);
-    //    } else {
-    //        NSLog(@"Results %@", results);
-    //    }
+    [AGTNote noteWithName:@"Puerta del Sol"
+                 notebook:lugares
+                  context:self.model.context];
+    [AGTNote noteWithName:@"Tatooine"
+                 notebook:lugares
+                  context:self.model.context];
+    [AGTNote noteWithName:@"Dantooine"
+                 notebook:lugares
+                  context:self.model.context];
+    [AGTNote noteWithName:@"Solaria"
+                 notebook:lugares
+                  context:self.model.context];
     
-    
-    //Save
+    // Guardamos
     [self save];
     
-    //Delete
-    //    [self.model.context deleteObject:camila];
+}
+
+-(void)trastearConDatos {
+    
+    [self addDummyData];
+    
+    // Buscar
+    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AGTNote entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AGTNamedEntityAttributes.name
+                                                          ascending:YES],
+                            [NSSortDescriptor sortDescriptorWithKey:AGTNamedEntityAttributes.modificationDate
+                                                          ascending:NO]];
+    NSError *error = nil;
+    NSArray *results = [self.model.context executeFetchRequest:req
+                                                         error:&error];
+    
+    if (results == nil) {
+        NSLog(@"Error al buscar: %@", results);
+    }else{
+        NSLog(@"Results %@", results);
+    }
+    
 }
 
 -(void)save {

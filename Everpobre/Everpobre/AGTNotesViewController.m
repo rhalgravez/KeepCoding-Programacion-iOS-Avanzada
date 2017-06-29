@@ -10,6 +10,7 @@
 #import "AGTNote.h"
 #import "AGTNoteCellView.h"
 #import "AGTPhoto.h"
+#import "AGTNoteViewController.h"
 
 static NSString *cellID = @"NoteCellId";
 
@@ -49,4 +50,19 @@ static NSString *cellID = @"NoteCellId";
     
     return cell;
 }
+
+
+#pragma mark - Delegate
+-(void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    //Obtener el objeto
+    AGTNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //Crear el controlador
+    AGTNoteViewController *noteVC = [[AGTNoteViewController alloc] initWithModel:note];
+    
+    //Hacer un push
+    [self.navigationController pushViewController:noteVC animated:YES];
+}
+
 @end

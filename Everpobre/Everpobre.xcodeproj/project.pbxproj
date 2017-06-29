@@ -19,6 +19,7 @@
 		6286C1501F041C64006FA36F /* AGTNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C14F1F041C64006FA36F /* AGTNotesViewController.m */; };
 		6286C1541F056E14006FA36F /* AGTNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C1521F056E14006FA36F /* AGTNoteViewController.m */; };
 		6286C1551F056E14006FA36F /* AGTNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6286C1531F056E14006FA36F /* AGTNoteViewController.xib */; };
+		6286C1581F057172006FA36F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6286C1571F057172006FA36F /* MapKit.framework */; };
 		DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEC71E9BF1C200D9C91E /* main.m */; };
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		6286C1511F056E14006FA36F /* AGTNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNoteViewController.h; sourceTree = "<group>"; };
 		6286C1521F056E14006FA36F /* AGTNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNoteViewController.m; sourceTree = "<group>"; };
 		6286C1531F056E14006FA36F /* AGTNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteViewController.xib; sourceTree = "<group>"; };
+		6286C1571F057172006FA36F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6286C1581F057172006FA36F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,11 +142,20 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		6286C1561F057172006FA36F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6286C1571F057172006FA36F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DFF4DEBA1E9BF1C200D9C91E = {
 			isa = PBXGroup;
 			children = (
 				DFF4DEC51E9BF1C200D9C91E /* Everpobre */,
 				DFF4DEC41E9BF1C200D9C91E /* Products */,
+				6286C1561F057172006FA36F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

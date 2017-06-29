@@ -60,6 +60,7 @@
 		6286C1521F056E14006FA36F /* AGTNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNoteViewController.m; sourceTree = "<group>"; };
 		6286C1531F056E14006FA36F /* AGTNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteViewController.xib; sourceTree = "<group>"; };
 		6286C1571F057172006FA36F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6286C15B1F059F9E006FA36F /* AGTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTDetailViewController.h; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +151,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6286C1591F059EAB006FA36F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6286C15B1F059F9E006FA36F /* AGTDetailViewController.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		DFF4DEBA1E9BF1C200D9C91E = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +179,7 @@
 		DFF4DEC51E9BF1C200D9C91E /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				6286C1591F059EAB006FA36F /* Protocols */,
 				6245F7921EE75F5D00235641 /* Views */,
 				6245F78E1EE73C2E00235641 /* Categories */,
 				6245F7871EE608B300235641 /* Controllers */,

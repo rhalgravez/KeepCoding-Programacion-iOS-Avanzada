@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+@class AGTNote;
 
 @interface AGTNoteViewController : UIViewController
 
@@ -17,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+-(instancetype)initWithModel:(AGTNote *)model;
 
 @end

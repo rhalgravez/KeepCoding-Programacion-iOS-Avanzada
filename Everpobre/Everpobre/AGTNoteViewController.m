@@ -7,31 +7,49 @@
 //
 
 #import "AGTNoteViewController.h"
+#include "AGTNote.h"
+#include "AGTPhoto.h"
 
 @interface AGTNoteViewController ()
+
+@property(nonatomic, strong) AGTNote *model;
 
 @end
 
 @implementation AGTNoteViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+#pragma mark - Init
+-(instancetype)initWithModel:(AGTNote *)model {
+    if (self = [super initWithNibName:nil bundle:nil]) {
+        _model = model;
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mrk - View Lifecycle
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //modelo a la vista
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateStyle = NSDateFormatterLongStyle;
+    self.modificationDateView.text = [formatter stringFromDate:self.model.modificationDate];
+    self.nameView.text = self.model.name;
+    self.textView.text = self.model.text;
+    
+    UIImage *img = self.model.photo.image;
+    if (!img) {
+        img = [UIImage imageNamed:@"noImage"];
+    }
+    self.photoView.image = img;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    //vista al modelo
+    self.model.text = self.textView.text;
+    self.model.photo.image = self.photoView.image;
 }
-*/
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AGTCoreDataCollectionViewController.h"
+#import "AGTDetailViewController.h"
 
 @interface AGTCoreDataCollectionViewController ()<NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSMutableArray *objectChanges;
@@ -251,4 +252,19 @@
     [self.collectionView reloadData];
     
 }
+
+#pragma mark - Delegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSAssert(self.detailViewControllerClassName, @"You must set a detailViewConotroller class name");
+    //Obetenemos el modelo
+    id detailModel = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //Creamos el controlador de detalle
+    UIViewController<AGTDetailViewController> *detailVC = [[NSClassFromString(self.detailViewControllerClassName) alloc] initWithModel:detailModel];
+    
+    //Hacemos un push
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 @end

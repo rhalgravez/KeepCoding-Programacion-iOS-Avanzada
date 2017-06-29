@@ -27,6 +27,7 @@ static NSString *cellID = @"NoteCellId";
     [self registerNib];
     
     self.collectionView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+    self.detailViewControllerClassName = NSStringFromClass([AGTNoteViewController class]);
     
     self.title = @"Notas";
 }
@@ -49,20 +50,6 @@ static NSString *cellID = @"NoteCellId";
     [cell observeNote:note];
     
     return cell;
-}
-
-
-#pragma mark - Delegate
--(void)collectionView:(UICollectionView *)collectionView
-didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    //Obtener el objeto
-    AGTNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    //Crear el controlador
-    AGTNoteViewController *noteVC = [[AGTNoteViewController alloc] initWithModel:note];
-    
-    //Hacer un push
-    [self.navigationController pushViewController:noteVC animated:YES];
 }
 
 @end

@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "AGTDetailViewController.h"
+
 @class AGTNote;
 
-@interface AGTNoteViewController : UIViewController
+@interface AGTNoteViewController : UIViewController <AGTDetailViewController>
 
 @property (weak, nonatomic) IBOutlet UILabel *modificationDateView;
 @property (weak, nonatomic) IBOutlet UILabel *nameView;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
--(instancetype)initWithModel:(AGTNote *)model;
 
 @end

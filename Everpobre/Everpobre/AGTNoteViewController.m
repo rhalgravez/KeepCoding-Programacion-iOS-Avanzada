@@ -18,8 +18,8 @@
 
 @implementation AGTNoteViewController
 
-#pragma mark - Init
--(instancetype)initWithModel:(AGTNote *)model {
+#pragma mark - AGTDetailViewController Delegate
+-(id)initWithModel:(id)model {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _model = model;
     }

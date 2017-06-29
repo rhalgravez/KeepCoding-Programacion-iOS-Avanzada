@@ -13,6 +13,7 @@
 @interface AGTCoreDataCollectionViewController : UICollectionViewController
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSString *detailViewControllerClassName;
 
 +(instancetype) coreDataCollectionViewControllerWithFetchedResultsController:(NSFetchedResultsController *) resultsController
                                                                       layout:(UICollectionViewLayout*) layout;

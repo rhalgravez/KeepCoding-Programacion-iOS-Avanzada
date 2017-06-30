@@ -10,6 +10,7 @@
 #include "AGTNote.h"
 #include "AGTPhoto.h"
 #import "AGTNotebook.h"
+#import "AGTPhotoViewController.h"
 
 @interface AGTNoteViewController () <UITextFieldDelegate>
 
@@ -178,7 +179,13 @@
 }
 
 -(void)displayDetailPhoto:(id)sedner {
-    NSLog(@"TAP TAP");
+    if (self.model.photo == nil) {
+        self.model.photo = [AGTPhoto photoWithImage:nil context:self.model.managedObjectContext];
+    }
+    
+    AGTPhotoViewController *photoVC = [[AGTPhotoViewController alloc] initWithModel:self.model.photo];
+    
+    [self.navigationController pushViewController:photoVC animated:YES];
 }
 
 #pragma mark - UITextFieldDelegate

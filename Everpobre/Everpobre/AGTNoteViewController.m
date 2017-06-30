@@ -11,7 +11,7 @@
 #include "AGTPhoto.h"
 #import "AGTNotebook.h"
 
-@interface AGTNoteViewController ()
+@interface AGTNoteViewController () <UITextFieldDelegate>
 
 @property(nonatomic, strong) AGTNote *model;
 @property(nonatomic) BOOL new;
@@ -63,6 +63,8 @@
         UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
         self.navigationItem.rightBarButtonItem = cancel;
     }
+    
+    self.nameView.delegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -162,4 +164,12 @@
     self.deleteCurrentNote = YES;
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    //podríamos validar el texto
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end

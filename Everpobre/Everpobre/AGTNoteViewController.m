@@ -119,7 +119,9 @@
     //Botón para mover el botón de done a la derecha
     UIBarButtonItem *separador = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    [tootlbar setItems:@[separador,done]];
+    UIBarButtonItem *smile = [[UIBarButtonItem alloc] initWithTitle:@":-)" style:UIBarButtonItemStylePlain target:self action:@selector(insertTitle:)];
+    
+    [tootlbar setItems:@[smile, separador,done]];
     
     //y la asignamos como accesoryInputView
     self.textView.inputAccessoryView = tootlbar;
@@ -127,6 +129,10 @@
 
 -(void)dismissKeyboard:(id)sender {
     [self.view endEditing:YES];
+}
+
+-(void)insertTitle:(UIBarButtonItem*)sender {
+    [self.textView insertText:sender.title];
 }
 
 @end

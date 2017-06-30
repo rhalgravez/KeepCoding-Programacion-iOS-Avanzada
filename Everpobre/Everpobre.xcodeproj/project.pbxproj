@@ -20,6 +20,8 @@
 		6286C1541F056E14006FA36F /* AGTNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C1521F056E14006FA36F /* AGTNoteViewController.m */; };
 		6286C1551F056E14006FA36F /* AGTNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6286C1531F056E14006FA36F /* AGTNoteViewController.xib */; };
 		6286C1581F057172006FA36F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6286C1571F057172006FA36F /* MapKit.framework */; };
+		6286C15F1F071111006FA36F /* AGTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6286C15D1F071111006FA36F /* AGTPhotoViewController.m */; };
+		6286C1601F071111006FA36F /* AGTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6286C15E1F071111006FA36F /* AGTPhotoViewController.xib */; };
 		DFF4DEC81E9BF1C200D9C91E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DEC71E9BF1C200D9C91E /* main.m */; };
 		DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF4DECA1E9BF1C200D9C91E /* AppDelegate.m */; };
 		DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4DED21E9BF1C200D9C91E /* Assets.xcassets */; };
@@ -61,6 +63,9 @@
 		6286C1531F056E14006FA36F /* AGTNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteViewController.xib; sourceTree = "<group>"; };
 		6286C1571F057172006FA36F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6286C15B1F059F9E006FA36F /* AGTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTDetailViewController.h; sourceTree = "<group>"; };
+		6286C15C1F071111006FA36F /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
+		6286C15D1F071111006FA36F /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
+		6286C15E1F071111006FA36F /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +122,9 @@
 				6286C1511F056E14006FA36F /* AGTNoteViewController.h */,
 				6286C1521F056E14006FA36F /* AGTNoteViewController.m */,
 				6286C1531F056E14006FA36F /* AGTNoteViewController.xib */,
+				6286C15C1F071111006FA36F /* AGTPhotoViewController.h */,
+				6286C15D1F071111006FA36F /* AGTPhotoViewController.m */,
+				6286C15E1F071111006FA36F /* AGTPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 				6286C1441EFC93BE006FA36F /* AGTNoteCollectionViewCell.xib in Resources */,
 				6286C1551F056E14006FA36F /* AGTNoteViewController.xib in Resources */,
 				DFF4DED61E9BF1C200D9C91E /* LaunchScreen.storyboard in Resources */,
+				6286C1601F071111006FA36F /* AGTPhotoViewController.xib in Resources */,
 				DFF4DED31E9BF1C200D9C91E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +317,7 @@
 				6286C1501F041C64006FA36F /* AGTNotesViewController.m in Sources */,
 				DFF4DECB1E9BF1C200D9C91E /* AppDelegate.m in Sources */,
 				DFF4DF471E9D7E1E00D9C91E /* AGTNotebook.m in Sources */,
+				6286C15F1F071111006FA36F /* AGTPhotoViewController.m in Sources */,
 				6286C1541F056E14006FA36F /* AGTNoteViewController.m in Sources */,
 				DFF4DF451E9D7E1E00D9C91E /* AGTNamedEntity.m in Sources */,
 				DFF4DF421E9D7E1E00D9C91E /* _AGTNamedEntity.m in Sources */,

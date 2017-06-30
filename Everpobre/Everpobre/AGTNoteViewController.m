@@ -65,6 +65,10 @@
     }
     
     self.nameView.delegate = self;
+    
+    //Añador gesture recognizer a la foto
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(displayDetailPhoto:)];
+    [self.photoView addGestureRecognizer:tap];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -171,6 +175,10 @@
 -(void)cancel:(id)sender {
     self.deleteCurrentNote = YES;
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)displayDetailPhoto:(id)sedner {
+    NSLog(@"TAP TAP");
 }
 
 #pragma mark - UITextFieldDelegate

@@ -44,6 +44,8 @@
     self.photoView.image = img;
     
     [self startObservingKeyboard];
+    
+    [self setupInputAccessoryView];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -105,6 +107,26 @@
     [UIView animateWithDuration:duration animations:^{
         self.textView.alpha = 1;
     }];
+}
+
+-(void)setupInputAccessoryView {
+    //creamos una barra
+    UIToolbar *tootlbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, 44)];
+    
+    //añadimos botones
+    UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard:)];
+    
+    //Botón para mover el botón de done a la derecha
+    UIBarButtonItem *separador = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    [tootlbar setItems:@[separador,done]];
+    
+    //y la asignamos como accesoryInputView
+    self.textView.inputAccessoryView = tootlbar;
+}
+
+-(void)dismissKeyboard:(id)sender {
+    [self.view endEditing:YES];
 }
 
 @end

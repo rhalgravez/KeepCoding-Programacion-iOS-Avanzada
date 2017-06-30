@@ -141,6 +141,7 @@
 -(void)setupInputAccessoryView {
     //creamos una barra
     UIToolbar *tootlbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, 44)];
+    UIToolbar *nameViewToolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, 44)];
     
     //añadimos botones
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard:)];
@@ -151,9 +152,11 @@
     UIBarButtonItem *smile = [[UIBarButtonItem alloc] initWithTitle:@":-)" style:UIBarButtonItemStylePlain target:self action:@selector(insertTitle:)];
     
     [tootlbar setItems:@[smile, separador,done]];
+    [nameViewToolBar setItems:@[separador, done]];
     
     //y la asignamos como accesoryInputView
     self.textView.inputAccessoryView = tootlbar;
+    self.nameView.inputAccessoryView = nameViewToolBar;
 }
 
 -(void)dismissKeyboard:(id)sender {

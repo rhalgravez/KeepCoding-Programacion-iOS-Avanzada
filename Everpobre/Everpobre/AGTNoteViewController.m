@@ -81,6 +81,11 @@
         //mover el frame del textView a donde se encuentra el modificationDateView y cambiar su tamaño para que cubra la pantalla y no se vea la imageView ni el mapViw en el fondo
         self.textView.frame = CGRectMake(self.modificationDateView.frame.origin.x, self.modificationDateView.frame.origin.y, self.view.frame.size.width, self.textView.frame.size.width);
     } completion:nil];
+    
+    //Hacer le textView translucido (para que se vea guay!!!)
+    [UIView animateWithDuration:duration animations:^{
+        self.textView.alpha = 0.8;
+    }];
 }
 
 -(void)notifyThatKeyboardWillDisappear:(NSNotification *)notification {

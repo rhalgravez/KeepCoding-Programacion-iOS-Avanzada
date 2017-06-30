@@ -89,7 +89,22 @@
 }
 
 -(void)notifyThatKeyboardWillDisappear:(NSNotification *)notification {
+    //extrar el userInfo
+    NSDictionary *dict = notification.userInfo;
     
+    //extraer la duración de la animación
+    double duration = [[dict objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    //Cambiar las propiedades de la caja de texto
+    [UIView animateWithDuration:duration delay:0 options:0 animations:^{
+        //mover el frame del textView a donde se encontraba
+        self.textView.frame = CGRectMake(0, 323, self.view.frame.size.width, self.textView.frame.size.width);
+    } completion:nil];
+    
+    //Regresaar el textView a su opacidad normal
+    [UIView animateWithDuration:duration animations:^{
+        self.textView.alpha = 1;
+    }];
 }
 
 @end

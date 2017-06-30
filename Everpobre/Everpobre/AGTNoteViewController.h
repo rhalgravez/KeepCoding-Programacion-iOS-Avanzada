@@ -16,7 +16,7 @@
 @interface AGTNoteViewController : UIViewController <AGTDetailViewController>
 
 @property (weak, nonatomic) IBOutlet UILabel *modificationDateView;
-@property (weak, nonatomic) IBOutlet UILabel *nameView;
+@property (weak, nonatomic) IBOutlet UITextField *nameView;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;

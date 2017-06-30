@@ -74,6 +74,7 @@
         //vista al modelo
         self.model.text = self.textView.text;
         self.model.photo.image = self.photoView.image;
+        self.model.name = self.nameView.text;
     }
     
     [self stopObservingKeyboard];

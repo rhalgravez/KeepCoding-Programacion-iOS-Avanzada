@@ -42,6 +42,8 @@
         img = [UIImage imageNamed:@"noImage"];
     }
     self.photoView.image = img;
+    
+    [self startObservingKeyboard];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -50,6 +52,39 @@
     //vista al modelo
     self.model.text = self.textView.text;
     self.model.photo.image = self.photoView.image;
+    
+    [self stopObservingKeyboard];
+}
+
+#pragma mark - Keyboard
+-(void)startObservingKeyboard {
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(notifyThatKeyboardWillAppear:) name:UIKeyboardWillShowNotification object:nil];
+    
+    [nc addObserver:self selector:@selector(notifyThatKeyboardWillDisappear:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+-(void)stopObservingKeyboard {
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc removeObserver:self];
+}
+
+-(void)notifyThatKeyboardWillAppear:(NSNotification *)notification {
+    //extrar el userInfo
+    NSDictionary *dict = notification.userInfo;
+    
+    //extraer la duración de la animación
+    double duration = [[dict objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    //Cambiar las propiedades de la caja de texto
+    [UIView animateWithDuration:duration delay:0 options:0 animations:^{
+        //mover el frame del textView a donde se encuentra el modificationDateView y cambiar su tamaño para que cubra la pantalla y no se vea la imageView ni el mapViw en el fondo
+        self.textView.frame = CGRectMake(self.modificationDateView.frame.origin.x, self.modificationDateView.frame.origin.y, self.view.frame.size.width, self.textView.frame.size.width);
+    } completion:nil];
+}
+
+-(void)notifyThatKeyboardWillDisappear:(NSNotification *)notification {
+    
 }
 
 @end

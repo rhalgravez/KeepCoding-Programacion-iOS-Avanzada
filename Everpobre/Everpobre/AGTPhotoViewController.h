@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGTDetailViewController.h"
 
-@interface AGTPhotoViewController : UIViewController
+@interface AGTPhotoViewController : UIViewController <AGTDetailViewController>
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 

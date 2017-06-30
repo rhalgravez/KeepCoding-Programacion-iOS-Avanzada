@@ -7,34 +7,43 @@
 //
 
 #import "AGTPhotoViewController.h"
+#import "AGTPhoto.h"
 
-@interface AGTPhotoViewController ()
+@interface AGTPhotoViewController () 
+
+@property (nonatomic, strong) AGTPhoto *model;
 
 @end
 
 @implementation AGTPhotoViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+#pragma mark - AGTDetailViewController
+-(id)initWithModel:(id)model {
+    
+    NSAssert(model, @"Model can't be nil");
+    if (self = [super initWithNibName:nil bundle:nil]) {
+        _model = model;
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - View lifecycle
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.photoView.image = self.model.image;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    self.model.image = self.photoView.image;
 }
-*/
+
+#pragma mark - Actions
 
 - (IBAction)takePhoto:(id)sender {
+    
 }
 
 - (IBAction)deletePhoto:(id)sender {

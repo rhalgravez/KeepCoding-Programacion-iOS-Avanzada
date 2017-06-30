@@ -9,7 +9,7 @@
 #import "AGTPhotoViewController.h"
 #import "AGTPhoto.h"
 
-@interface AGTPhotoViewController () 
+@interface AGTPhotoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) AGTPhoto *model;
 
@@ -43,7 +43,24 @@
 #pragma mark - Actions
 
 - (IBAction)takePhoto:(id)sender {
+    //Crearlo
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     
+    //configurar
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    
+    //Asignar delegado
+    picker.delegate = self;
+    
+    //mostarlo
+    [self presentViewController:picker animated:YES completion:^{
+        //no se nos ocurre nada por hacer aquí XD
+    }];
 }
 
 - (IBAction)deletePhoto:(id)sender {

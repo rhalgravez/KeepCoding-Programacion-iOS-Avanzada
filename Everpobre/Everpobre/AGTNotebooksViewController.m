@@ -126,6 +126,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //Creamos el controlador de notas
     AGTNotesViewController *notesVC = [AGTNotesViewController coreDataCollectionViewControllerWithFetchedResultsController:fC layout:layout];
+    notesVC.notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     //Hacemos push para ver el nuevo controlador
     [self.navigationController pushViewController:notesVC animated:YES];

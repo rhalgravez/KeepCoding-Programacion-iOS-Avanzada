@@ -11,6 +11,7 @@
 #import "AGTDetailViewController.h"
 
 @class AGTNote;
+@class AGTNotebook;
 
 @interface AGTNoteViewController : UIViewController <AGTDetailViewController>
 
@@ -19,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+
+-(instancetype)initForNewNoteInNotebook:(AGTNotebook*)notebook;
 
 @end

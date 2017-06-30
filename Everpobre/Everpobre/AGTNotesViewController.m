@@ -30,6 +30,9 @@ static NSString *cellID = @"NoteCellId";
     self.detailViewControllerClassName = NSStringFromClass([AGTNoteViewController class]);
     
     self.title = @"Notas";
+    
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewNote:)];
+    self.navigationItem.rightBarButtonItem = add;
 }
 
 #pragma mark - Xib registration
@@ -50,6 +53,12 @@ static NSString *cellID = @"NoteCellId";
     [cell observeNote:note];
     
     return cell;
+}
+
+#pragma mark - Utils
+-(void)addNewNote:(id)sender {
+    AGTNoteViewController *newNoteVC = [[AGTNoteViewController alloc] initForNewNoteInNotebook:self.notebook];
+    [self.navigationController pushViewController:newNoteVC animated:YES];
 }
 
 @end

@@ -8,6 +8,10 @@
 
 #import "AGTCoreDataCollectionViewController.h"
 
+@class AGTNotebook;
+
 @interface AGTNotesViewController : AGTCoreDataCollectionViewController
+
+@property(nonatomic, strong) AGTNotebook *notebook;
 
 @end

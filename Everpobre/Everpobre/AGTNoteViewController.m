@@ -9,10 +9,13 @@
 #import "AGTNoteViewController.h"
 #include "AGTNote.h"
 #include "AGTPhoto.h"
+#import "AGTNotebook.h"
 
 @interface AGTNoteViewController ()
 
 @property(nonatomic, strong) AGTNote *model;
+@property(nonatomic) BOOL new;
+@property(nonatomic) BOOL deleteCurrentNote;
 
 @end
 
@@ -26,7 +29,15 @@
     return self;
 }
 
-#pragma mrk - View Lifecycle
+#pragma mark - Init
+-(instancetype)initForNewNoteInNotebook:(AGTNotebook*)notebook {
+    AGTNote *newNote = [AGTNote noteWithName:@"" notebook:notebook context:notebook.managedObjectContext];
+    
+    _new = YES;
+    return [self initWithModel:newNote];
+}
+
+#pragma mark - View Lifecycle
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
@@ -46,14 +57,24 @@
     [self startObservingKeyboard];
     
     [self setupInputAccessoryView];
+    
+    if(self.new) {
+        //Mostramos botón de cancelar
+        UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+        self.navigationItem.rightBarButtonItem = cancel;
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    //vista al modelo
-    self.model.text = self.textView.text;
-    self.model.photo.image = self.photoView.image;
+    if (self.deleteCurrentNote) {
+        [self.model.managedObjectContext deleteObject:self.model];
+    } else {
+        //vista al modelo
+        self.model.text = self.textView.text;
+        self.model.photo.image = self.photoView.image;
+    }
     
     [self stopObservingKeyboard];
 }
@@ -135,4 +156,9 @@
     [self.textView insertText:sender.title];
 }
 
+#pragma mark - Utils
+-(void)cancel:(id)sender {
+    self.deleteCurrentNote = YES;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

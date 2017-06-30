@@ -96,41 +96,46 @@
 }
 
 -(void)notifyThatKeyboardWillAppear:(NSNotification *)notification {
-    //extrar el userInfo
-    NSDictionary *dict = notification.userInfo;
-    
-    //extraer la duración de la animación
-    double duration = [[dict objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    //Cambiar las propiedades de la caja de texto
-    [UIView animateWithDuration:duration delay:0 options:0 animations:^{
-        //mover el frame del textView a donde se encuentra el modificationDateView y cambiar su tamaño para que cubra la pantalla y no se vea la imageView ni el mapViw en el fondo
-        self.textView.frame = CGRectMake(self.modificationDateView.frame.origin.x, self.modificationDateView.frame.origin.y, self.view.frame.size.width, self.textView.frame.size.width);
-    } completion:nil];
-    
-    //Hacer le textView translucido (para que se vea guay!!!)
-    [UIView animateWithDuration:duration animations:^{
-        self.textView.alpha = 0.8;
-    }];
+    //averiguar quien es el fisrtRespodner para ver si idsparamos la animación
+    if ([self.textView isFirstResponder]) {
+        //extrar el userInfo
+        NSDictionary *dict = notification.userInfo;
+        
+        //extraer la duración de la animación
+        double duration = [[dict objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        
+        //Cambiar las propiedades de la caja de texto
+        [UIView animateWithDuration:duration delay:0 options:0 animations:^{
+            //mover el frame del textView a donde se encuentra el modificationDateView y cambiar su tamaño para que cubra la pantalla y no se vea la imageView ni el mapViw en el fondo
+            self.textView.frame = CGRectMake(self.modificationDateView.frame.origin.x, self.modificationDateView.frame.origin.y, self.view.frame.size.width, self.textView.frame.size.width);
+        } completion:nil];
+        
+        //Hacer le textView translucido (para que se vea guay!!!)
+        [UIView animateWithDuration:duration animations:^{
+            self.textView.alpha = 0.8;
+        }];
+    }
 }
 
 -(void)notifyThatKeyboardWillDisappear:(NSNotification *)notification {
-    //extrar el userInfo
-    NSDictionary *dict = notification.userInfo;
-    
-    //extraer la duración de la animación
-    double duration = [[dict objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
-    //Cambiar las propiedades de la caja de texto
-    [UIView animateWithDuration:duration delay:0 options:0 animations:^{
-        //mover el frame del textView a donde se encontraba
-        self.textView.frame = CGRectMake(0, 323, self.view.frame.size.width, self.textView.frame.size.width);
-    } completion:nil];
-    
-    //Regresaar el textView a su opacidad normal
-    [UIView animateWithDuration:duration animations:^{
-        self.textView.alpha = 1;
-    }];
+    if ([self.textView isFirstResponder]) {
+        //extrar el userInfo
+        NSDictionary *dict = notification.userInfo;
+        
+        //extraer la duración de la animación
+        double duration = [[dict objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+        
+        //Cambiar las propiedades de la caja de texto
+        [UIView animateWithDuration:duration delay:0 options:0 animations:^{
+            //mover el frame del textView a donde se encontraba
+            self.textView.frame = CGRectMake(0, 323, self.view.frame.size.width, self.textView.frame.size.width);
+        } completion:nil];
+        
+        //Regresaar el textView a su opacidad normal
+        [UIView animateWithDuration:duration animations:^{
+            self.textView.alpha = 1;
+        }];
+    }
 }
 
 -(void)setupInputAccessoryView {

@@ -68,6 +68,24 @@
 }
 
 - (IBAction)deletePhoto:(id)sender {
+    
+    //Estado incial
+    CGRect oldBounds = self.photoView.bounds;
+    
+    //Eliminar la foto de la vista
+    [UIView animateWithDuration:0.6
+                          delay:0
+                        options:0
+                     animations:^{
+                         self.photoView.bounds = CGRectZero;
+                         self.photoView.alpha = 0;
+                         self.photoView.transform = CGAffineTransformMakeRotation(M_2_PI);
+                     } completion:^(BOOL finished) {
+                         self.photoView.image = nil;
+                         self.photoView.alpha = 1;
+                         self.photoView.bounds = oldBounds;
+                         self.photoView.transform = CGAffineTransformIdentity;
+                     }];
 }
 
 #pragma mark - UIImagePickerControllerDelegate

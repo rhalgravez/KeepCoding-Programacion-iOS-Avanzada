@@ -65,4 +65,14 @@
 
 - (IBAction)deletePhoto:(id)sender {
 }
+
+#pragma mark - UIImagePickerControllerDelegate
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.model.image = img;
+    
+    //Ahora sí tengo que quitar la vista del ImagePicker 
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

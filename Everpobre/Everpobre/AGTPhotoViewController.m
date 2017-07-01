@@ -53,9 +53,13 @@
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     
+    //modifcar la transición del picker
+    picker.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     //Asignar delegado
     picker.delegate = self;
+    
+    
     
     //mostarlo
     [self presentViewController:picker animated:YES completion:^{
@@ -72,7 +76,7 @@
     UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
     self.model.image = img;
     
-    //Ahora sí tengo que quitar la vista del ImagePicker 
+    //Ahora sí tengo que quitar la vista del ImagePicker
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

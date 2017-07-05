@@ -1,6 +1,9 @@
 #import "AGTNote.h"
+@import CoreLocation;
 
-@interface AGTNote ()
+@interface AGTNote () <CLLocationManagerDelegate>
+
+@property(nonatomic, strong) CLLocationManager *locationManager;
 
 // Private interface goes here.
 +(NSArray *)observableKeyNames;
@@ -10,6 +13,8 @@
 @implementation AGTNote
 
 // Custom logic goes here.
+
+@synthesize locationManager = _locationManager;
 
 -(BOOL)hasLocation {
     return (nil == self.location);
@@ -33,6 +38,22 @@
     note.modificationDate = [NSDate date];
     
     return note;
+}
+
+#pragma mark - Init
+-(void)awakeFromInsert {
+    [super awakeFromInsert];
+    
+    //Averiguar si tiene sentido o no crear una localización
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (((status == kCLAuthorizationStatusAuthorizedAlways) || (status == kCLAuthorizationStatusNotDetermined)) && [CLLocationManager locationServicesEnabled]) {
+        //tenemos localización!!!
+        
+        self.locationManager = [CLLocationManager new];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [self.locationManager startUpdatingLocation];
+    }
 }
 
 @end

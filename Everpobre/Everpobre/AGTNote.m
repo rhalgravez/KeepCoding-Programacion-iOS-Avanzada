@@ -11,6 +11,10 @@
 
 // Custom logic goes here.
 
+-(BOOL)hasLocation {
+    return (nil == self.location);
+}
+
 +(NSArray *)observableKeyNames {
     return @[@"name", @"creationDate", @"text", @"notebook", @"photo"];
 }

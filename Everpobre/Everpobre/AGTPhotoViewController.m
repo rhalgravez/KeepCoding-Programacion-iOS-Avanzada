@@ -135,7 +135,22 @@
 }
 
 - (IBAction)zoomToFace:(id)sender {
-    NSLog(@"Faces: %@", [self featuresInImage:self.photoView.image]);
+    NSArray *features = [self featuresInImage:self.photoView.image];
+    
+    if (features) {
+        //Obtenemos la última cara
+        CIFeature *face = [features lastObject];
+        //Obtenemos la posición de la cara
+        CGRect faceBounds = [face bounds];
+        
+        //Crear una nueva imagen sólo con la cara
+        CIImage *image = [CIImage imageWithCGImage:self.photoView.image.CGImage];
+        CIImage * crop = [image imageByCroppingToRect:faceBounds];
+        
+        UIImage *newImage = [UIImage imageWithCIImage:crop];
+        //Mostrar esa imagen
+        self.photoView.image = newImage;
+    }
 }
 
 #pragma mark - Utils

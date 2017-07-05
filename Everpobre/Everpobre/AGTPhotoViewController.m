@@ -8,6 +8,7 @@
 
 #import "AGTPhotoViewController.h"
 #import "AGTPhoto.h"
+@import CoreImage;
 
 @interface AGTPhotoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -86,16 +87,39 @@
                          self.photoView.bounds = oldBounds;
                          self.photoView.transform = CGAffineTransformIdentity;
                      }];
+    self.model.image = nil;
 }
 
 - (IBAction)applyVintageEffect:(id)sender {
+    //Crear un contexto
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    //Crear CIImage de entrada
+    CIImage *image = [CIImage imageWithCGImage:self.model.image.CGImage];
+    
+    //Crear filtro(s)
+    CIFilter *old = [CIFilter filterWithName:@"CIFalseColor"];
+    [old setDefaults];
+    [old setValue:image forKey:kCIInputImageKey];
+    
+    //Obtener imagen de salida
+    CIImage *output = old.outputImage;
+    
+    //Aplicar el filtro
+    CGImageRef res = [context createCGImage:output fromRect:[output extent]];
+    
+    //Guardamos la nueva imagen
+    UIImage *img = [UIImage imageWithCGImage:res];
+    self.photoView.image = img;
+    
+    //Liberar el CGImageRef
+    CGImageRelease(res);
 }
 
 #pragma mark - UIImagePickerControllerDelegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
-    self.model.image = img;
+    self.model.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     //Ahora sí tengo que quitar la vista del ImagePicker
     [self dismissViewControllerAnimated:YES completion:nil];

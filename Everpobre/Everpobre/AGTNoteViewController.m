@@ -70,6 +70,11 @@
     //Añador gesture recognizer a la foto
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(displayDetailPhoto:)];
     [self.photoView addGestureRecognizer:tap];
+    
+    //Añadimos botón de compartir nota
+    UIBarButtonItem *share = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(displayShareController:)];
+    
+    self.navigationItem.rightBarButtonItem = share;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -188,11 +193,38 @@
     [self.navigationController pushViewController:photoVC animated:YES];
 }
 
+-(NSArray*)arrayOfItems{
+    NSMutableArray *items = [NSMutableArray array];
+    
+    if (self.model.name) {
+        [items addObject:self.model.name];
+    }
+    
+    if (self.model.text) {
+        [items addObject:self.model.text];
+    }
+    
+    if (self.model.photo.image) {
+        [items addObject:self.model.photo.image];
+    }
+    
+    return items;
+}
+
 #pragma mark - UITextFieldDelegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     //podríamos validar el texto
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - Action
+-(void)displayShareController:(id)sender {
+    //Crear UIActivityController
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:[self arrayOfItems] applicationActivities:nil];
+    
+    //Lo presentamos
+    [self presentViewController:avc animated:YES completion:nil];
 }
 
 @end

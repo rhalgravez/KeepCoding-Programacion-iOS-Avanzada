@@ -135,6 +135,30 @@
 }
 
 - (IBAction)zoomToFace:(id)sender {
+    NSLog(@"Faces: %@", [self featuresInImage:self.photoView.image]);
+}
+
+#pragma mark - Utils
+
+-(NSArray*)featuresInImage:(UIImage*)image {
+    //Crer contexto
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    //Crear el detector
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
+                                              context:context
+                                              options:@{CIDetectorAccuracy:CIDetectorAccuracyHigh}];
+    
+    //Necesitamos la CiImage para detectar las caras
+    CIImage *img = [CIImage imageWithCGImage:image.CGImage];
+    
+    //Extraer las features (en este caso las caras)
+    NSArray *features = [detector featuresInImage:img];
+    if ([features count]) {
+        return features;
+    } else {
+        return nil;
+    }
 }
 
 #pragma mark - UIImagePickerControllerDelegate

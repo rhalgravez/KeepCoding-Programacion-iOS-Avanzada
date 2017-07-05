@@ -102,8 +102,15 @@
     [old setDefaults];
     [old setValue:image forKey:kCIInputImageKey];
     
+    CIFilter *vignette = [CIFilter filterWithName:@"CIVignette"];
+    [vignette setDefaults];
+    [vignette setValue:@12 forKey:kCIInputIntensityKey];
+    
+    //Encadenar los filtros
+    [vignette setValue:old.outputImage forKey:kCIInputImageKey];
+
     //Obtener imagen de salida
-    CIImage *output = old.outputImage;
+    CIImage *output = vignette.outputImage;
     
     //Aplicar el filtro
     CGImageRef res = [context createCGImage:output fromRect:[output extent]];

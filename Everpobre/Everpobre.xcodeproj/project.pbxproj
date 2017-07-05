@@ -66,6 +66,7 @@
 		6286C15C1F071111006FA36F /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
 		6286C15D1F071111006FA36F /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
 		6286C15E1F071111006FA36F /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
+		62EC3E3B1F0D791900203FA7 /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
 		DFF4DEC31E9BF1C200D9C91E /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4DEC71E9BF1C200D9C91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFF4DEC91E9BF1C200D9C91E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -487,6 +488,7 @@
 		DFF4DEE11E9C0B5B00D9C91E /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				62EC3E3B1F0D791900203FA7 /* Model2.xcdatamodel */,
 				DFF4DEE21E9C0B5B00D9C91E /* Model.xcdatamodel */,
 			);
 			currentVersion = DFF4DEE21E9C0B5B00D9C91E /* Model.xcdatamodel */;

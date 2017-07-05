@@ -36,6 +36,11 @@
                                 <action selector="applyVintageEffect:" destination="-1" id="j4u-HB-FzO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem title="Faces" id="ufz-8N-iLQ">
+                            <connections>
+                                <action selector="zoomToFace:" destination="-1" id="PFZ-8O-KwM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="XX6-nc-2yx"/>
                         <barButtonItem systemItem="trash" id="Yw4-1E-4R3">
                             <connections>

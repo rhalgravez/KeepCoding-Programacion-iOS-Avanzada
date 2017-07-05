@@ -12,6 +12,7 @@
 @interface AGTPhotoViewController : UIViewController <AGTDetailViewController>
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)deletePhoto:(id)sender;

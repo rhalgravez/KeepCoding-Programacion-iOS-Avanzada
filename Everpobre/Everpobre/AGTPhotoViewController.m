@@ -113,14 +113,25 @@
     CIImage *output = vignette.outputImage;
     
     //Aplicar el filtro
-    CGImageRef res = [context createCGImage:output fromRect:[output extent]];
+    [self.activityView startAnimating];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0
+                                             ), ^{
+        CGImageRef res = [context createCGImage:output fromRect:[output extent]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.activityView stopAnimating];
+            
+            //Guardamos la nueva imagen
+            UIImage *img = [UIImage imageWithCGImage:res];
+            self.photoView.image = img;
+            
+            //Liberar el CGImageRef
+            CGImageRelease(res);
+        });
+    });
     
-    //Guardamos la nueva imagen
-    UIImage *img = [UIImage imageWithCGImage:res];
-    self.photoView.image = img;
     
-    //Liberar el CGImageRef
-    CGImageRelease(res);
+    
 }
 
 #pragma mark - UIImagePickerControllerDelegate

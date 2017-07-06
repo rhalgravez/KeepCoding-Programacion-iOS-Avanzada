@@ -14,4 +14,12 @@
 
 @synthesize coordinate = _coordinate;
 
+-(NSString*)title {
+    return @"Estatua de Mazinger Z";
+}
+
+-(NSString *)subtitle {
+    return @"Meca de frikis y otakus";
+}
+
 @end

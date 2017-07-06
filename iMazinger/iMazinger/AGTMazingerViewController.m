@@ -75,6 +75,7 @@
     }
     
     mazingerView.pinTintColor = [UIColor purpleColor];
+    mazingerView.canShowCallout = YES;
     
     return mazingerView;
 }

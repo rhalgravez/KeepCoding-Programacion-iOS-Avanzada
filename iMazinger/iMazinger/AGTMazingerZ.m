@@ -12,7 +12,7 @@
 
 -(instancetype)init {
     if (self = [super init]) {
-        _coordinate = CLLocationCoordinate2DMake(41.2827416, 1.32880926);
+        _coordinate = CLLocationCoordinate2DMake(41.3827416, 1.32880926);
     }
     return self;
 }

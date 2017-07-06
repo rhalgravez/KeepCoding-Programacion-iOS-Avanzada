@@ -32,6 +32,22 @@
     [self.mapView addAnnotation:self.model];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    MKCoordinateRegion countryRegion = MKCoordinateRegionMakeWithDistance(self.model.coordinate, 1000000, 1000000);
+    
+    MKCoordinateRegion areaRegion = MKCoordinateRegionMakeWithDistance(self.model.coordinate, 500, 500);
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.mapView setRegion:countryRegion animated:YES];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.mapView setRegion:areaRegion animated:YES];
+        });
+    });
+}
+
 #pragma mark - Actions
 - (IBAction)vectorial:(id)sender {
 }

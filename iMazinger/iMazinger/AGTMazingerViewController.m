@@ -50,11 +50,14 @@
 
 #pragma mark - Actions
 - (IBAction)vectorial:(id)sender {
+    self.mapView.mapType = MKMapTypeStandard;
 }
 
 - (IBAction)satelite:(id)sender {
+    self.mapView.mapType = MKMapTypeSatellite;
 }
 
 - (IBAction)hibrido:(id)sender {
+    self.mapView.mapType = MKMapTypeHybrid;
 }
 @end

@@ -13,6 +13,7 @@
 		62A704591F0EC00100984D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A704571F0EC00100984D27 /* LaunchScreen.storyboard */; };
 		62A704621F0EC0DD00984D27 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A704611F0EC0DD00984D27 /* MapKit.framework */; };
 		62A704641F0EC0E500984D27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A704631F0EC0E500984D27 /* CoreLocation.framework */; };
+		62A704681F0EC1BB00984D27 /* AGTMazingerZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704671F0EC1BB00984D27 /* AGTMazingerZ.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		62A7045A1F0EC00100984D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A704611F0EC0DD00984D27 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		62A704631F0EC0E500984D27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		62A704661F0EC1BB00984D27 /* AGTMazingerZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMazingerZ.h; sourceTree = "<group>"; };
+		62A704671F0EC1BB00984D27 /* AGTMazingerZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMazingerZ.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		62A704481F0EC00100984D27 /* iMazinger */ = {
 			isa = PBXGroup;
 			children = (
+				62A704651F0EC18C00984D27 /* Model */,
 				62A7044C1F0EC00100984D27 /* AppDelegate.h */,
 				62A7044D1F0EC00100984D27 /* AppDelegate.m */,
 				62A704551F0EC00100984D27 /* Assets.xcassets */,
@@ -85,6 +89,15 @@
 				62A704611F0EC0DD00984D27 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62A704651F0EC18C00984D27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62A704661F0EC1BB00984D27 /* AGTMazingerZ.h */,
+				62A704671F0EC1BB00984D27 /* AGTMazingerZ.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +172,7 @@
 			files = (
 				62A7044E1F0EC00100984D27 /* AppDelegate.m in Sources */,
 				62A7044B1F0EC00100984D27 /* main.m in Sources */,
+				62A704681F0EC1BB00984D27 /* AGTMazingerZ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

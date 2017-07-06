@@ -14,6 +14,8 @@
 		62A704621F0EC0DD00984D27 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A704611F0EC0DD00984D27 /* MapKit.framework */; };
 		62A704641F0EC0E500984D27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A704631F0EC0E500984D27 /* CoreLocation.framework */; };
 		62A704681F0EC1BB00984D27 /* AGTMazingerZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704671F0EC1BB00984D27 /* AGTMazingerZ.m */; };
+		62A7046D1F0EE44400984D27 /* AGTMazingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7046B1F0EE44400984D27 /* AGTMazingerViewController.m */; };
+		62A7046E1F0EE44400984D27 /* AGTMazingerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A7046C1F0EE44400984D27 /* AGTMazingerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		62A704631F0EC0E500984D27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		62A704661F0EC1BB00984D27 /* AGTMazingerZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMazingerZ.h; sourceTree = "<group>"; };
 		62A704671F0EC1BB00984D27 /* AGTMazingerZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMazingerZ.m; sourceTree = "<group>"; };
+		62A7046A1F0EE44400984D27 /* AGTMazingerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMazingerViewController.h; sourceTree = "<group>"; };
+		62A7046B1F0EE44400984D27 /* AGTMazingerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMazingerViewController.m; sourceTree = "<group>"; };
+		62A7046C1F0EE44400984D27 /* AGTMazingerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTMazingerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		62A704481F0EC00100984D27 /* iMazinger */ = {
 			isa = PBXGroup;
 			children = (
+				62A704691F0EE40700984D27 /* Conrollers */,
 				62A704651F0EC18C00984D27 /* Model */,
 				62A7044C1F0EC00100984D27 /* AppDelegate.h */,
 				62A7044D1F0EC00100984D27 /* AppDelegate.m */,
@@ -98,6 +104,16 @@
 				62A704671F0EC1BB00984D27 /* AGTMazingerZ.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		62A704691F0EE40700984D27 /* Conrollers */ = {
+			isa = PBXGroup;
+			children = (
+				62A7046A1F0EE44400984D27 /* AGTMazingerViewController.h */,
+				62A7046B1F0EE44400984D27 /* AGTMazingerViewController.m */,
+				62A7046C1F0EE44400984D27 /* AGTMazingerViewController.xib */,
+			);
+			name = Conrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A704591F0EC00100984D27 /* LaunchScreen.storyboard in Resources */,
+				62A7046E1F0EE44400984D27 /* AGTMazingerViewController.xib in Resources */,
 				62A704561F0EC00100984D27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +189,7 @@
 			files = (
 				62A7044E1F0EC00100984D27 /* AppDelegate.m in Sources */,
 				62A7044B1F0EC00100984D27 /* main.m in Sources */,
+				62A7046D1F0EE44400984D27 /* AGTMazingerViewController.m in Sources */,
 				62A704681F0EC1BB00984D27 /* AGTMazingerZ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,11 +18,11 @@
 @synthesize locationManager = _locationManager;
 
 -(BOOL)hasLocation {
-    return (nil == self.location);
+    return (nil != self.location);
 }
 
 +(NSArray *)observableKeyNames {
-    return @[@"name", @"creationDate", @"text", @"notebook", @"photo"];
+    return @[@"name", @"creationDate", @"text", @"notebook", @"photo", @"location"];
 }
 
 +(instancetype)noteWithName:(NSString *)name
@@ -54,6 +54,11 @@
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [self.locationManager startUpdatingLocation];
+        
+        //solo me interesan datos recientes
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self zapLocationManager];
+        });
     }
 }
 
@@ -61,14 +66,23 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     
     //Paramos el locationManager para ahorrar batería
-    [self.locationManager startUpdatingLocation];
-    self.locationManager = nil;
+    [self zapLocationManager];
     
-    //Pillamos la última location
-    CLLocation *LastLocation = [locations lastObject];
-    
-    //Creamos nuestra AGTLocation
-    self.location = [AGTLocation locationWithCLLocation:LastLocation forNote:self];
+    if (![self hasLocation]) {//Hacer esto si la nota no tiene Location
+        //Pillamos la última location
+        CLLocation *LastLocation = [locations lastObject];
+        
+        //Creamos nuestra AGTLocation
+        self.location = [AGTLocation locationWithCLLocation:LastLocation forNote:self];
+    } else {
+        NSLog(@"No deberíamos llegar nunca aquí");
+    }
 }
 
+#pragma mark - Utils
+-(void)zapLocationManager {
+    [self.locationManager startUpdatingLocation];
+    self.locationManager.delegate = nil;
+    self.locationManager = nil;
+}
 @end

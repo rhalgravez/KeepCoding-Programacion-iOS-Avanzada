@@ -1,4 +1,5 @@
 #import "AGTNote.h"
+#import "AGTLocation.h"
 @import CoreLocation;
 
 @interface AGTNote () <CLLocationManagerDelegate>
@@ -54,6 +55,20 @@
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [self.locationManager startUpdatingLocation];
     }
+}
+
+#pragma mark - CLLocationManagerDelegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    //Paramos el locationManager para ahorrar batería
+    [self.locationManager startUpdatingLocation];
+    self.locationManager = nil;
+    
+    //Pillamos la última location
+    CLLocation *LastLocation = [locations lastObject];
+    
+    //Creamos nuestra AGTLocation
+    self.location = [AGTLocation locationWithCLLocation:LastLocation forNote:self];
 }
 
 @end

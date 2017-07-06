@@ -12,5 +12,6 @@
 
 #pragma mark - MKAnnotation
 
+@synthesize coordinate = _coordinate;
 
 @end

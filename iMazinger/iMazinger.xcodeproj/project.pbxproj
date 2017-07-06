@@ -11,6 +11,8 @@
 		62A7044E1F0EC00100984D27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7044D1F0EC00100984D27 /* AppDelegate.m */; };
 		62A704561F0EC00100984D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A704551F0EC00100984D27 /* Assets.xcassets */; };
 		62A704591F0EC00100984D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A704571F0EC00100984D27 /* LaunchScreen.storyboard */; };
+		62A704621F0EC0DD00984D27 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A704611F0EC0DD00984D27 /* MapKit.framework */; };
+		62A704641F0EC0E500984D27 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A704631F0EC0E500984D27 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		62A704551F0EC00100984D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62A704581F0EC00100984D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A7045A1F0EC00100984D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A704611F0EC0DD00984D27 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		62A704631F0EC0E500984D27 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A704641F0EC0E500984D27 /* CoreLocation.framework in Frameworks */,
+				62A704621F0EC0DD00984D27 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +45,7 @@
 			children = (
 				62A704481F0EC00100984D27 /* iMazinger */,
 				62A704471F0EC00100984D27 /* Products */,
+				62A704601F0EC0DC00984D27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,15 @@
 				62A7044A1F0EC00100984D27 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62A704601F0EC0DC00984D27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62A704631F0EC0E500984D27 /* CoreLocation.framework */,
+				62A704611F0EC0DD00984D27 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

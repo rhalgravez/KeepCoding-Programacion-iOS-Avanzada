@@ -9,7 +9,7 @@
 #import "AGTMazingerViewController.h"
 
 
-@interface AGTMazingerViewController ()
+@interface AGTMazingerViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) id<MKAnnotation> model;
@@ -30,6 +30,7 @@
     [super viewWillAppear:animated];
     
     [self.mapView addAnnotation:self.model];
+    self.mapView.delegate = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -60,4 +61,22 @@
 - (IBAction)hibrido:(id)sender {
     self.mapView.mapType = MKMapTypeHybrid;
 }
+
+#pragma mark - MKMapViewDelegate
+-(MKAnnotationView *)mapView:(MKMapView *)mapView
+           viewForAnnotation:(id<MKAnnotation>)annotation {
+    static NSString *reuseID = @"Mazinger";
+    
+    //Reciclar la annotation
+    MKPinAnnotationView *mazingerView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseID];
+    
+    if (mazingerView == nil) {
+        mazingerView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseID];
+    }
+    
+    mazingerView.pinTintColor = [UIColor purpleColor];
+    
+    return mazingerView;
+}
+
 @end

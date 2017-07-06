@@ -86,4 +86,22 @@
     return mazingerView;
 }
 
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+    MKMapSnapshotOptions *options =[MKMapSnapshotOptions new];
+    options.region = self.mapView.region;
+    options.mapType = MKMapTypeHybrid;
+    
+    MKMapSnapshotter *shotter = [[MKMapSnapshotter alloc] initWithOptions:options];
+    
+    [shotter startWithCompletionHandler:^(MKMapSnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error al crear snapshot\n%@", error);
+        } else {
+            NSLog(@"Snapshot: %@", snapshot);
+        }
+        
+    }];
+}
+
 @end

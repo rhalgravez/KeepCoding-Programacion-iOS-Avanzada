@@ -80,6 +80,9 @@
     UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mazinger"]];
     mazingerView.leftCalloutAccessoryView = image;
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    mazingerView.rightCalloutAccessoryView = btn;
+    
     return mazingerView;
 }
 

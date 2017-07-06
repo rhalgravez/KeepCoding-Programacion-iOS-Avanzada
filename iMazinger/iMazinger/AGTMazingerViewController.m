@@ -7,9 +7,10 @@
 //
 
 #import "AGTMazingerViewController.h"
+@import MessageUI;
 
 
-@interface AGTMazingerViewController () <MKMapViewDelegate>
+@interface AGTMazingerViewController () <MKMapViewDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) id<MKAnnotation> model;
@@ -98,10 +99,24 @@
         if (error) {
             NSLog(@"Error al crear snapshot\n%@", error);
         } else {
-            NSLog(@"Snapshot: %@", snapshot);
+            //Mandar el snapshot por email
+            MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
+            [mailVC setSubject:self.model.title];
+            mailVC.mailComposeDelegate = self;
+            
+            //añadir el snapshot como adjunto
+            NSData *imageData = UIImageJPEGRepresentation(snapshot.image, 0.9);
+            [mailVC addAttachmentData:imageData mimeType:@"image/jpeg" fileName:@"mazingerMap.jpg"];
+            
+            [self presentViewController:mailVC animated:YES completion:nil];
         }
-        
     }];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

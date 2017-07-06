@@ -10,4 +10,6 @@
 
 @interface AGTMazingerViewController : UIViewController
 
+-(instancetype)initWithAnnotationObject:(id<MKAnnotation>)model;
+
 @end

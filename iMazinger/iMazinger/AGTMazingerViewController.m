@@ -12,9 +12,19 @@
 @interface AGTMazingerViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (strong, nonatomic) id<MKAnnotation> model;
+
 @end
 
 @implementation AGTMazingerViewController
+
+#pragma mark - Init
+-(instancetype)initWithAnnotationObject:(id<MKAnnotation>)model {
+    if (self = [super initWithNibName:nil bundle:nil]) {
+        _model = model;
+    }
+    return self; 
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

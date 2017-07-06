@@ -2,8 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Location" representedClassName="AGTLocation" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
         <relationship name="notes" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="location" inverseEntity="Note" syncable="YES"/>
     </entity>
     <entity name="NamedEntity" representedClassName="AGTNamedEntity" syncable="YES">
@@ -29,6 +29,6 @@
         <element name="Note" positionX="-317" positionY="-609" width="128" height="105"/>
         <element name="Notebook" positionX="45" positionY="-612" width="128" height="58"/>
         <element name="Photo" positionX="-126" positionY="-522" width="128" height="73"/>
-        <element name="Location" positionX="-108" positionY="-594" width="128" height="105"/>
+        <element name="Location" positionX="-306" positionY="-438" width="128" height="103"/>
     </elements>
 </model>

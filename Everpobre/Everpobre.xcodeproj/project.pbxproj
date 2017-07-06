@@ -503,7 +503,7 @@
 				62EC3E3B1F0D791900203FA7 /* Model2.xcdatamodel */,
 				DFF4DEE21E9C0B5B00D9C91E /* Model.xcdatamodel */,
 			);
-			currentVersion = DFF4DEE21E9C0B5B00D9C91E /* Model.xcdatamodel */;
+			currentVersion = 62EC3E3B1F0D791900203FA7 /* Model2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

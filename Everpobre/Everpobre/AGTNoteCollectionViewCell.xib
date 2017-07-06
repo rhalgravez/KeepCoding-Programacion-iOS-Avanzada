@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-Tl-02n">
-                        <rect key="frame" x="8" y="93" width="132" height="21"/>
+                        <rect key="frame" x="8" y="93" width="102" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="14"/>
                         <nil key="textColor"/>
@@ -36,10 +36,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placemark" translatesAutoresizingMaskIntoConstraints="NO" id="Ybb-ll-AEr">
+                        <rect key="frame" x="115" y="93" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="locationView" destination="Ybb-ll-AEr" id="FM6-g7-VBe"/>
                 <outlet property="modificationDAteView" destination="EYf-Tl-02n" id="eJg-mk-egk"/>
                 <outlet property="photoView" destination="jEH-oR-eru" id="fcF-ma-vyf"/>
                 <outlet property="titleView" destination="pOg-c7-0dz" id="kda-3i-dz1"/>
@@ -49,5 +54,6 @@
     </objects>
     <resources>
         <image name="noImage" width="285" height="174"/>
+        <image name="placemark" width="256" height="256"/>
     </resources>
 </document>

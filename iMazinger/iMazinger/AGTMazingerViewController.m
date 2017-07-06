@@ -77,6 +77,9 @@
     mazingerView.pinTintColor = [UIColor purpleColor];
     mazingerView.canShowCallout = YES;
     
+    UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mazinger"]];
+    mazingerView.leftCalloutAccessoryView = image;
+    
     return mazingerView;
 }
 

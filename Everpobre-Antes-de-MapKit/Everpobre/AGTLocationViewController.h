@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AGTLocation;
 
 @interface AGTLocationViewController : UIViewController
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -14,6 +15,8 @@
 - (IBAction)standardMap:(id)sender;
 - (IBAction)satelliteMap:(id)sender;
 - (IBAction)hybridMap:(id)sender;
+
+-(instancetype)initWithLocation:(AGTLocation *)location;
 
 
 

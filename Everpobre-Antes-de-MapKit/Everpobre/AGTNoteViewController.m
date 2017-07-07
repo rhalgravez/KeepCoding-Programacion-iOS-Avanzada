@@ -11,6 +11,8 @@
 #import "AGTPhoto.h"
 #import "AGTNotebook.h"
 #import "AGTPhotoViewController.h"
+#import "AGTLocation.h"
+#import "AGTMapSnapshot.h"
 
 @interface AGTNoteViewController ()<UITextFieldDelegate, UITextViewDelegate>
 @property (nonatomic, strong) AGTNote *model;
@@ -53,12 +55,22 @@
     self.nameView.text = self.model.name;
     self.textView.text = self.model.text;
     
+    //image
     UIImage *img = self.model.photo.image;
     if (!img) {
         img = [UIImage imageNamed:@"noImage.png"];
     }
     
     self.photoView.image = img;
+    
+    //Snapshot
+    img = self.model.location.mapSnapshot.image;
+    if (!img) {
+        img = [UIImage imageNamed:@"noSnapshot.png"];
+    }
+    self.mapSnapshotView.image = img;
+    //Cómo la snapshot se hace en segundo plano, quizás todavía no est´lista y tengamos que observarla
+    [self startObservingSnapshot];
     
     [self startObservingKeyboard];
     
@@ -106,6 +118,7 @@
     
     
     [self stopObservingKeyboard];
+    [self stopObservingSnapshot];
 }
 
 #pragma mark -  TextView
@@ -289,6 +302,26 @@
 
 }
 
+#pragma mark - KVO
+-(void)startObservingSnapshot {
+    [self.model addObserver:self
+           forKeyPath:@"location.mapSnapshot.snapshotData"
+              options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+-(void)stopObservingSnapshot {
+    [self.model removeObserver:self forKeyPath:@"location.mapSnapshot.snapshotData"];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change
+                      context:(void *)context {
+    UIImage *img = self.model.location.mapSnapshot.image;
+    if (!img) {
+        img = [UIImage imageNamed:@"noSnapshot.png"];
+    }
+    self.mapSnapshotView.image = img;
+}
 
 
 

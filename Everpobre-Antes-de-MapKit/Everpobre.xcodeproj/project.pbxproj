@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		62A704741F0F3F8300984D27 /* _AGTMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704711F0F3F8300984D27 /* _AGTMapSnapshot.m */; };
 		62A704751F0F3F8300984D27 /* AGTMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */; };
+		62A704781F0F51E200984D27 /* noSnapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A704771F0F51E200984D27 /* noSnapshot.png */; };
 		ED019170195751EB00DDE0B6 /* AGTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */; };
 		ED019171195751EB00DDE0B6 /* AGTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */; };
 		ED01DF29189CFA8E00FDDA35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF28189CFA8E00FDDA35 /* Foundation.framework */; };
@@ -71,6 +72,7 @@
 		62A704721F0F3F8300984D27 /* AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMapSnapshot.h; sourceTree = "<group>"; };
 		62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMapSnapshot.m; sourceTree = "<group>"; };
 		62A704761F0F50CC00984D27 /* AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMapSnapshot.h; sourceTree = "<group>"; };
+		62A704771F0F51E200984D27 /* noSnapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noSnapshot.png; sourceTree = "<group>"; };
 		ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
 		ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
 		ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				ED9D5F08195DCFD3005C53F0 /* placemark.png */,
 				ED33F18D194F36FF00E0407E /* noImage.png */,
+				62A704771F0F51E200984D27 /* noSnapshot.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				EDC8715E1960392900EC30D6 /* placemark.png in Resources */,
 				ED2FD7EA18F6E02B002EE77A /* AGTNotebookCellView.xib in Resources */,
 				ED01DF33189CFA8E00FDDA35 /* InfoPlist.strings in Resources */,
+				62A704781F0F51E200984D27 /* noSnapshot.png in Resources */,
 				ED33F18E194F36FF00E0407E /* noImage.png in Resources */,
 				ED01DF3B189CFA8E00FDDA35 /* Images.xcassets in Resources */,
 				ED7A3E6419571161000A33BC /* AGTNoteTableViewController.xib in Resources */,

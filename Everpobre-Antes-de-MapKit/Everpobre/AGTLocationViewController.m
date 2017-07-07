@@ -43,12 +43,15 @@
 
 #pragma mark - Actions
 - (IBAction)standardMap:(id)sender {
+    self.mapView.mapType = MKMapTypeStandard;
 }
 
 - (IBAction)satelliteMap:(id)sender {
+    self.mapView.mapType = MKMapTypeSatellite;
 }
 
 - (IBAction)hybridMap:(id)sender {
+    self.mapView.mapType = MKMapTypeHybrid;
 }
 
 #pragma mark - MKMapViewDelegate

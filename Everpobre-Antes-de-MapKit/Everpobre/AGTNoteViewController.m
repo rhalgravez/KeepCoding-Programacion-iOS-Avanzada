@@ -95,6 +95,12 @@
                                                                           action:@selector(displayDetailPhoto:)];
     [self.photoView addGestureRecognizer:tap];
     
+    
+    //GestureRecognizer para la vista location
+    self.mapSnapshotView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *snapTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(displayDetailLocation:)];
+    
+    [self.mapSnapshotView addGestureRecognizer:snapTap];
 
     // Botón de compartir
     UIBarButtonItem *share = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(displayActions:)];
@@ -274,6 +280,10 @@
                                          animated:YES];
     
 
+}
+
+-(void)displayDetailLocation:(id)sender {
+    
 }
 
 -(void) displayActions:(id) sender{

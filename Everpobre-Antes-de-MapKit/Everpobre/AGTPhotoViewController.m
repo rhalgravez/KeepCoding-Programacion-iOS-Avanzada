@@ -8,6 +8,8 @@
 
 #import "AGTPhotoViewController.h"
 #import "AGTPhoto.h"
+#import "UIImage+Resize.h"
+
 @import CoreImage;
 
 @interface AGTPhotoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -197,9 +199,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
                                    screenBounds.size.height * screenScale);
     NSLog(@"Size of screen: %@", NSStringFromCGSize(screenSize));
     
-    //Aquí es donde pasamos la imagen mastodóndtica, la guardamos y la pasamos
-    //por la funcíon de conversión a jpg
-    self.model.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    //Mandamos la imagen haciéndole un resize antes
+    self.model.image = [img resizedImage:screenSize interpolationQuality:kCGInterpolationMedium];
     [self dismissViewControllerAnimated:YES
                              completion:^{
                                  

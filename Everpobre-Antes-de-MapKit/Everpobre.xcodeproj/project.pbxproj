@@ -12,6 +12,9 @@
 		62A704781F0F51E200984D27 /* noSnapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A704771F0F51E200984D27 /* noSnapshot.png */; };
 		62D7EEEF1F0F5A1100771041 /* AGTLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D7EEED1F0F5A1100771041 /* AGTLocationViewController.m */; };
 		62D7EEF01F0F5A1100771041 /* AGTLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D7EEEE1F0F5A1100771041 /* AGTLocationViewController.xib */; };
+		62D7EEF81F0FFC6A00771041 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D7EEF31F0FFC6A00771041 /* UIImage+Alpha.m */; };
+		62D7EEF91F0FFC6A00771041 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D7EEF51F0FFC6A00771041 /* UIImage+Resize.m */; };
+		62D7EEFA1F0FFC6A00771041 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D7EEF71F0FFC6A00771041 /* UIImage+RoundedCorner.m */; };
 		ED019170195751EB00DDE0B6 /* AGTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */; };
 		ED019171195751EB00DDE0B6 /* AGTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */; };
 		ED01DF29189CFA8E00FDDA35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF28189CFA8E00FDDA35 /* Foundation.framework */; };
@@ -78,6 +81,12 @@
 		62D7EEEC1F0F5A1100771041 /* AGTLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTLocationViewController.h; sourceTree = "<group>"; };
 		62D7EEED1F0F5A1100771041 /* AGTLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTLocationViewController.m; sourceTree = "<group>"; };
 		62D7EEEE1F0F5A1100771041 /* AGTLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTLocationViewController.xib; sourceTree = "<group>"; };
+		62D7EEF21F0FFC6A00771041 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		62D7EEF31F0FFC6A00771041 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		62D7EEF41F0FFC6A00771041 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		62D7EEF51F0FFC6A00771041 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		62D7EEF61F0FFC6A00771041 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		62D7EEF71F0FFC6A00771041 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
 		ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
 		ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
@@ -177,6 +186,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62D7EEF11F0FFC4F00771041 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				62D7EEF21F0FFC6A00771041 /* UIImage+Alpha.h */,
+				62D7EEF31F0FFC6A00771041 /* UIImage+Alpha.m */,
+				62D7EEF41F0FFC6A00771041 /* UIImage+Resize.h */,
+				62D7EEF51F0FFC6A00771041 /* UIImage+Resize.m */,
+				62D7EEF61F0FFC6A00771041 /* UIImage+RoundedCorner.h */,
+				62D7EEF71F0FFC6A00771041 /* UIImage+RoundedCorner.m */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
 		ED01DF1C189CFA8E00FDDA35 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +367,7 @@
 		ED57849A18ECC60500A96913 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				62D7EEF11F0FFC4F00771041 /* ThirdParty */,
 				ED57849B18ECC63F00A96913 /* UIViewController+Navigation.h */,
 				ED57849C18ECC63F00A96913 /* UIViewController+Navigation.m */,
 			);
@@ -483,6 +506,7 @@
 				ED57849318EC40A200A96913 /* AGTCoreDataTableViewController.m in Sources */,
 				ED01DF5A189CFAC100FDDA35 /* AGTSimpleCoreDataStack.m in Sources */,
 				62A704751F0F3F8300984D27 /* AGTMapSnapshot.m in Sources */,
+				62D7EEF81F0FFC6A00771041 /* UIImage+Alpha.m in Sources */,
 				62A704741F0F3F8300984D27 /* _AGTMapSnapshot.m in Sources */,
 				ED01DF86189D7B3400FDDA35 /* AGTNote.m in Sources */,
 				ED019170195751EB00DDE0B6 /* AGTPhotoViewController.m in Sources */,
@@ -491,7 +515,9 @@
 				ED0967C4195AC99400DE098B /* _AGTLocation.m in Sources */,
 				ED7A3E6319571161000A33BC /* AGTNoteTableViewController.m in Sources */,
 				ED0967C5195AC99400DE098B /* AGTLocation.m in Sources */,
+				62D7EEFA1F0FFC6A00771041 /* UIImage+RoundedCorner.m in Sources */,
 				ED1388AE18FDBA1300F5EBF2 /* AGTNotesTableViewController.m in Sources */,
+				62D7EEF91F0FFC6A00771041 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

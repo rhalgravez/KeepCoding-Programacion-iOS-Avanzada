@@ -1,5 +1,6 @@
 #import "AGTLocation.h"
 #import "AGTNote.h"
+#import "AGTMapSnapshot.h"
 
 @import AddressBookUI;
 
@@ -41,7 +42,8 @@
         loc.latitudeValue = location.coordinate.latitude;
         loc.longitudeValue = location.coordinate.longitude;
         [loc addNotesObject:note];
-
+        
+        //Creamos la dirección
         CLGeocoder *coder = [[CLGeocoder alloc]init];
         [coder reverseGeocodeLocation:location
                     completionHandler:^(NSArray *placemarks, NSError *error) {
@@ -53,6 +55,10 @@
                             NSLog(@"Address is %@", loc.address);
                         }
                     }];
+        
+        //Crear un mapSnapshot
+        loc.mapSnapshot = [AGTMapSnapshot mapSnapshotForLocation:loc];
+        
         return loc;
 
     }

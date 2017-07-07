@@ -29,9 +29,11 @@
     [super viewWillAppear:animated];
     
     //Crer un Annotation Object
-    
+    //Ya no necesitamos crear un annotation object porque ya tenemos AGTLoaction, sólo
+    //hacemos que implemente el protocolo MKAnnotation
     
     //Pasarle ese annotation al mapView
+    [self.mapView addAnnotation:self.model];
 }
 
 -(void)viewDidAppear:(BOOL)animated {

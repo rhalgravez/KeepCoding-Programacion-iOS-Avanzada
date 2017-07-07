@@ -2,6 +2,8 @@
 #import "AGTNote.h"
 #import "AGTMapSnapshot.h"
 
+#import <CoreLocation/CoreLocation.h>
+
 @import AddressBookUI;
 
 @interface AGTLocation ()
@@ -65,6 +67,27 @@
     
     
     
+}
+
+#pragma mark - MKAnnotation
+-(NSString *)titile {
+    return @"I wrote a note here!";
+}
+
+-(NSString *)subtitle {
+    //Cómo la dirección viene con saltos de línea eso podría dar problemas al subtitle
+    //así que eliminamos los saltos de línea
+    NSArray *lines = [self.address componentsSeparatedByString:@"\n"];
+    NSMutableString *concat = [@"" mutableCopy];
+    for (NSString *line in lines) {
+        [concat appendFormat:@"%@", line];
+    }
+    
+    return concat;
+}
+
+-(CLLocationCoordinate2D)coordinate {
+    return CLLocationCoordinate2DMake(self.latitudeValue, self.longitudeValue);
 }
 
 

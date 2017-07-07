@@ -4,7 +4,7 @@
 
 @class AGTNote;
 
-@interface AGTLocation : _AGTLocation {}
+@interface AGTLocation : _AGTLocation <MKAnnotation> {}
 // Custom logic goes here.
 
 +(instancetype) locationWithCLLocation:(CLLocation*)location forNote:(AGTNote *) note;

@@ -17,7 +17,10 @@
 -(void) setImage:(UIImage *)image{
     
     // sincronizar con imageData
-    self.imageData = UIImagePNGRepresentation(image);
+    //Cambio la función de representation para así posiblemente reudiciría los poicos de memoria
+    //pero al hacer una prueba en instruments lo spicos de memoría siguen siendo enormes
+    //de entre 148MB quizás hasta más de 200
+    self.imageData = UIImageJPEGRepresentation(image, 0.9);
     
 }
 

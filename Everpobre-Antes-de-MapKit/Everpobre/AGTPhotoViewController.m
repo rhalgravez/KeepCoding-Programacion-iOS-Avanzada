@@ -184,6 +184,21 @@
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
+    
+    //Código para comparar el tamaño de la imagen con el tamaño de la pantalla y
+    //ver que tan grande la imagen es en comparación
+    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.model.image = img;
+    NSLog(@"Size of image %@", NSStringFromCGSize(img.size));
+    
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGFloat screenScale = [[UIScreen mainScreen] scale];
+    CGSize screenSize = CGSizeMake(screenBounds.size.width * screenScale,
+                                   screenBounds.size.height * screenScale);
+    NSLog(@"Size of screen: %@", NSStringFromCGSize(screenSize));
+    
+    //Aquí es donde pasamos la imagen mastodóndtica, la guardamos y la pasamos
+    //por la funcíon de conversión a jpg
     self.model.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated:YES
                              completion:^{

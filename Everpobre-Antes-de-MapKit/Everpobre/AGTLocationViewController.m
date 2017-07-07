@@ -9,7 +9,7 @@
 #import "AGTLocationViewController.h"
 #import "AGTLocation.h"
 
-@interface AGTLocationViewController ()
+@interface AGTLocationViewController ()<MKMapViewDelegate>
 
 @property(nonatomic, strong) AGTLocation *model;
 
@@ -25,7 +25,21 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //Crer un Annotation Object
+    
+    
+    //Pasarle ese annotation al mapView
+}
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    //asinganr la region y animar
+}
+
+#pragma mark - Actions
 - (IBAction)standardMap:(id)sender {
 }
 
@@ -34,4 +48,6 @@
 
 - (IBAction)hybridMap:(id)sender {
 }
+
+#pragma mark - MKMapViewDelegate
 @end

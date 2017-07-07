@@ -120,6 +120,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath{
                             [NSSortDescriptor
                              sortDescriptorWithKey:AGTNamedEntityAttributes.creationDate
                              ascending:NO]];
+    req.fetchBatchSize = 20;
     
     req.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", [self.fetchedResultsController objectAtIndexPath:indexPath]];
     

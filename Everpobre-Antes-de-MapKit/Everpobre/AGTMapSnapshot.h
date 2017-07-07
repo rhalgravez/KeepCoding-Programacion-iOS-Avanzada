@@ -5,4 +5,6 @@
 
 @property (nonatomic, strong) UIImage *image;
 
++(instancetype)mapSnapshotForLocation:(AGTLocation *)location;
+
 @end

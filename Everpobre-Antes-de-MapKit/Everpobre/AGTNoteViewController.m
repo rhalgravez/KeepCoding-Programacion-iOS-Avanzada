@@ -13,6 +13,7 @@
 #import "AGTPhotoViewController.h"
 #import "AGTLocation.h"
 #import "AGTMapSnapshot.h"
+#import "AGTLocationViewController.h"
 
 @interface AGTNoteViewController ()<UITextFieldDelegate, UITextViewDelegate>
 @property (nonatomic, strong) AGTNote *model;
@@ -283,6 +284,9 @@
 }
 
 -(void)displayDetailLocation:(id)sender {
+    AGTLocationViewController *locationVC = [[AGTLocationViewController alloc] initWithLocation:self.model.location];
+    
+    [self.navigationController pushViewController:locationVC animated:YES];
     
 }
 

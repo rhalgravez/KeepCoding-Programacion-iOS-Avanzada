@@ -34,11 +34,23 @@
     
     //Pasarle ese annotation al mapView
     [self.mapView addAnnotation:self.model];
+    
+    //Region inicial
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.model.coordinate, 2000000, 2000000);
+    [self.mapView setRegion:region];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     //asinganr la region y animar
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(self.model.coordinate, 500, 500);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.mapView setRegion:region animated:YES];
+        });
+    });
+    
 }
 
 #pragma mark - Actions

@@ -186,21 +186,28 @@
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
-    
-    //Código para comparar el tamaño de la imagen con el tamaño de la pantalla y
-    //ver que tan grande la imagen es en comparación
-    UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
-    self.model.image = img;
-    NSLog(@"Size of image %@", NSStringFromCGSize(img.size));
+    __block UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGFloat screenScale = [[UIScreen mainScreen] scale];
     CGSize screenSize = CGSizeMake(screenBounds.size.width * screenScale,
                                    screenBounds.size.height * screenScale);
-    NSLog(@"Size of screen: %@", NSStringFromCGSize(screenSize));
     
-    //Mandamos la imagen haciéndole un resize antes
-    self.model.image = [img resizedImage:screenSize interpolationQuality:kCGInterpolationMedium];
+    
+    //Salimos de aquí una vez que ya tenemos la imagen y el tamaño del device
+    //no sin antes dejar el resize en segundo plano, esto se hace ya que el info dictionary
+    //puede tener demasiadas cosas así que es mejor salir de aquí lo más rápido posible
+    [self.activityView startAnimating];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        img = [img resizedImage:screenSize interpolationQuality:kCGInterpolationMedium];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.photoView.image = img;
+            [self.activityView stopAnimating];
+            self.model.image = img;
+        });
+    });
+    
     [self dismissViewControllerAnimated:YES
                              completion:^{
                                  

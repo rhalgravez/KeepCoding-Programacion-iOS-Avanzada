@@ -70,6 +70,7 @@
 		62A704711F0F3F8300984D27 /* _AGTMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTMapSnapshot.m; sourceTree = "<group>"; };
 		62A704721F0F3F8300984D27 /* AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMapSnapshot.h; sourceTree = "<group>"; };
 		62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMapSnapshot.m; sourceTree = "<group>"; };
+		62A704761F0F50CC00984D27 /* AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMapSnapshot.h; sourceTree = "<group>"; };
 		ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
 		ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
 		ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
@@ -250,6 +251,7 @@
 		ED01DF57189CFA9500FDDA35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				62A704761F0F50CC00984D27 /* AGTMapSnapshot.h */,
 				ED0967C0195AC99400DE098B /* _AGTLocation.h */,
 				ED0967C1195AC99400DE098B /* _AGTLocation.m */,
 				ED01DF76189D7B3400FDDA35 /* _AGTNamedEntity.h */,

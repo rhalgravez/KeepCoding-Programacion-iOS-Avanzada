@@ -10,6 +10,8 @@
 		62A704741F0F3F8300984D27 /* _AGTMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704711F0F3F8300984D27 /* _AGTMapSnapshot.m */; };
 		62A704751F0F3F8300984D27 /* AGTMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */; };
 		62A704781F0F51E200984D27 /* noSnapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A704771F0F51E200984D27 /* noSnapshot.png */; };
+		62D7EEEF1F0F5A1100771041 /* AGTLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D7EEED1F0F5A1100771041 /* AGTLocationViewController.m */; };
+		62D7EEF01F0F5A1100771041 /* AGTLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62D7EEEE1F0F5A1100771041 /* AGTLocationViewController.xib */; };
 		ED019170195751EB00DDE0B6 /* AGTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */; };
 		ED019171195751EB00DDE0B6 /* AGTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */; };
 		ED01DF29189CFA8E00FDDA35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF28189CFA8E00FDDA35 /* Foundation.framework */; };
@@ -73,6 +75,9 @@
 		62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMapSnapshot.m; sourceTree = "<group>"; };
 		62A704761F0F50CC00984D27 /* AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMapSnapshot.h; sourceTree = "<group>"; };
 		62A704771F0F51E200984D27 /* noSnapshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noSnapshot.png; sourceTree = "<group>"; };
+		62D7EEEC1F0F5A1100771041 /* AGTLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTLocationViewController.h; sourceTree = "<group>"; };
+		62D7EEED1F0F5A1100771041 /* AGTLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTLocationViewController.m; sourceTree = "<group>"; };
+		62D7EEEE1F0F5A1100771041 /* AGTLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTLocationViewController.xib; sourceTree = "<group>"; };
 		ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
 		ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
 		ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
@@ -330,6 +335,9 @@
 				ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */,
 				ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */,
 				ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */,
+				62D7EEEC1F0F5A1100771041 /* AGTLocationViewController.h */,
+				62D7EEED1F0F5A1100771041 /* AGTLocationViewController.m */,
+				62D7EEEE1F0F5A1100771041 /* AGTLocationViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -434,6 +442,7 @@
 				62A704781F0F51E200984D27 /* noSnapshot.png in Resources */,
 				ED33F18E194F36FF00E0407E /* noImage.png in Resources */,
 				ED01DF3B189CFA8E00FDDA35 /* Images.xcassets in Resources */,
+				62D7EEF01F0F5A1100771041 /* AGTLocationViewController.xib in Resources */,
 				ED7A3E6419571161000A33BC /* AGTNoteTableViewController.xib in Resources */,
 				ED33F18B194F34D300E0407E /* AGTNoteCollectionViewCell.xib in Resources */,
 				EDD3BD001951E5F600F5B5E7 /* AGTNoteViewController.xib in Resources */,
@@ -457,6 +466,7 @@
 			files = (
 				ED57849918EC566000A96913 /* AGTNotebooksViewController.m in Sources */,
 				ED01DF8C189D8B4C00FDDA35 /* _AGTPhoto.m in Sources */,
+				62D7EEEF1F0F5A1100771041 /* AGTLocationViewController.m in Sources */,
 				ED01DF35189CFA8E00FDDA35 /* main.m in Sources */,
 				ED33F19D1950481800E0407E /* AGTNotesViewController.m in Sources */,
 				ED33F191194F376A00E0407E /* AGTNoteCellView.m in Sources */,

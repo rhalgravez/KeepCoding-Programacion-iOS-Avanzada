@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G31" minimumToolsVersion="Xcode 4.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="v3">
+    <entity name="Location" representedClassName="AGTLocation" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <relationship name="mapSnapshot" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MapSnapshot" inverseName="location" inverseEntity="MapSnapshot" syncable="YES"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="location" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <entity name="MapSnapshot" representedClassName="AGTMapSnapshot" syncable="YES">
+        <attribute name="snapshotData" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="location" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="mapSnapshot" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="NamedEntity" representedClassName="AGTNamedEntity" syncable="YES">
+        <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="modificationDate" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Note" representedClassName="AGTNote" parentEntity="NamedEntity" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Location" inverseName="notes" inverseEntity="Location" syncable="YES"/>
+        <relationship name="notebook" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="notes" inverseEntity="Notebook" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Photo" inverseName="notes" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <entity name="Notebook" representedClassName="AGTNotebook" parentEntity="NamedEntity" syncable="YES">
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Note" inverseName="notebook" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="AGTPhoto" syncable="YES">
+        <attribute name="imageData" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="notes" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="photo" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Location" positionX="144" positionY="-45" width="128" height="120"/>
+        <element name="NamedEntity" positionX="126" positionY="-196" width="128" height="88"/>
+        <element name="Note" positionX="-38" positionY="36" width="128" height="103"/>
+        <element name="Notebook" positionX="333" positionY="27" width="128" height="58"/>
+        <element name="Photo" positionX="187" positionY="162" width="128" height="75"/>
+        <element name="MapSnapshot" positionX="144" positionY="-45" width="128" height="75"/>
+    </elements>
+</model>

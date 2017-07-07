@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62A704741F0F3F8300984D27 /* _AGTMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704711F0F3F8300984D27 /* _AGTMapSnapshot.m */; };
+		62A704751F0F3F8300984D27 /* AGTMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */; };
+		ED019170195751EB00DDE0B6 /* AGTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */; };
+		ED019171195751EB00DDE0B6 /* AGTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */; };
+		ED01DF29189CFA8E00FDDA35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF28189CFA8E00FDDA35 /* Foundation.framework */; };
+		ED01DF2B189CFA8E00FDDA35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF2A189CFA8E00FDDA35 /* CoreGraphics.framework */; };
+		ED01DF2D189CFA8E00FDDA35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF2C189CFA8E00FDDA35 /* UIKit.framework */; };
+		ED01DF33189CFA8E00FDDA35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED01DF31189CFA8E00FDDA35 /* InfoPlist.strings */; };
+		ED01DF35189CFA8E00FDDA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF34189CFA8E00FDDA35 /* main.m */; };
+		ED01DF39189CFA8E00FDDA35 /* AGTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF38189CFA8E00FDDA35 /* AGTAppDelegate.m */; };
+		ED01DF3B189CFA8E00FDDA35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED01DF3A189CFA8E00FDDA35 /* Images.xcassets */; };
+		ED01DF42189CFA8E00FDDA35 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF41189CFA8E00FDDA35 /* XCTest.framework */; };
+		ED01DF43189CFA8E00FDDA35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF28189CFA8E00FDDA35 /* Foundation.framework */; };
+		ED01DF44189CFA8E00FDDA35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED01DF2C189CFA8E00FDDA35 /* UIKit.framework */; };
+		ED01DF4C189CFA8E00FDDA35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED01DF4A189CFA8E00FDDA35 /* InfoPlist.strings */; };
+		ED01DF4E189CFA8E00FDDA35 /* EverpobreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF4D189CFA8E00FDDA35 /* EverpobreTests.m */; };
+		ED01DF5A189CFAC100FDDA35 /* AGTSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF59189CFAC100FDDA35 /* AGTSimpleCoreDataStack.m */; };
+		ED01DF63189D1A6700FDDA35 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF61189D1A6700FDDA35 /* Model.xcdatamodeld */; };
+		ED01DF82189D7B3400FDDA35 /* _AGTNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF77189D7B3400FDDA35 /* _AGTNamedEntity.m */; };
+		ED01DF83189D7B3400FDDA35 /* _AGTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF79189D7B3400FDDA35 /* _AGTNote.m */; };
+		ED01DF84189D7B3400FDDA35 /* _AGTNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF7B189D7B3400FDDA35 /* _AGTNotebook.m */; };
+		ED01DF85189D7B3400FDDA35 /* AGTNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF7D189D7B3400FDDA35 /* AGTNamedEntity.m */; };
+		ED01DF86189D7B3400FDDA35 /* AGTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF7F189D7B3400FDDA35 /* AGTNote.m */; };
+		ED01DF87189D7B3400FDDA35 /* AGTNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF81189D7B3400FDDA35 /* AGTNotebook.m */; };
+		ED01DF8C189D8B4C00FDDA35 /* _AGTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF89189D8B4C00FDDA35 /* _AGTPhoto.m */; };
+		ED01DF8D189D8B4C00FDDA35 /* AGTPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = ED01DF8B189D8B4C00FDDA35 /* AGTPhoto.m */; };
+		ED0967C4195AC99400DE098B /* _AGTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0967C1195AC99400DE098B /* _AGTLocation.m */; };
+		ED0967C5195AC99400DE098B /* AGTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0967C3195AC99400DE098B /* AGTLocation.m */; };
+		ED1388AE18FDBA1300F5EBF2 /* AGTNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1388AD18FDBA1300F5EBF2 /* AGTNotesTableViewController.m */; };
+		ED2FD7EA18F6E02B002EE77A /* AGTNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2FD7E918F6E02B002EE77A /* AGTNotebookCellView.xib */; };
+		ED2FD7ED18F6E102002EE77A /* AGTNotebookCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2FD7EC18F6E102002EE77A /* AGTNotebookCellView.m */; };
+		ED33F18B194F34D300E0407E /* AGTNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED33F18A194F34D300E0407E /* AGTNoteCollectionViewCell.xib */; };
+		ED33F18E194F36FF00E0407E /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ED33F18D194F36FF00E0407E /* noImage.png */; };
+		ED33F191194F376A00E0407E /* AGTNoteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED33F190194F376A00E0407E /* AGTNoteCellView.m */; };
+		ED33F19A194F3D8F00E0407E /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED33F199194F3D8F00E0407E /* AGTCoreDataCollectionViewController.m */; };
+		ED33F19D1950481800E0407E /* AGTNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED33F19C1950481800E0407E /* AGTNotesViewController.m */; };
+		ED57849318EC40A200A96913 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED57849218EC40A200A96913 /* AGTCoreDataTableViewController.m */; };
+		ED57849918EC566000A96913 /* AGTNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED57849818EC566000A96913 /* AGTNotebooksViewController.m */; };
+		ED57849D18ECC63F00A96913 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED57849C18ECC63F00A96913 /* UIViewController+Navigation.m */; };
+		ED7A3E6319571161000A33BC /* AGTNoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7A3E6119571161000A33BC /* AGTNoteTableViewController.m */; };
+		ED7A3E6419571161000A33BC /* AGTNoteTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED7A3E6219571161000A33BC /* AGTNoteTableViewController.xib */; };
+		EDC8715E1960392900EC30D6 /* placemark.png in Resources */ = {isa = PBXBuildFile; fileRef = ED9D5F08195DCFD3005C53F0 /* placemark.png */; };
+		EDD3BCFF1951E5F600F5B5E7 /* AGTNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD3BCFD1951E5F600F5B5E7 /* AGTNoteViewController.m */; };
+		EDD3BD001951E5F600F5B5E7 /* AGTNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD3BCFE1951E5F600F5B5E7 /* AGTNoteViewController.xib */; };
+		EDD3BD021951E7EB00F5B5E7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD3BD011951E7EB00F5B5E7 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED01DF45189CFA8E00FDDA35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED01DF1D189CFA8E00FDDA35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED01DF24189CFA8E00FDDA35;
+			remoteInfo = Everpobre;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62A7046F1F0F3D3D00984D27 /* Model3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model3.xcdatamodel; sourceTree = "<group>"; };
+		62A704701F0F3F8300984D27 /* _AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTMapSnapshot.h; sourceTree = "<group>"; };
+		62A704711F0F3F8300984D27 /* _AGTMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTMapSnapshot.m; sourceTree = "<group>"; };
+		62A704721F0F3F8300984D27 /* AGTMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMapSnapshot.h; sourceTree = "<group>"; };
+		62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMapSnapshot.m; sourceTree = "<group>"; };
+		ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhotoViewController.h; sourceTree = "<group>"; };
+		ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhotoViewController.m; sourceTree = "<group>"; };
+		ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTPhotoViewController.xib; sourceTree = "<group>"; };
+		ED01DF25189CFA8E00FDDA35 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED01DF28189CFA8E00FDDA35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED01DF2A189CFA8E00FDDA35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED01DF2C189CFA8E00FDDA35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED01DF30189CFA8E00FDDA35 /* Everpobre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Everpobre-Info.plist"; sourceTree = "<group>"; };
+		ED01DF32189CFA8E00FDDA35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED01DF34189CFA8E00FDDA35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED01DF36189CFA8E00FDDA35 /* Everpobre-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Everpobre-Prefix.pch"; sourceTree = "<group>"; };
+		ED01DF37189CFA8E00FDDA35 /* AGTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGTAppDelegate.h; sourceTree = "<group>"; };
+		ED01DF38189CFA8E00FDDA35 /* AGTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGTAppDelegate.m; sourceTree = "<group>"; };
+		ED01DF3A189CFA8E00FDDA35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED01DF40189CFA8E00FDDA35 /* EverpobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverpobreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED01DF41189CFA8E00FDDA35 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ED01DF49189CFA8E00FDDA35 /* EverpobreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EverpobreTests-Info.plist"; sourceTree = "<group>"; };
+		ED01DF4B189CFA8E00FDDA35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED01DF4D189CFA8E00FDDA35 /* EverpobreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverpobreTests.m; sourceTree = "<group>"; };
+		ED01DF58189CFAC100FDDA35 /* AGTSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleCoreDataStack.h; sourceTree = "<group>"; };
+		ED01DF59189CFAC100FDDA35 /* AGTSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleCoreDataStack.m; sourceTree = "<group>"; };
+		ED01DF62189D1A6700FDDA35 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		ED01DF76189D7B3400FDDA35 /* _AGTNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTNamedEntity.h; sourceTree = SOURCE_ROOT; };
+		ED01DF77189D7B3400FDDA35 /* _AGTNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTNamedEntity.m; sourceTree = SOURCE_ROOT; };
+		ED01DF78189D7B3400FDDA35 /* _AGTNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTNote.h; sourceTree = SOURCE_ROOT; };
+		ED01DF79189D7B3400FDDA35 /* _AGTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTNote.m; sourceTree = SOURCE_ROOT; };
+		ED01DF7A189D7B3400FDDA35 /* _AGTNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTNotebook.h; sourceTree = SOURCE_ROOT; };
+		ED01DF7B189D7B3400FDDA35 /* _AGTNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTNotebook.m; sourceTree = SOURCE_ROOT; };
+		ED01DF7C189D7B3400FDDA35 /* AGTNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNamedEntity.h; sourceTree = SOURCE_ROOT; };
+		ED01DF7D189D7B3400FDDA35 /* AGTNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNamedEntity.m; sourceTree = SOURCE_ROOT; };
+		ED01DF7E189D7B3400FDDA35 /* AGTNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNote.h; sourceTree = SOURCE_ROOT; };
+		ED01DF7F189D7B3400FDDA35 /* AGTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNote.m; sourceTree = SOURCE_ROOT; };
+		ED01DF80189D7B3400FDDA35 /* AGTNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebook.h; sourceTree = SOURCE_ROOT; };
+		ED01DF81189D7B3400FDDA35 /* AGTNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebook.m; sourceTree = SOURCE_ROOT; };
+		ED01DF88189D8B4C00FDDA35 /* _AGTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTPhoto.h; sourceTree = SOURCE_ROOT; };
+		ED01DF89189D8B4C00FDDA35 /* _AGTPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTPhoto.m; sourceTree = SOURCE_ROOT; };
+		ED01DF8A189D8B4C00FDDA35 /* AGTPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTPhoto.h; sourceTree = SOURCE_ROOT; };
+		ED01DF8B189D8B4C00FDDA35 /* AGTPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTPhoto.m; sourceTree = SOURCE_ROOT; };
+		ED0967C0195AC99400DE098B /* _AGTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTLocation.h; sourceTree = SOURCE_ROOT; };
+		ED0967C1195AC99400DE098B /* _AGTLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTLocation.m; sourceTree = SOURCE_ROOT; };
+		ED0967C2195AC99400DE098B /* AGTLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTLocation.h; sourceTree = SOURCE_ROOT; };
+		ED0967C3195AC99400DE098B /* AGTLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTLocation.m; sourceTree = SOURCE_ROOT; };
+		ED1388AC18FDBA1300F5EBF2 /* AGTNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotesTableViewController.h; sourceTree = "<group>"; };
+		ED1388AD18FDBA1300F5EBF2 /* AGTNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotesTableViewController.m; sourceTree = "<group>"; };
+		ED2FD7E918F6E02B002EE77A /* AGTNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNotebookCellView.xib; sourceTree = SOURCE_ROOT; };
+		ED2FD7EB18F6E102002EE77A /* AGTNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebookCellView.h; sourceTree = "<group>"; };
+		ED2FD7EC18F6E102002EE77A /* AGTNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebookCellView.m; sourceTree = "<group>"; };
+		ED33F18A194F34D300E0407E /* AGTNoteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		ED33F18D194F36FF00E0407E /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
+		ED33F18F194F376A00E0407E /* AGTNoteCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNoteCellView.h; sourceTree = "<group>"; };
+		ED33F190194F376A00E0407E /* AGTNoteCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNoteCellView.m; sourceTree = "<group>"; };
+		ED33F198194F3D8F00E0407E /* AGTCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataCollectionViewController.h; sourceTree = "<group>"; };
+		ED33F199194F3D8F00E0407E /* AGTCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataCollectionViewController.m; sourceTree = "<group>"; };
+		ED33F19B1950481800E0407E /* AGTNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotesViewController.h; sourceTree = "<group>"; };
+		ED33F19C1950481800E0407E /* AGTNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotesViewController.m; sourceTree = "<group>"; };
+		ED3A22C918E1DD27003D818F /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		ED3C01951959B123006DEC44 /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
+		ED57849118EC40A200A96913 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		ED57849218EC40A200A96913 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		ED57849718EC566000A96913 /* AGTNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNotebooksViewController.h; sourceTree = "<group>"; };
+		ED57849818EC566000A96913 /* AGTNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNotebooksViewController.m; sourceTree = "<group>"; };
+		ED57849B18ECC63F00A96913 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		ED57849C18ECC63F00A96913 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		ED7A3E6019571161000A33BC /* AGTNoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNoteTableViewController.h; sourceTree = "<group>"; };
+		ED7A3E6119571161000A33BC /* AGTNoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNoteTableViewController.m; sourceTree = "<group>"; };
+		ED7A3E6219571161000A33BC /* AGTNoteTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteTableViewController.xib; sourceTree = "<group>"; };
+		ED9D5F08195DCFD3005C53F0 /* placemark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placemark.png; sourceTree = "<group>"; };
+		EDD3BCFC1951E5F600F5B5E7 /* AGTNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNoteViewController.h; sourceTree = "<group>"; };
+		EDD3BCFD1951E5F600F5B5E7 /* AGTNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNoteViewController.m; sourceTree = "<group>"; };
+		EDD3BCFE1951E5F600F5B5E7 /* AGTNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteViewController.xib; sourceTree = "<group>"; };
+		EDD3BD011951E7EB00F5B5E7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EDD3BD041951EF4600F5B5E7 /* AGTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGTDetailViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED01DF22189CFA8E00FDDA35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD3BD021951E7EB00F5B5E7 /* MapKit.framework in Frameworks */,
+				ED01DF2B189CFA8E00FDDA35 /* CoreGraphics.framework in Frameworks */,
+				ED01DF2D189CFA8E00FDDA35 /* UIKit.framework in Frameworks */,
+				ED01DF29189CFA8E00FDDA35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED01DF3D189CFA8E00FDDA35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED01DF42189CFA8E00FDDA35 /* XCTest.framework in Frameworks */,
+				ED01DF44189CFA8E00FDDA35 /* UIKit.framework in Frameworks */,
+				ED01DF43189CFA8E00FDDA35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED01DF1C189CFA8E00FDDA35 = {
+			isa = PBXGroup;
+			children = (
+				ED01DF2E189CFA8E00FDDA35 /* Everpobre */,
+				ED01DF47189CFA8E00FDDA35 /* EverpobreTests */,
+				ED01DF27189CFA8E00FDDA35 /* Frameworks */,
+				ED01DF26189CFA8E00FDDA35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED01DF26189CFA8E00FDDA35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED01DF25189CFA8E00FDDA35 /* Everpobre.app */,
+				ED01DF40189CFA8E00FDDA35 /* EverpobreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED01DF27189CFA8E00FDDA35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDD3BD011951E7EB00F5B5E7 /* MapKit.framework */,
+				ED01DF28189CFA8E00FDDA35 /* Foundation.framework */,
+				ED01DF2A189CFA8E00FDDA35 /* CoreGraphics.framework */,
+				ED01DF2C189CFA8E00FDDA35 /* UIKit.framework */,
+				ED01DF41189CFA8E00FDDA35 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED01DF2E189CFA8E00FDDA35 /* Everpobre */ = {
+			isa = PBXGroup;
+			children = (
+				EDD3BD031951EF2700F5B5E7 /* Protocols */,
+				ED33F18C194F36E800E0407E /* Resources */,
+				ED2FD7E818F6E00A002EE77A /* Views */,
+				ED57849A18ECC60500A96913 /* Categories */,
+				ED57849018EC403300A96913 /* Controllers */,
+				ED01DF57189CFA9500FDDA35 /* Models */,
+				ED01DF37189CFA8E00FDDA35 /* AGTAppDelegate.h */,
+				ED01DF38189CFA8E00FDDA35 /* AGTAppDelegate.m */,
+				ED01DF3A189CFA8E00FDDA35 /* Images.xcassets */,
+				ED01DF2F189CFA8E00FDDA35 /* Supporting Files */,
+			);
+			path = Everpobre;
+			sourceTree = "<group>";
+		};
+		ED01DF2F189CFA8E00FDDA35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A22C918E1DD27003D818F /* Settings.h */,
+				ED01DF30189CFA8E00FDDA35 /* Everpobre-Info.plist */,
+				ED01DF31189CFA8E00FDDA35 /* InfoPlist.strings */,
+				ED01DF34189CFA8E00FDDA35 /* main.m */,
+				ED01DF36189CFA8E00FDDA35 /* Everpobre-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED01DF47189CFA8E00FDDA35 /* EverpobreTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED01DF4D189CFA8E00FDDA35 /* EverpobreTests.m */,
+				ED01DF48189CFA8E00FDDA35 /* Supporting Files */,
+			);
+			path = EverpobreTests;
+			sourceTree = "<group>";
+		};
+		ED01DF48189CFA8E00FDDA35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED01DF49189CFA8E00FDDA35 /* EverpobreTests-Info.plist */,
+				ED01DF4A189CFA8E00FDDA35 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED01DF57189CFA9500FDDA35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED0967C0195AC99400DE098B /* _AGTLocation.h */,
+				ED0967C1195AC99400DE098B /* _AGTLocation.m */,
+				ED01DF76189D7B3400FDDA35 /* _AGTNamedEntity.h */,
+				ED01DF77189D7B3400FDDA35 /* _AGTNamedEntity.m */,
+				ED01DF78189D7B3400FDDA35 /* _AGTNote.h */,
+				ED01DF79189D7B3400FDDA35 /* _AGTNote.m */,
+				ED01DF7A189D7B3400FDDA35 /* _AGTNotebook.h */,
+				ED01DF7B189D7B3400FDDA35 /* _AGTNotebook.m */,
+				ED01DF88189D8B4C00FDDA35 /* _AGTPhoto.h */,
+				ED01DF89189D8B4C00FDDA35 /* _AGTPhoto.m */,
+				62A704701F0F3F8300984D27 /* _AGTMapSnapshot.h */,
+				62A704711F0F3F8300984D27 /* _AGTMapSnapshot.m */,
+				62A704721F0F3F8300984D27 /* AGTMapSnapshot.h */,
+				62A704731F0F3F8300984D27 /* AGTMapSnapshot.m */,
+				ED0967C2195AC99400DE098B /* AGTLocation.h */,
+				ED0967C3195AC99400DE098B /* AGTLocation.m */,
+				ED01DF7C189D7B3400FDDA35 /* AGTNamedEntity.h */,
+				ED01DF7D189D7B3400FDDA35 /* AGTNamedEntity.m */,
+				ED01DF7E189D7B3400FDDA35 /* AGTNote.h */,
+				ED01DF7F189D7B3400FDDA35 /* AGTNote.m */,
+				ED01DF80189D7B3400FDDA35 /* AGTNotebook.h */,
+				ED01DF81189D7B3400FDDA35 /* AGTNotebook.m */,
+				ED01DF8A189D8B4C00FDDA35 /* AGTPhoto.h */,
+				ED01DF8B189D8B4C00FDDA35 /* AGTPhoto.m */,
+				ED01DF58189CFAC100FDDA35 /* AGTSimpleCoreDataStack.h */,
+				ED01DF59189CFAC100FDDA35 /* AGTSimpleCoreDataStack.m */,
+				ED01DF61189D1A6700FDDA35 /* Model.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ED2FD7E818F6E00A002EE77A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED2FD7E918F6E02B002EE77A /* AGTNotebookCellView.xib */,
+				ED33F18F194F376A00E0407E /* AGTNoteCellView.h */,
+				ED33F190194F376A00E0407E /* AGTNoteCellView.m */,
+				ED33F18A194F34D300E0407E /* AGTNoteCollectionViewCell.xib */,
+				ED2FD7EB18F6E102002EE77A /* AGTNotebookCellView.h */,
+				ED2FD7EC18F6E102002EE77A /* AGTNotebookCellView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		ED33F18C194F36E800E0407E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED9D5F08195DCFD3005C53F0 /* placemark.png */,
+				ED33F18D194F36FF00E0407E /* noImage.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ED57849018EC403300A96913 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED7A3E6019571161000A33BC /* AGTNoteTableViewController.h */,
+				ED7A3E6119571161000A33BC /* AGTNoteTableViewController.m */,
+				ED7A3E6219571161000A33BC /* AGTNoteTableViewController.xib */,
+				ED33F198194F3D8F00E0407E /* AGTCoreDataCollectionViewController.h */,
+				ED33F199194F3D8F00E0407E /* AGTCoreDataCollectionViewController.m */,
+				ED57849118EC40A200A96913 /* AGTCoreDataTableViewController.h */,
+				ED57849218EC40A200A96913 /* AGTCoreDataTableViewController.m */,
+				ED57849718EC566000A96913 /* AGTNotebooksViewController.h */,
+				ED57849818EC566000A96913 /* AGTNotebooksViewController.m */,
+				ED1388AC18FDBA1300F5EBF2 /* AGTNotesTableViewController.h */,
+				ED1388AD18FDBA1300F5EBF2 /* AGTNotesTableViewController.m */,
+				ED33F19B1950481800E0407E /* AGTNotesViewController.h */,
+				ED33F19C1950481800E0407E /* AGTNotesViewController.m */,
+				EDD3BCFC1951E5F600F5B5E7 /* AGTNoteViewController.h */,
+				EDD3BCFD1951E5F600F5B5E7 /* AGTNoteViewController.m */,
+				EDD3BCFE1951E5F600F5B5E7 /* AGTNoteViewController.xib */,
+				ED01916D195751EB00DDE0B6 /* AGTPhotoViewController.h */,
+				ED01916E195751EB00DDE0B6 /* AGTPhotoViewController.m */,
+				ED01916F195751EB00DDE0B6 /* AGTPhotoViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		ED57849A18ECC60500A96913 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ED57849B18ECC63F00A96913 /* UIViewController+Navigation.h */,
+				ED57849C18ECC63F00A96913 /* UIViewController+Navigation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		EDD3BD031951EF2700F5B5E7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EDD3BD041951EF4600F5B5E7 /* AGTDetailViewController.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED01DF24189CFA8E00FDDA35 /* Everpobre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED01DF51189CFA8E00FDDA35 /* Build configuration list for PBXNativeTarget "Everpobre" */;
+			buildPhases = (
+				ED01DF21189CFA8E00FDDA35 /* Sources */,
+				ED01DF22189CFA8E00FDDA35 /* Frameworks */,
+				ED01DF23189CFA8E00FDDA35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Everpobre;
+			productName = Everpobre;
+			productReference = ED01DF25189CFA8E00FDDA35 /* Everpobre.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED01DF3F189CFA8E00FDDA35 /* EverpobreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED01DF54189CFA8E00FDDA35 /* Build configuration list for PBXNativeTarget "EverpobreTests" */;
+			buildPhases = (
+				ED01DF3C189CFA8E00FDDA35 /* Sources */,
+				ED01DF3D189CFA8E00FDDA35 /* Frameworks */,
+				ED01DF3E189CFA8E00FDDA35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED01DF46189CFA8E00FDDA35 /* PBXTargetDependency */,
+			);
+			name = EverpobreTests;
+			productName = EverpobreTests;
+			productReference = ED01DF40189CFA8E00FDDA35 /* EverpobreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED01DF1D189CFA8E00FDDA35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AGT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Agbo;
+				TargetAttributes = {
+					ED01DF3F189CFA8E00FDDA35 = {
+						TestTargetID = ED01DF24189CFA8E00FDDA35;
+					};
+				};
+			};
+			buildConfigurationList = ED01DF20189CFA8E00FDDA35 /* Build configuration list for PBXProject "Everpobre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED01DF1C189CFA8E00FDDA35;
+			productRefGroup = ED01DF26189CFA8E00FDDA35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED01DF24189CFA8E00FDDA35 /* Everpobre */,
+				ED01DF3F189CFA8E00FDDA35 /* EverpobreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED01DF23189CFA8E00FDDA35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED019171195751EB00DDE0B6 /* AGTPhotoViewController.xib in Resources */,
+				EDC8715E1960392900EC30D6 /* placemark.png in Resources */,
+				ED2FD7EA18F6E02B002EE77A /* AGTNotebookCellView.xib in Resources */,
+				ED01DF33189CFA8E00FDDA35 /* InfoPlist.strings in Resources */,
+				ED33F18E194F36FF00E0407E /* noImage.png in Resources */,
+				ED01DF3B189CFA8E00FDDA35 /* Images.xcassets in Resources */,
+				ED7A3E6419571161000A33BC /* AGTNoteTableViewController.xib in Resources */,
+				ED33F18B194F34D300E0407E /* AGTNoteCollectionViewCell.xib in Resources */,
+				EDD3BD001951E5F600F5B5E7 /* AGTNoteViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED01DF3E189CFA8E00FDDA35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED01DF4C189CFA8E00FDDA35 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED01DF21189CFA8E00FDDA35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED57849918EC566000A96913 /* AGTNotebooksViewController.m in Sources */,
+				ED01DF8C189D8B4C00FDDA35 /* _AGTPhoto.m in Sources */,
+				ED01DF35189CFA8E00FDDA35 /* main.m in Sources */,
+				ED33F19D1950481800E0407E /* AGTNotesViewController.m in Sources */,
+				ED33F191194F376A00E0407E /* AGTNoteCellView.m in Sources */,
+				ED01DF87189D7B3400FDDA35 /* AGTNotebook.m in Sources */,
+				EDD3BCFF1951E5F600F5B5E7 /* AGTNoteViewController.m in Sources */,
+				ED01DF85189D7B3400FDDA35 /* AGTNamedEntity.m in Sources */,
+				ED01DF82189D7B3400FDDA35 /* _AGTNamedEntity.m in Sources */,
+				ED57849D18ECC63F00A96913 /* UIViewController+Navigation.m in Sources */,
+				ED01DF84189D7B3400FDDA35 /* _AGTNotebook.m in Sources */,
+				ED2FD7ED18F6E102002EE77A /* AGTNotebookCellView.m in Sources */,
+				ED01DF83189D7B3400FDDA35 /* _AGTNote.m in Sources */,
+				ED01DF39189CFA8E00FDDA35 /* AGTAppDelegate.m in Sources */,
+				ED33F19A194F3D8F00E0407E /* AGTCoreDataCollectionViewController.m in Sources */,
+				ED57849318EC40A200A96913 /* AGTCoreDataTableViewController.m in Sources */,
+				ED01DF5A189CFAC100FDDA35 /* AGTSimpleCoreDataStack.m in Sources */,
+				62A704751F0F3F8300984D27 /* AGTMapSnapshot.m in Sources */,
+				62A704741F0F3F8300984D27 /* _AGTMapSnapshot.m in Sources */,
+				ED01DF86189D7B3400FDDA35 /* AGTNote.m in Sources */,
+				ED019170195751EB00DDE0B6 /* AGTPhotoViewController.m in Sources */,
+				ED01DF63189D1A6700FDDA35 /* Model.xcdatamodeld in Sources */,
+				ED01DF8D189D8B4C00FDDA35 /* AGTPhoto.m in Sources */,
+				ED0967C4195AC99400DE098B /* _AGTLocation.m in Sources */,
+				ED7A3E6319571161000A33BC /* AGTNoteTableViewController.m in Sources */,
+				ED0967C5195AC99400DE098B /* AGTLocation.m in Sources */,
+				ED1388AE18FDBA1300F5EBF2 /* AGTNotesTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED01DF3C189CFA8E00FDDA35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED01DF4E189CFA8E00FDDA35 /* EverpobreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED01DF46189CFA8E00FDDA35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED01DF24189CFA8E00FDDA35 /* Everpobre */;
+			targetProxy = ED01DF45189CFA8E00FDDA35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED01DF31189CFA8E00FDDA35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED01DF32189CFA8E00FDDA35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED01DF4A189CFA8E00FDDA35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED01DF4B189CFA8E00FDDA35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED01DF4F189CFA8E00FDDA35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED01DF50189CFA8E00FDDA35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED01DF52189CFA8E00FDDA35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Everpobre/Everpobre-Prefix.pch";
+				INFOPLIST_FILE = "Everpobre/Everpobre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED01DF53189CFA8E00FDDA35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Everpobre/Everpobre-Prefix.pch";
+				INFOPLIST_FILE = "Everpobre/Everpobre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ED01DF55189CFA8E00FDDA35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Everpobre.app/Everpobre";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Everpobre/Everpobre-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EverpobreTests/EverpobreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ED01DF56189CFA8E00FDDA35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Everpobre.app/Everpobre";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Everpobre/Everpobre-Prefix.pch";
+				INFOPLIST_FILE = "EverpobreTests/EverpobreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED01DF20189CFA8E00FDDA35 /* Build configuration list for PBXProject "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED01DF4F189CFA8E00FDDA35 /* Debug */,
+				ED01DF50189CFA8E00FDDA35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED01DF51189CFA8E00FDDA35 /* Build configuration list for PBXNativeTarget "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED01DF52189CFA8E00FDDA35 /* Debug */,
+				ED01DF53189CFA8E00FDDA35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED01DF54189CFA8E00FDDA35 /* Build configuration list for PBXNativeTarget "EverpobreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED01DF55189CFA8E00FDDA35 /* Debug */,
+				ED01DF56189CFA8E00FDDA35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED01DF61189D1A6700FDDA35 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				62A7046F1F0F3D3D00984D27 /* Model3.xcdatamodel */,
+				ED3C01951959B123006DEC44 /* Model2.xcdatamodel */,
+				ED01DF62189D1A6700FDDA35 /* Model.xcdatamodel */,
+			);
+			currentVersion = 62A7046F1F0F3D3D00984D27 /* Model3.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ED01DF1D189CFA8E00FDDA35 /* Project object */;
+}
